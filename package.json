@@ -1,0 +1,35 @@
+{
+  "name": "docs",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^5.3.5",
+    "@ant-design/nextjs-registry": "^1.0.0",
+    "@mdit/plugin-container": "^0.8.0",
+    "@mdit/plugin-mark": "^0.8.0",
+    "@mdit/plugin-mathjax": "^0.8.0",
+    "@mdit/plugin-sub": "^0.8.0",
+    "@mdit/plugin-sup": "^0.8.0",
+    "@tailwindcss/typography": "^0.5.10",
+    "antd": "^5.15.3",
+    "highlight.js": "^11.9.0",
+    "js-yaml": "^4.1.0",
+    "markdown-it": "^14.1.0",
+    "markdown-it-multimd-table": "^4.2.3",
+    "mathjax-full": "^3.2.2",
+    "next": "14.1.4",
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.0.1",
+    "postcss": "^8",
+    "tailwindcss": "^3.3.0"
+  }
+}

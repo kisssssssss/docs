@@ -1,0 +1,19 @@
+{
+  "cSpell.words": [
+    "antd",
+    "Appstore",
+    "autolabel",
+    "chtml",
+    "headerless",
+    "highlightjs",
+    "hoverable",
+    "mathjax",
+    "mdit",
+    "multibody",
+    "multimd",
+    "nextjs",
+    "rowspan",
+    "tailwindcss"
+  ],
+  "css.customData": [".vscode/tailwindcss.json"],
+}
