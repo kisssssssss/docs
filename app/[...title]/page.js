@@ -2,18 +2,15 @@ import fs from 'fs';
 import path from 'path';
 import Article from '../../components/Article';
 
-import { createMathjaxInstance, mathjax } from '@mdit/plugin-mathjax';
 import yaml from 'js-yaml';
 import hljs from 'highlight.js';
 import MarkdownIt from 'markdown-it';
+import mathjax from 'markdown-it-mathjax3';
 import { sup } from '@mdit/plugin-sup';
 import { sub } from '@mdit/plugin-sub';
 import { mark } from '@mdit/plugin-mark';
 import { container } from '@mdit/plugin-container';
 // import multimdTable from 'markdown-it-multimd-table';
-import "mathjax-full"
-
-const mathjaxInstance = createMathjaxInstance({ output: 'chtml' });
 
 const md = new MarkdownIt({
 	html: true,
@@ -56,7 +53,7 @@ const md = new MarkdownIt({
 			return `<div class="custom-container error">\n<p class="custom-container-title error">${info || 'Error'}</p>\n`;
 		}
 	})
-	.use(mathjax, mathjaxInstance);
+	.use(mathjax);
 // .use(multimdTable, {
 // 	multiline: true,
 // 	rowspan: true,
