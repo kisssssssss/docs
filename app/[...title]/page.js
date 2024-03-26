@@ -21,5 +21,5 @@ export default async function Page(props) {
 
 	// return <Article content={data.content} />;
 
-	return <h1>{mdPath}</h1>;
+	return <h1>{md}</h1>;
 }
