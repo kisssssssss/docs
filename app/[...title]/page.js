@@ -1,13 +1,15 @@
+import fs from 'fs';
+import path from 'path';
 import Article from '../../components/Article';
 
 // import { createMathjaxInstance, mathjax } from '@mdit/plugin-mathjax';
 import yaml from 'js-yaml';
 import hljs from 'highlight.js';
 import MarkdownIt from 'markdown-it';
-import { sup } from '@mdit/plugin-sup';
-import { sub } from '@mdit/plugin-sub';
-import { mark } from '@mdit/plugin-mark';
-import { container } from '@mdit/plugin-container';
+// import { sup } from '@mdit/plugin-sup';
+// import { sub } from '@mdit/plugin-sub';
+// import { mark } from '@mdit/plugin-mark';
+// import { container } from '@mdit/plugin-container';
 // import multimdTable from 'markdown-it-multimd-table';
 
 // const mathjaxInstance = createMathjaxInstance({ output: 'chtml' });
@@ -21,38 +23,38 @@ const md = new MarkdownIt({
 		}
 		return `<pre class="hljs"><code>${code}</code></pre>`;
 	}
-})
-	.use(sup)
-	.use(sub)
-	.use(mark)
-	.use(container, {
-		name: 'info',
-		openRender: (tokens, index, _options) => {
-			const info = tokens[index].info.trim().trim();
-			return `<div class="custom-container info">\n<p class="custom-container-title info">${info || 'Info'}</p>\n`;
-		}
-	})
-	.use(container, {
-		name: 'tip',
-		openRender: (tokens, index, _options) => {
-			const info = tokens[index].info.trim().trim();
-			return `<div class="custom-container tip">\n<p class="custom-container-title tip">${info || 'Tip'}</p>\n`;
-		}
-	})
-	.use(container, {
-		name: 'warning',
-		openRender: (tokens, index, _options) => {
-			const info = tokens[index].info.trim().trim();
-			return `<div class="custom-container warning">\n<p class="custom-container-title warning">${info || 'Warning'}</p>\n`;
-		}
-	})
-	.use(container, {
-		name: 'error',
-		openRender: (tokens, index, _options) => {
-			const info = tokens[index].info.trim().trim();
-			return `<div class="custom-container error">\n<p class="custom-container-title error">${info || 'Error'}</p>\n`;
-		}
-	});
+});
+// .use(sup)
+// .use(sub)
+// .use(mark)
+// .use(container, {
+// 	name: 'info',
+// 	openRender: (tokens, index, _options) => {
+// 		const info = tokens[index].info.trim().trim();
+// 		return `<div class="custom-container info">\n<p class="custom-container-title info">${info || 'Info'}</p>\n`;
+// 	}
+// })
+// .use(container, {
+// 	name: 'tip',
+// 	openRender: (tokens, index, _options) => {
+// 		const info = tokens[index].info.trim().trim();
+// 		return `<div class="custom-container tip">\n<p class="custom-container-title tip">${info || 'Tip'}</p>\n`;
+// 	}
+// })
+// .use(container, {
+// 	name: 'warning',
+// 	openRender: (tokens, index, _options) => {
+// 		const info = tokens[index].info.trim().trim();
+// 		return `<div class="custom-container warning">\n<p class="custom-container-title warning">${info || 'Warning'}</p>\n`;
+// 	}
+// })
+// .use(container, {
+// 	name: 'error',
+// 	openRender: (tokens, index, _options) => {
+// 		const info = tokens[index].info.trim().trim();
+// 		return `<div class="custom-container error">\n<p class="custom-container-title error">${info || 'Error'}</p>\n`;
+// 	}
+// });
 // .use(mathjax, mathjaxInstance)
 // .use(multimdTable, {
 // 	multiline: true,
