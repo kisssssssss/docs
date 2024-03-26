@@ -1,4 +1,4 @@
-import path from 'path';
+// import path from 'path';
 import { markdownToHtml } from '../../utils/markdownIt';
 // import parseDocFile from '../../utils/parseDocFile';
 
