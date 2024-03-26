@@ -15,7 +15,7 @@ export default function Home({ docs }) {
 		<main className='max-w-[1200px] mx-auto flex flex-col lg:flex-row lg:mt-20'>
 			<div className='w-full lg:w-fit flex flex-col justify-center lg:justify-start items-center mt-10 lg:mt-0'>
 				<img
-					className='w-16 h-16 min-w-16 min-h-16 xl:w-24 xl:min-w-24 xl:h-24 xl:min-h-24 2xl:w-32 2xl:min-w-32 2xl:h-32 2xl:min-h-32'
+					className='w-16 h-16 min-w-16 min-h-16 xl:w-24 xl:min-w-24 xl:h-24 xl:min-h-24 2xl:w-32 2xl:min-w-32 2xl:h-32 2xl:min-h-32 rounded-full shadow-lg'
 					src='/icon.png'
 					alt=''></img>
 
