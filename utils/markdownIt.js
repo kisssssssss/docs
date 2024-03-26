@@ -1,4 +1,3 @@
-'use server';
 import MarkdownIt from 'markdown-it';
 // import { createMathjaxInstance, mathjax } from '@mdit/plugin-mathjax';
 import { container } from '@mdit/plugin-container';
