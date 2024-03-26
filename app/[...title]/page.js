@@ -11,9 +11,7 @@ export default async function Page(props) {
 
 	let md;
 	try {
-		fs.readFile(mdPath, 'utf-8', (err, data) => {
-			md = data || err;
-		});
+		md = await fs.promises.readFile(mdPath, 'utf-8');
 	} catch (err) {
 		md = String(err);
 	}
@@ -22,5 +20,5 @@ export default async function Page(props) {
 
 	// return <Article content={data.content} />;
 
-	return <h1>{md.content}</h1>;
+	return <h1>{md}</h1>;
 }
