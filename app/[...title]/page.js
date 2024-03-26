@@ -11,8 +11,7 @@ export default async function Page(props) {
 
 	let md;
 	try {
-		md = fs.readdirSync(path.join(process.cwd(), 'docs'));
-		// md = await fs.promises.readFile(mdPath, 'utf-8');
+		md = await fs.promises.readFile(mdPath, 'utf-8');
 	} catch (err) {
 		// md = String(err);
 	}
