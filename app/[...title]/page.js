@@ -6,7 +6,7 @@
 
 export default async function Page(props) {
 	const title = props.params.title.map(item => decodeURI(item));
-	const mdPath = path.join(process.cwd(), 'public', 'docs', `${path.join(...title)}.md`);
+	const mdPath = path.join(process.cwd(), 'docs', `${path.join(...title)}.md`);
 
 	let md;
 	try {

@@ -57,5 +57,5 @@ function readDir(dirPath) {
 }
 
 export default async function getDocsMap() {
-	return readDir(path.join(process.cwd(), 'public','docs'));
+	return readDir(path.join(process.cwd(), 'docs'));
 }
