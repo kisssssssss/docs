@@ -1,7 +1,7 @@
 'use server';
 import path from 'path';
 import fs from 'fs';
-import { markdownToHtml } from '../utils/markdownIt';
+import { markdownToHtml } from './markdownIt';
 
 export default async function parseDocFile(mdPath) {
 	// 获取文档所在路径

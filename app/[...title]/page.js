@@ -1,6 +1,6 @@
 import path from 'path';
 import fs from 'fs';
-// import { markdownToHtml } from '../../utils/markdownIt';
+import { markdownToHtml } from '../../utils/markdownIt';
 // import parseDocFile from '../../utils/parseDocFile';
 
 // import Article from '../../components/Article';
