@@ -1,12 +1,20 @@
 import path from 'path';
 import fs from 'fs';
-import { markdownToHtml } from '../utils/test';
 // import parseDocFile from '../../utils/parseDocFile';
 
 // import Article from '../../components/Article';
 
 import MarkdownIt from 'markdown-it';
-const md = new MarkdownIt()
+const md = new MarkdownIt();
+
+function markdownToHtml(markdown) {
+	const fmRegex = /---(.*?)---/gs;
+
+	return {
+		// meta: yaml.load(fmRegex.exec(markdown)[1]),
+		content: md.render(markdown.replace(fmRegex, ''))
+	};
+}
 
 export default async function Page(props) {
 	const title = props.params.title.map(item => decodeURI(item));
