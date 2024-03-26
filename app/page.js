@@ -1,4 +1,4 @@
-import getDocsMap from './utils/getDocsMap';
+import getDocsMap from '../utils/getDocsMap';
 import Home from '../components/home';
 
 export default async function APP() {

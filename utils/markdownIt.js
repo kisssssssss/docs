@@ -1,15 +1,15 @@
 'use server';
 import MarkdownIt from 'markdown-it';
-import { createMathjaxInstance, mathjax } from '@mdit/plugin-mathjax';
+// import { createMathjaxInstance, mathjax } from '@mdit/plugin-mathjax';
 import { container } from '@mdit/plugin-container';
 import { sup } from '@mdit/plugin-sup';
 import { sub } from '@mdit/plugin-sub';
 import { mark } from '@mdit/plugin-mark';
 import hljs from 'highlight.js';
-import multimdTable from 'markdown-it-multimd-table';
+// import multimdTable from 'markdown-it-multimd-table';
 import yaml from 'js-yaml';
 
-const mathjaxInstance = createMathjaxInstance({ output: 'chtml' });
+// const mathjaxInstance = createMathjaxInstance({ output: 'chtml' });
 
 const md = new MarkdownIt({
 	html: true,
@@ -21,7 +21,7 @@ const md = new MarkdownIt({
 		return `<pre class="hljs"><code>${code}</code></pre>`;
 	}
 })
-	.use(mathjax, mathjaxInstance)
+	// .use(mathjax, mathjaxInstance)
 	.use(sup)
 	.use(sub)
 	.use(mark)
