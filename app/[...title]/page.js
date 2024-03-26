@@ -53,7 +53,7 @@ const md = new MarkdownIt({
 			return `<div class="custom-container error">\n<p class="custom-container-title error">${info || 'Error'}</p>\n`;
 		}
 	})
-	.use(mathjax);
+	.use(mathjax());
 // .use(multimdTable, {
 // 	multiline: true,
 // 	rowspan: true,
