@@ -3,9 +3,9 @@ import path from 'path';
 import Article from '../../components/Article';
 
 // import { createMathjaxInstance, mathjax } from '@mdit/plugin-mathjax';
-import yaml from 'js-yaml';
-import hljs from 'highlight.js';
-import MarkdownIt from 'markdown-it';
+// import yaml from 'js-yaml';
+// import hljs from 'highlight.js';
+// import MarkdownIt from 'markdown-it';
 // import { sup } from '@mdit/plugin-sup';
 // import { sub } from '@mdit/plugin-sub';
 // import { mark } from '@mdit/plugin-mark';
@@ -14,16 +14,16 @@ import MarkdownIt from 'markdown-it';
 
 // const mathjaxInstance = createMathjaxInstance({ output: 'chtml' });
 
-const md = new MarkdownIt({
-	html: true,
-	highlight: function (str, lang) {
-		let code = md.utils.escapeHtml(str);
-		if (lang && hljs.getLanguage(lang)) {
-			code = hljs.highlight(lang, str, true).value;
-		}
-		return `<pre class="hljs"><code>${code}</code></pre>`;
-	}
-});
+// const md = new MarkdownIt({
+// 	html: true,
+// 	highlight: function (str, lang) {
+// 		let code = md.utils.escapeHtml(str);
+// 		if (lang && hljs.getLanguage(lang)) {
+// 			code = hljs.highlight(lang, str, true).value;
+// 		}
+// 		return `<pre class="hljs"><code>${code}</code></pre>`;
+// 	}
+// });
 // .use(sup)
 // .use(sub)
 // .use(mark)
@@ -64,14 +64,15 @@ const md = new MarkdownIt({
 // 	autolabel: true
 // })
 
-function markdownToHtml(markdown) {
-	const fmRegex = /---(.*?)---/gs;
+// function markdownToHtml(markdown) {
+// 	const fmRegex = /---(.*?)---/gs;
 
-	return {
-		meta: yaml.load(fmRegex.exec(markdown)[1]),
-		content: md.render(markdown.replace(fmRegex, ''))
-	};
-}
+// 	return {
+// 		meta: yaml.load(fmRegex.exec(markdown)[1]),
+// 		content: md.render(markdown.replace(fmRegex, ''))
+// 	};
+// }
+import { markdownToHtml} from "../../utils/markdownIt"
 
 export default async function Page(props) {
 	const title = props.params.title.map(item => decodeURI(item));
@@ -80,7 +81,7 @@ export default async function Page(props) {
 	let mdHtml;
 	try {
 		const mdSource = await fs.promises.readFile(mdPath, 'utf-8');
-		mdHtml = markdownToHtml(mdSource).content;
+		mdHtml =await markdownToHtml(mdSource).content;
 	} catch (_) {}
 
 	return <Article content={mdHtml} />;
