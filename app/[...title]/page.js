@@ -15,11 +15,14 @@ export default async function Page(props) {
 	let source;
 	try {
 		source = await fs.promises.readFile(mdPath, 'utf-8');
+		console.log(source);
+		source = markdownToHtml(source);
+		console.log(source);
 	} catch (_) {}
 
 	// const data = await parseDocFile(title);
 
 	// return <Article content={data.content} />;
 
-	return <h1>{markdownToHtml(source).content}</h1>;
+	return <h1>{source}</h1>;
 }
