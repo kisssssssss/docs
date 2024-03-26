@@ -1,6 +1,6 @@
 import path from 'path';
 import fs from 'fs';
-// import { markdownToHtml } from '../../utils/markdownIt';
+import { markdownToHtml } from '../../utils/markdownIt';
 // import parseDocFile from '../../utils/parseDocFile';
 
 // import Article from '../../components/Article';
@@ -12,9 +12,7 @@ export default async function Page(props) {
 	let md;
 	try {
 		md = await fs.promises.readFile(mdPath, 'utf-8');
-	} catch (err) {
-		// md = String(err);
-	}
+	} catch (_) {}
 
 	// const data = await parseDocFile(title);
 
