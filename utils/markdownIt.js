@@ -6,8 +6,8 @@ import { sup } from '@mdit/plugin-sup';
 import { sub } from '@mdit/plugin-sub';
 import { mark } from '@mdit/plugin-mark';
 import hljs from 'highlight.js';
-const multimdTable = require('markdown-it-multimd-table');
-const yaml = require('js-yaml');
+import multimdTable from 'markdown-it-multimd-table';
+import yaml from 'js-yaml';
 
 const mathjaxInstance = createMathjaxInstance({ output: 'chtml' });
 
