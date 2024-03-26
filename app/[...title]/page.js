@@ -2,9 +2,10 @@ import path from 'path';
 import fs from 'fs';
 // import parseDocFile from '../../utils/parseDocFile';
 
-// import Article from '../../components/Article';
+import Article from '../../components/Article';
 
 import MarkdownIt from 'markdown-it';
+import yaml from 'js-yaml';
 const md = new MarkdownIt();
 
 function markdownToHtml(markdown) {
@@ -20,17 +21,12 @@ export default async function Page(props) {
 	const title = props.params.title.map(item => decodeURI(item));
 	const mdPath = path.join(process.cwd(), 'docs', `${path.join(...title)}.md`);
 
-	let source;
+	let mdSource;
+	let mdHtml;
 	try {
-		source = await fs.promises.readFile(mdPath, 'utf-8');
-		console.log(source);
-		source = markdownToHtml(source).content;
-		console.log(source);
+		mdSource = await fs.promises.readFile(mdPath, 'utf-8');
+		mdHtml = markdownToHtml(mdSource).content;
 	} catch (_) {}
 
-	// const data = await parseDocFile(title);
-
-	// return <Article content={data.content} />;
-
-	return <h1>{source}</h1>;
+	return <Article content={mdHtml} />;
 }
