@@ -16,7 +16,7 @@ export default async function Page(props) {
 	try {
 		source = await fs.promises.readFile(mdPath, 'utf-8');
 		console.log(source);
-		source = markdownToHtml(source);
+		source = markdownToHtml(source).content;
 		console.log(source);
 	} catch (_) {}
 

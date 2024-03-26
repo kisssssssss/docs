@@ -1,3 +1,5 @@
+'use server';
+
 import MarkdownIt from 'markdown-it';
 
 
