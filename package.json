@@ -15,6 +15,7 @@
     "@mdit/plugin-mark": "^0.8.0",
     "@mdit/plugin-sub": "^0.8.0",
     "@mdit/plugin-sup": "^0.8.0",
+    "@mdit/plugin-tasklist": "^0.8.0",
     "@tailwindcss/typography": "^0.5.10",
     "antd": "^5.15.3",
     "highlight.js": "^11.9.0",
@@ -22,6 +23,7 @@
     "markdown-it": "^14.1.0",
     "markdown-it-katex": "^2.0.3",
     "markdown-it-multimd-table": "^4.2.3",
+    "markdown-it-toc-and-anchor": "^4.2.0",
     "next": "14.1.4",
     "react": "^18",
     "react-dom": "^18"

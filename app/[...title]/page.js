@@ -9,10 +9,14 @@ import katex from 'markdown-it-katex';
 import { sup } from '@mdit/plugin-sup';
 import { sub } from '@mdit/plugin-sub';
 import { mark } from '@mdit/plugin-mark';
+import { tasklist } from '@mdit/plugin-tasklist';
 import { container } from '@mdit/plugin-container';
+import multimdTable from 'markdown-it-multimd-table';
 
 const md = new MarkdownIt({
 	html: true,
+	linkify: true,
+	typographer: true,
 	highlight: function (str, lang) {
 		let code = md.utils.escapeHtml(str);
 		if (lang && hljs.getLanguage(lang)) {
@@ -53,7 +57,8 @@ const md = new MarkdownIt({
 		}
 	})
 	.use(katex)
-	.use(require('markdown-it-multimd-table'));
+	.use(tasklist)
+	.use(multimdTable);
 
 function markdownToHtml(markdown) {
 	const fmRegex = /---(.*?)---/gs;
