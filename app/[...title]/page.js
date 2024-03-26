@@ -10,7 +10,6 @@ import { sup } from '@mdit/plugin-sup';
 import { sub } from '@mdit/plugin-sub';
 import { mark } from '@mdit/plugin-mark';
 import { container } from '@mdit/plugin-container';
-var { markdownItTable } = require('markdown-it-table')
 
 const md = new MarkdownIt({
 	html: true,
@@ -54,7 +53,7 @@ const md = new MarkdownIt({
 		}
 	})
 	.use(katex)
-	.use(markdownItTable);
+	.use(require('markdown-it-multimd-table'));
 
 function markdownToHtml(markdown) {
 	const fmRegex = /---(.*?)---/gs;
