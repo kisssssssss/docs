@@ -25,13 +25,13 @@ const md = new MarkdownIt({
 	.use(sup)
 	.use(sub)
 	.use(mark)
-	.use(multimdTable, {
-		multiline: true,
-		rowspan: true,
-		headerless: true,
-		multibody: true,
-		autolabel: true
-	})
+	// .use(multimdTable, {
+	// 	multiline: true,
+	// 	rowspan: true,
+	// 	headerless: true,
+	// 	multibody: true,
+	// 	autolabel: true
+	// })
 	.use(container, {
 		name: 'info',
 		openRender: (tokens, index, _options) => {
