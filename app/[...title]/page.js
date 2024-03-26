@@ -13,7 +13,7 @@ export default async function Page(props) {
 		// fs.readdirSync(path.join(process.cwd(), 'public','docs'))
 		// md = await fs.promises.readFile(mdPath, 'utf-8');
 	} catch (err) {
-		md = String(err);
+		// md = String(err);
 	}
 
 	// const data = await parseDocFile(title);
