@@ -61,7 +61,7 @@ const md = new MarkdownIt({
 		}
 	});
 
-export function markdownToHtml(markdown) {
+export async function markdownToHtml(markdown) {
 	const fmRegex = /---(.*?)---/gs;
 
 	return {
