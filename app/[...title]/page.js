@@ -36,34 +36,34 @@ const md = new MarkdownIt({
 	// 	multibody: true,
 	// 	autolabel: true
 	// })
-	// .use(container, {
-	// 	name: 'info',
-	// 	openRender: (tokens, index, _options) => {
-	// 		const info = tokens[index].info.trim().trim();
-	// 		return `<div class="custom-container info">\n<p class="custom-container-title info">${info || 'Info'}</p>\n`;
-	// 	}
-	// })
-	// .use(container, {
-	// 	name: 'tip',
-	// 	openRender: (tokens, index, _options) => {
-	// 		const info = tokens[index].info.trim().trim();
-	// 		return `<div class="custom-container tip">\n<p class="custom-container-title tip">${info || 'Tip'}</p>\n`;
-	// 	}
-	// })
-	// .use(container, {
-	// 	name: 'warning',
-	// 	openRender: (tokens, index, _options) => {
-	// 		const info = tokens[index].info.trim().trim();
-	// 		return `<div class="custom-container warning">\n<p class="custom-container-title warning">${info || 'Warning'}</p>\n`;
-	// 	}
-	// })
-	// .use(container, {
-	// 	name: 'error',
-	// 	openRender: (tokens, index, _options) => {
-	// 		const info = tokens[index].info.trim().trim();
-	// 		return `<div class="custom-container error">\n<p class="custom-container-title error">${info || 'Error'}</p>\n`;
-	// 	}
-	// });
+	.use(container, {
+		name: 'info',
+		openRender: (tokens, index, _options) => {
+			const info = tokens[index].info.trim().trim();
+			return `<div class="custom-container info">\n<p class="custom-container-title info">${info || 'Info'}</p>\n`;
+		}
+	})
+	.use(container, {
+		name: 'tip',
+		openRender: (tokens, index, _options) => {
+			const info = tokens[index].info.trim().trim();
+			return `<div class="custom-container tip">\n<p class="custom-container-title tip">${info || 'Tip'}</p>\n`;
+		}
+	})
+	.use(container, {
+		name: 'warning',
+		openRender: (tokens, index, _options) => {
+			const info = tokens[index].info.trim().trim();
+			return `<div class="custom-container warning">\n<p class="custom-container-title warning">${info || 'Warning'}</p>\n`;
+		}
+	})
+	.use(container, {
+		name: 'error',
+		openRender: (tokens, index, _options) => {
+			const info = tokens[index].info.trim().trim();
+			return `<div class="custom-container error">\n<p class="custom-container-title error">${info || 'Error'}</p>\n`;
+		}
+	});
 
 function markdownToHtml(markdown) {
 	const fmRegex = /---(.*?)---/gs;
