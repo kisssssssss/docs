@@ -10,7 +10,7 @@ import { sup } from '@mdit/plugin-sup';
 import { sub } from '@mdit/plugin-sub';
 import { mark } from '@mdit/plugin-mark';
 import { container } from '@mdit/plugin-container';
-import table from 'markdown-it-table';
+import { markdownItTable } from 'markdown-it-table';
 // import multimdTable from 'markdown-it-multimd-table';
 
 const md = new MarkdownIt({
@@ -55,7 +55,7 @@ const md = new MarkdownIt({
 		}
 	})
 	.use(katex)
-	.use(table);
+	.use(markdownItTable);
 // .use(multimdTable, {
 // 	multiline: true,
 // 	rowspan: true,
