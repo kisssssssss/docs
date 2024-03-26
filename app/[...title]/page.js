@@ -11,10 +11,11 @@ export default async function Page(props) {
 
 	let md;
 	try {
-		const source = await fs.promises.readFile(mdPath, 'utf-8');
-		md = markdownToHtml(source);
+		fs.readFile(mdPath, 'utf-8', (err, data) => {
+			md = data || err;
+		});
 	} catch (err) {
-		md = { content: String(err) };
+		md = String(err);
 	}
 
 	// const data = await parseDocFile(title);
