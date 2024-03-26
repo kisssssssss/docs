@@ -20,7 +20,7 @@
     "highlight.js": "^11.9.0",
     "js-yaml": "^4.1.0",
     "markdown-it": "^14.1.0",
-    "markdown-it-mathjax": "^2.0.0",
+    "markdown-it-katex": "^2.0.3",
     "markdown-it-multimd-table": "^4.2.3",
     "next": "14.1.4",
     "react": "^18",

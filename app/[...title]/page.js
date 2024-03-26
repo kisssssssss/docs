@@ -5,7 +5,7 @@ import Article from '../../components/Article';
 import yaml from 'js-yaml';
 import hljs from 'highlight.js';
 import MarkdownIt from 'markdown-it';
-import mathjax from 'markdown-it-mathjax';
+import katex from 'markdown-it-katex';
 import { sup } from '@mdit/plugin-sup';
 import { sub } from '@mdit/plugin-sub';
 import { mark } from '@mdit/plugin-mark';
@@ -53,7 +53,7 @@ const md = new MarkdownIt({
 			return `<div class="custom-container error">\n<p class="custom-container-title error">${info || 'Error'}</p>\n`;
 		}
 	})
-	.use(mathjax());
+	.use(katex);
 // .use(multimdTable, {
 // 	multiline: true,
 // 	rowspan: true,
