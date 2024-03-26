@@ -10,7 +10,7 @@ import { sup } from '@mdit/plugin-sup';
 import { sub } from '@mdit/plugin-sub';
 import { mark } from '@mdit/plugin-mark';
 import hljs from 'highlight.js';
-import multimdTable from 'markdown-it-multimd-table';
+// import multimdTable from 'markdown-it-multimd-table';
 import yaml from 'js-yaml';
 
 // const mathjaxInstance = createMathjaxInstance({ output: 'chtml' });
