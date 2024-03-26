@@ -11,6 +11,7 @@ import { sub } from '@mdit/plugin-sub';
 import { mark } from '@mdit/plugin-mark';
 import { container } from '@mdit/plugin-container';
 // import multimdTable from 'markdown-it-multimd-table';
+import "mathjax-full"
 
 const mathjaxInstance = createMathjaxInstance({ output: 'chtml' });
 
