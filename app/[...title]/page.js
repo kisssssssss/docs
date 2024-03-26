@@ -1,6 +1,6 @@
 import path from 'path';
 import fs from 'fs';
-// import { markdownToHtml } from '../utils/markdownIt';
+import { markdownToHtml } from '../utils/test';
 // import parseDocFile from '../../utils/parseDocFile';
 
 // import Article from '../../components/Article';
@@ -21,5 +21,5 @@ export default async function Page(props) {
 
 	// return <Article content={data.content} />;
 
-	return <h1>{md.render(source)}</h1>;
+	return <h1>{markdownToHtml(source).content}</h1>;
 }
