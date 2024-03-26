@@ -1,6 +1,5 @@
 'use client';
 import { useState, useEffect } from 'react';
-import path from 'path';
 import { useRouter } from 'next/navigation';
 import { FloatButton } from 'antd';
 import { HomeOutlined } from '@ant-design/icons';
@@ -14,7 +13,7 @@ export default function Page(props) {
 
 	const [data, setData] = useState('');
 	useEffect(() => {
-		parseDocFile(path.join(...title)).then(data => {
+		parseDocFile(title).then(data => {
 			setData(data);
 			document.title = data.meta.title;
 		});

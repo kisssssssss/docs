@@ -5,7 +5,7 @@ import { markdownToHtml } from '../utils/markdownIt';
 
 export default async function parseDocFile(mdPath) {
 	// 获取文档所在路径
-	let finalMdPath = `${mdPath}.md`;
+	let finalMdPath = `${path.join(...mdPath)}.md`;
 	if (finalMdPath.startsWith('/')) {
 		finalMdPath = finalMdPath.slice(1);
 	}
