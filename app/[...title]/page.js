@@ -5,7 +5,7 @@ import Article from '../../components/Article';
 import yaml from 'js-yaml';
 import hljs from 'highlight.js';
 import MarkdownIt from 'markdown-it';
-import katex from 'markdown-it-mathjax3';
+import { createMathjaxInstance, mathjax } from '@mdit/plugin-mathjax';
 import { sup } from '@mdit/plugin-sup';
 import { sub } from '@mdit/plugin-sub';
 import { mark } from '@mdit/plugin-mark';
@@ -25,6 +25,7 @@ const md = new MarkdownIt({
 		return `<pre class="hljs"><code>${code}</code></pre>`;
 	}
 })
+	.use(mathjax, createMathjaxInstance({ output: 'chtml' }))
 	.use(sup)
 	.use(sub)
 	.use(mark)
@@ -56,7 +57,6 @@ const md = new MarkdownIt({
 			return `<div class="custom-container error">\n<p class="custom-container-title error">${info || 'Error'}</p>\n`;
 		}
 	})
-	.use(katex)
 	.use(tasklist)
 	.use(multimdTable);
 

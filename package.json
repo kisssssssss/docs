@@ -13,6 +13,7 @@
     "@ant-design/nextjs-registry": "^1.0.0",
     "@mdit/plugin-container": "^0.8.0",
     "@mdit/plugin-mark": "^0.8.0",
+    "@mdit/plugin-mathjax": "^0.8.0",
     "@mdit/plugin-sub": "^0.8.0",
     "@mdit/plugin-sup": "^0.8.0",
     "@mdit/plugin-tasklist": "^0.8.0",
