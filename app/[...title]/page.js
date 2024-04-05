@@ -5,7 +5,7 @@ import Article from '../../components/Article';
 import yaml from 'js-yaml';
 import hljs from 'highlight.js';
 import MarkdownIt from 'markdown-it';
-import { createMathjaxInstance, mathjax } from '@mdit/plugin-mathjax';
+import mathjax from 'markdown-it-mathjax3';
 import { sup } from '@mdit/plugin-sup';
 import { sub } from '@mdit/plugin-sub';
 import { mark } from '@mdit/plugin-mark';
@@ -25,7 +25,7 @@ const md = new MarkdownIt({
 		return `<pre class="hljs"><code>${code}</code></pre>`;
 	}
 })
-	.use(mathjax, createMathjaxInstance({ output: 'chtml' }))
+	.use(mathjax)
 	.use(sup)
 	.use(sub)
 	.use(mark)

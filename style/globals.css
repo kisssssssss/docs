@@ -10,7 +10,8 @@
   font-size: 14px;
   @apply mt-4 mb-2;
 }
-.custom-container>p{
+
+.custom-container>p {
   @apply my-[0.75em];
 }
 
@@ -34,8 +35,12 @@
   background-color: rgba(244, 63, 94, .14);
 }
 
-.custom-container-title{
+.custom-container-title {
   font-size: 16px;
   font-weight: bolder;
   @apply my-0 !important;
+}
+
+.MathJax>svg {
+  display: inline;
 }
