@@ -1,36 +1,20 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 前言
 
-## Getting Started
+为满足记录学习过程中笔记与文档的需求，我想要一个简洁的仓库，能在网上展示我的笔记即可。
+刚开始计划使用静态博客框架与Vercel托管服务。在使用Hexo、VuePress以及VitePress之后，我发现它们对我来说都不是很理想：
 
-First, run the development server:
+- Hexo虽然部署便捷和主题多样，但是大量教程文献年代久远，官方文档不是很优秀，而且我不是很喜欢它的项目结构。
+- VuePress与VitePress虽然功能更强大与部署也更简单，但对于仅需基础功能的我而言，它们有显得过于臃肿。
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+鉴于上述考量，我选择了Next.js作为开发框架，并通过Vercel就行部署。至于为什么选择Next.js，只是单纯地因为我想了解一些新技术。
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# 特点
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+页面十分简洁
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+# 部署
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+1. fork此项目
+2. 将fork后的项目拉取到本地
+3. 将docs文件夹里面的笔记换成自己的即可
+4. 在vercel中导入项目
