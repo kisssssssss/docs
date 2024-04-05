@@ -5,7 +5,7 @@ import Article from '../../components/Article';
 import yaml from 'js-yaml';
 import hljs from 'highlight.js';
 import MarkdownIt from 'markdown-it';
-import katex from 'markdown-it-katex';
+import katex from 'markdown-it-mathjax3';
 import { sup } from '@mdit/plugin-sup';
 import { sub } from '@mdit/plugin-sub';
 import { mark } from '@mdit/plugin-mark';

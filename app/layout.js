@@ -17,6 +17,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
 	return (
 		<html lang='en'>
+			<head>
+				{/* <link rel='stylesheet' href='https://cdn.jsdelivr.net/github-markdown-css/2.2.1/github-markdown.css' /> */}
+			</head>
 			<body className={inter.className}>
 				<AntdRegistry>{children}</AntdRegistry>
 				<Plum></Plum>
