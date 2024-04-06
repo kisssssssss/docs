@@ -5,13 +5,14 @@ import Article from '../../components/Article';
 import yaml from 'js-yaml';
 import hljs from 'highlight.js';
 import MarkdownIt from 'markdown-it';
+import anchor from "markdown-it-anchor"
 import mathjax from 'markdown-it-mathjax3';
+import multimdTable from 'markdown-it-multimd-table';
 import { sup } from '@mdit/plugin-sup';
 import { sub } from '@mdit/plugin-sub';
 import { mark } from '@mdit/plugin-mark';
 import { tasklist } from '@mdit/plugin-tasklist';
 import { container } from '@mdit/plugin-container';
-import multimdTable from 'markdown-it-multimd-table';
 
 const md = new MarkdownIt({
 	html: true,
@@ -29,6 +30,7 @@ const md = new MarkdownIt({
 	.use(sup)
 	.use(sub)
 	.use(mark)
+	.use(anchor)
 	.use(container, {
 		name: 'info',
 		openRender: (tokens, index, _options) => {

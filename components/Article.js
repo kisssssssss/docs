@@ -8,9 +8,9 @@ import Catalog from './Catalog';
 export default function Article({ content }) {
 	const router = useRouter();
 
+	// 目录
 	const [catalog, setCatalog] = useState([]);
-
-	// 获取目录
+	const [isShowCatalog, setIsShowCatalog] = useState(false);
 	useEffect(() => {
 		// 获取h1-h6节点
 		let headers = [];
@@ -55,14 +55,22 @@ export default function Article({ content }) {
 		console.log(res);
 		setCatalog(res);
 	}, [content]);
+
 	return (
 		<>
-			<Catalog catalog={catalog}/>
 			<article
-				className={`prose prose-pre:font-[CaskaydiaCoveNerdFontMono] prose-code:font-medium prose-code:before:content-[''] prose-code:after:content-[''] prose-code:font-[CaskaydiaCoveNerdFontMono] prose-a:underline-offset-[6px] mx-auto px-6 my-20 sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-[896px] xl:max-w-screen-[1120px]`}
+				className={`prose prose-pre:font-[CaskaydiaCoveNerdFontMono] prose-code:font-medium prose-code:before:content-[''] prose-code:after:content-[''] prose-code:font-[CaskaydiaCoveNerdFontMono] prose-a:underline-offset-[6px] mx-auto px-6 sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-[896px] xl:max-w-screen-[1120px] py-20`}
 				dangerouslySetInnerHTML={{ __html: content }}></article>
+			<Catalog catalog={catalog} isShowCatalog={isShowCatalog} />
 			<FloatButton.Group shape='circle' style={{ right: 24 }}>
-				<FloatButton type='primary' icon={<ProfileOutlined />} tooltip={<span>目录</span>} />
+				<FloatButton
+					type='primary'
+					icon={<ProfileOutlined />}
+					tooltip={<span>目录</span>}
+					onClick={() => {
+						setIsShowCatalog(!isShowCatalog);
+					}}
+				/>
 				<FloatButton
 					type='primary'
 					icon={<HomeOutlined />}

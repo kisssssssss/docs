@@ -8,6 +8,12 @@
   src: url('/fonts/CaskaydiaCoveNerdFontMono-Regular.woff2');
 }
 
+html,
+body,
+article {
+  scroll-behavior: smooth;
+}
+
 body {
   font-variant-numeric: tabular-nums;
   font-family: 'CaskaydiaCoveNerdFontMono', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
@@ -97,4 +103,9 @@ blockquote>p::before {
 blockquote>p::after {
   content: close-quote;
   margin-left: 5px;
+}
+
+/* 隐藏目录滚动条 */
+#Catalog::-webkit-scrollbar{
+  display: none;
 }
