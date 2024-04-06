@@ -3,7 +3,6 @@ title: react初体验
 index: 1
 ---
 
-
 ![](../../../images/WEB/react/Snipaste_1.png)
 
 ## React 是什么

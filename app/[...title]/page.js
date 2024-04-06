@@ -57,8 +57,10 @@ const md = new MarkdownIt({
 			return `<div class="custom-container error">\n<p class="custom-container-title error">${info || 'Error'}</p>\n`;
 		}
 	})
-	.use(tasklist)
-	.use(multimdTable);
+	.use(tasklist, {
+		disabled: false
+	})
+	.use(multimdTable)
 
 function markdownToHtml(markdown) {
 	const fmRegex = /---(.*?)---/gs;

@@ -16,6 +16,10 @@ body {
   ;
 }
 
+a:hover {
+  color: #8b5cf6;
+}
+
 /* 自定义容器 */
 
 .custom-container {
@@ -93,8 +97,4 @@ blockquote>p::before {
 blockquote>p::after {
   content: close-quote;
   margin-left: 5px;
-}
-
-blockquote a:hover {
-  color: #8b5cf6;
 }
