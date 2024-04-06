@@ -63,14 +63,16 @@ export default function Article({ content }) {
 				dangerouslySetInnerHTML={{ __html: content }}></article>
 			<Catalog catalog={catalog} isShowCatalog={isShowCatalog} />
 			<FloatButton.Group shape='circle' style={{ right: 24 }}>
-				<FloatButton
-					type='primary'
-					icon={<ProfileOutlined />}
-					tooltip={<span>目录</span>}
-					onClick={() => {
-						setIsShowCatalog(!isShowCatalog);
-					}}
-				/>
+				{catalog.length > 0 ? (
+					<FloatButton
+						type='primary'
+						icon={<ProfileOutlined />}
+						tooltip={<span>目录</span>}
+						onClick={() => {
+							setIsShowCatalog(!isShowCatalog);
+						}}
+					/>
+				) : null}
 				<FloatButton
 					type='primary'
 					icon={<HomeOutlined />}
