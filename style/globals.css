@@ -2,6 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'CaskaydiaCoveNerdFontMono';
+  src: url('/fonts/CaskaydiaCoveNerdFontMono-Regular.woff2');
+}
+
+body {
+  font-variant-numeric: tabular-nums;
+  font-family: 'CaskaydiaCoveNerdFontMono', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+    'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+    'Noto Color Emoji';
+  ;
+}
+
 .custom-container {
   border: 1px solid transparent;
   border-radius: 8px;
@@ -17,22 +30,22 @@
 
 .custom-container.info {
   color: rgba(60, 60, 67);
-  background-color: rgba(142, 150, 170, .14);
+  background-color: rgba(142, 150, 170, .24);
 }
 
 .custom-container.tip {
   color: rgba(60, 60, 67);
-  background-color: rgba(100, 108, 255, .14);
+  background-color: rgba(100, 108, 255, .24);
 }
 
 .custom-container.warning {
   color: rgba(60, 60, 67);
-  background-color: rgba(234, 179, 8, .14);
+  background-color: rgba(234, 179, 8, .24);
 }
 
 .custom-container.error {
   color: rgba(60, 60, 67);
-  background-color: rgba(244, 63, 94, .14);
+  background-color: rgba(244, 63, 94, .24);
 }
 
 .custom-container-title {
@@ -43,4 +56,17 @@
 
 .MathJax>svg {
   display: inline;
+}
+
+mark {
+  background-color: transparent;
+  color: #D6192C;
+}
+
+p>img {
+  @apply shadow-lg rounded-lg hover:shadow-xl transition-all;
+}
+
+code {
+  font-family: 'CaskaydiaCoveNerdFontMono';
 }

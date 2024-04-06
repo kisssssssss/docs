@@ -3,6 +3,7 @@
     "antd",
     "Appstore",
     "autolabel",
+    "Caskaydia",
     "chtml",
     "headerless",
     "highlightjs",
@@ -14,6 +15,7 @@
     "multibody",
     "multimd",
     "nextjs",
+    "nums",
     "rowspan",
     "tailwindcss"
   ],

@@ -125,7 +125,7 @@ const index = () => {
 
 	return (
 		<div>
-			<canvas ref={canvasRef} width='400' height='400' className='fixed top-0 left-0 right-0 bottom-0 pointer-events-none z-10' />
+			<canvas ref={canvasRef} width='400' height='400' className='fixed top-0 left-0 right-0 bottom-0 pointer-events-none -z-[1]' />
 		</div>
 	);
 };
