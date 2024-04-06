@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* 引入代码字体 */
 @font-face {
   font-family: 'CaskaydiaCoveNerdFontMono';
   src: url('/fonts/CaskaydiaCoveNerdFontMono-Regular.woff2');
@@ -14,6 +15,8 @@ body {
     'Noto Color Emoji';
   ;
 }
+
+/* 自定义容器 */
 
 .custom-container {
   border: 1px solid transparent;
@@ -54,19 +57,18 @@ body {
   @apply my-0 !important;
 }
 
+/* 优化数学公式显示 */
 .MathJax>svg {
   display: inline;
 }
 
+/* markdown高亮样式修改 */
 mark {
   background-color: transparent;
   color: #D6192C;
 }
 
+/* 图片样式优化 */
 p>img {
   @apply shadow-lg rounded-lg hover:shadow-xl transition-all;
-}
-
-code {
-  font-family: 'CaskaydiaCoveNerdFontMono';
 }

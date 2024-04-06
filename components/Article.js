@@ -7,7 +7,7 @@ export default function Article({content}) {
 	return (
 		<>
 			<article
-				className='prose mx-auto px-6 my-20 sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-[896px] xl:max-w-screen-[1120px]'
+				className='prose prose-pre:font-[CaskaydiaCoveNerdFontMono] mx-auto px-6 my-20 sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-[896px] xl:max-w-screen-[1120px]'
 				dangerouslySetInnerHTML={{ __html: content }}></article>
 			<FloatButton
 				type='primary'
