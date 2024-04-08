@@ -52,7 +52,6 @@ export default function Article({ content }) {
 				}
 			}
 		}
-		console.log(res);
 		setCatalog(res);
 	}, [content]);
 

@@ -11,6 +11,18 @@ export default function Home({ docs }) {
 			router.push(info.node.path);
 		}
 	};
+
+	const links = [
+		{
+			title: 'Home',
+			link: 'https://kisssssssss.space/'
+		},
+		{
+			title: 'Github',
+			link: 'https://github.com/kisssssssss/docs'
+		}
+	];
+
 	return (
 		<main className='max-w-[1200px] mx-auto flex flex-col lg:flex-row lg:mt-20'>
 			<div className='w-full lg:w-fit flex flex-col justify-center lg:justify-start items-center mt-10 lg:mt-0'>
@@ -20,11 +32,14 @@ export default function Home({ docs }) {
 					alt=''></img>
 
 				<div className='mx-auto mt-6 mb-3'>
-					<p
-						className='w-full text-center mt-2 mb-1 mx-2 lg:mx-0 text-sm inline lg:inline-block text-gray-700 hover:text-violet-500 no-underline hover:underline hover:underline-offset-4 hover:decoration-dashed cursor-pointer'
-						onClick={() => router.push('https://kisssssssss.space/')}>
-						Home
-					</p>
+					{links.map((item, index) => (
+						<p
+							key={index}
+							onClick={() => (item.link.includes('kis') ? router.push(item.link) : window.open(item.link, '_blank'))}
+							className='w-full text-center mt-2 mb-1 mx-2 lg:mx-0 text-sm inline lg:inline-block text-gray-700 hover:text-violet-500 no-underline hover:underline hover:underline-offset-4 hover:decoration-dashed cursor-pointer'>
+							{item.title}
+						</p>
+					))}
 				</div>
 			</div>
 			<div className='w-full px-16 max-w-[86vw] mx-auto mt-8'>
