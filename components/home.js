@@ -35,7 +35,7 @@ export default function Home({ docs }) {
 					{links.map((item, index) => (
 						<p
 							key={index}
-							onClick={() => (item.link.includes('kis') ? router.push(item.link) : window.open(item.link, '_blank'))}
+							onClick={() => (item.link.includes('kisssssssss.space') ? router.push(item.link) : window.open(item.link, '_blank'))}
 							className='w-full text-center mt-2 mb-1 mx-2 lg:mx-0 text-sm inline lg:inline-block text-gray-700 hover:text-violet-500 no-underline hover:underline hover:underline-offset-4 hover:decoration-dashed cursor-pointer'>
 							{item.title}
 						</p>
