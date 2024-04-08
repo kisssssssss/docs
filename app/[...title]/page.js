@@ -5,7 +5,7 @@ import Article from '../../components/Article';
 import yaml from 'js-yaml';
 import hljs from 'highlight.js';
 import MarkdownIt from 'markdown-it';
-import anchor from "markdown-it-anchor"
+import anchor from 'markdown-it-anchor';
 import mathjax from 'markdown-it-mathjax3';
 import multimdTable from 'markdown-it-multimd-table';
 import { sup } from '@mdit/plugin-sup';
@@ -35,34 +35,38 @@ const md = new MarkdownIt({
 		name: 'info',
 		openRender: (tokens, index, _options) => {
 			const info = tokens[index].info.trim().trim();
-			return `<div class="custom-container info">\n<p class="custom-container-title info">${info || 'Info'}</p>\n`;
+			return `<div class="custom-container info">`;
+			// return `<div class="custom-container info">\n<p class="custom-container-title info">${info || 'Info'}</p>\n`;
 		}
 	})
 	.use(container, {
 		name: 'tip',
 		openRender: (tokens, index, _options) => {
 			const info = tokens[index].info.trim().trim();
-			return `<div class="custom-container tip">\n<p class="custom-container-title tip">${info || 'Tip'}</p>\n`;
+			return `<div class="custom-container tip">`;
+			// return `<div class="custom-container tip">\n<p class="custom-container-title tip">${info || 'Tip'}</p>\n`;
 		}
 	})
 	.use(container, {
 		name: 'warning',
 		openRender: (tokens, index, _options) => {
 			const info = tokens[index].info.trim().trim();
-			return `<div class="custom-container warning">\n<p class="custom-container-title warning">${info || 'Warning'}</p>\n`;
+			return `<div class="custom-container warning">`;
+			// return `<div class="custom-container warning">\n<p class="custom-container-title warning">${info || 'Warning'}</p>\n`;
 		}
 	})
 	.use(container, {
 		name: 'error',
 		openRender: (tokens, index, _options) => {
 			const info = tokens[index].info.trim().trim();
-			return `<div class="custom-container error">\n<p class="custom-container-title error">${info || 'Error'}</p>\n`;
+			return `<div class="custom-container error">`;
+			// return `<div class="custom-container error">\n<p class="custom-container-title error">${info || 'Error'}</p>\n`;
 		}
 	})
 	.use(tasklist, {
 		disabled: false
 	})
-	.use(multimdTable)
+	.use(multimdTable);
 
 function markdownToHtml(markdown) {
 	const fmRegex = /---(.*?)---/gs;
