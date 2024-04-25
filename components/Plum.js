@@ -104,8 +104,6 @@ const index = () => {
 			steps = [
 				() => step(random() * size.width, 0, r90),
 				() => step(random() * size.width, size.height, -r90),
-				() => step(0, random() * size.height, 0),
-				() => step(size.width, random() * size.height, r180)
 			];
 			if (size.width < 500) steps = steps.slice(0, 2);
 		};
