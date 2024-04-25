@@ -1,7 +1,9 @@
 import fs from 'fs';
 import path from 'path';
+import { notFound } from 'next/navigation';
 import Article from '../../components/Article';
 
+// 把 markdown 抽离到其它文件后，vercel会显示500错误
 import yaml from 'js-yaml';
 import hljs from 'highlight.js';
 import MarkdownIt from 'markdown-it';
@@ -76,12 +78,29 @@ function markdownToHtml(markdown) {
 	};
 }
 
-export default async function Page(props) {
-	const title = props.params.title.map(item => decodeURI(item));
-	const mdPath = path.join(process.cwd(), 'docs', `${path.join(...title)}.md`);
+// 实现缓存
+const renderResult = new Map();
 
-	const mdSource = await fs.promises.readFile(mdPath, 'utf-8');
-	const mdHtml = markdownToHtml(mdSource).content;
+export default async function Page(props) {
+	const title = path.join(...props.params.title.map(item => decodeURI(item)));
+
+	// 渲染结果
+	let mdHtml;
+
+	if (renderResult.has(title)) {
+		mdHtml = renderResult.get(title);
+	} else {
+		// 获取文件路径
+		const mdPath = path.join(process.cwd(), 'docs', `${title}.md`);
+		// 判断文件是否存在
+		if (!fs.existsSync(mdPath)) return notFound();
+		// 读取文件
+		const mdFile = await fs.promises.readFile(mdPath, 'utf-8');
+		// 获取渲染结果
+		mdHtml = markdownToHtml(mdFile).content;
+		// 缓存
+		renderResult.set(title, mdHtml);
+	}
 
 	return <Article content={mdHtml} />;
 }
