@@ -1,5 +1,5 @@
 #toggle {
-	background-color: #fa0;
+	background-color: #a78bfa;
 	border-radius: 5px;
 	bottom: 66px;
 	color: #fff;
@@ -23,7 +23,7 @@
 }
 
 #live2d-container {
-	bottom: -1000px;
+	bottom: -5px;
 	left: 0;
 	line-height: 0;
 	margin-bottom: -10px;
@@ -98,15 +98,14 @@
 }
 
 #tool svg {
-	fill: #7b8c9d;
 	cursor: pointer;
 	height: 25px;
+	color: #7b8c9d;
 	transition: fill .3s;
 }
 
 #tool svg:hover {
-	fill: #0684bd;
-	/* #34495e */
+	color: #a78bfa;
 }
 
 @keyframes shake {

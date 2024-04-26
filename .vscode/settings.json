@@ -5,12 +5,15 @@
     "autolabel",
     "Caskaydia",
     "chtml",
+    "fontawesome",
+    "fortawesome",
     "headerless",
     "highlightjs",
     "hoverable",
     "katex",
     "kisssssssss",
     "linkify",
+    "loadlive",
     "mathjax",
     "mdit",
     "multibody",
@@ -18,7 +21,9 @@
     "nextjs",
     "nums",
     "rowspan",
-    "tailwindcss"
+    "svgs",
+    "tailwindcss",
+    "xmark"
   ],
   "css.customData": [".vscode/tailwindcss.json"],
 }
