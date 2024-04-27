@@ -16,6 +16,8 @@ export default function RootLayout({ children }) {
 	return (
 		<html lang='en'>
 			<body>
+				<script src='https://unpkg.com/oh-my-live2d@latest'></script>
+
 				<AntdRegistry>{children}</AntdRegistry>
 				<Plum />
 				<Live2d />
