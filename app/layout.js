@@ -15,10 +15,6 @@ export const metadata = {
 export default function RootLayout({ children }) {
 	return (
 		<html lang='en'>
-			<head>
-				<link rel='stylesheet' href='/live2d/live2d.css'></link>
-				<script src='/live2d/live2d.min.js'></script>
-			</head>
 			<body>
 				<AntdRegistry>{children}</AntdRegistry>
 				<Plum />
