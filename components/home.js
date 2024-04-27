@@ -31,7 +31,7 @@ export default function Home({ docs }) {
 	const router = useRouter();
 	const onSelect = (keys, info) => {
 		if (info.node.isLeaf) {
-			router.push(info.node.path);
+			router.push(`/docs/${info.node.path}`);
 		}
 	};
 

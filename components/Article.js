@@ -75,20 +75,6 @@ export default function Article({ content }) {
 				) : null}
 				<FloatButton
 					type='primary'
-					icon={'Live2D'}
-					tooltip={<span>live2d</span>}
-					onClick={() => {
-						if (Boolean(Cookies.get('live2d'))) {
-							Cookies.set('live2d', 'false', { expires: 365 });
-							window.location.reload();
-						} else {
-							Cookies.set('live2d', 'true', { expires: 365 });
-							window.location.reload();
-						}
-					}}
-				/>
-				<FloatButton
-					type='primary'
 					icon={<HomeOutlined />}
 					tooltip={<span>回到主页</span>}
 					onClick={() => {
