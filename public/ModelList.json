@@ -1,5 +1,6 @@
 [
     {
+        "title": "阿贝克隆比",
         "name": "abeikelongbi_3",
         "position": [
             0,
@@ -9,9 +10,11 @@
         "stageStyle": {
             "height": 400,
             "width": 300
-        }
+        },
+        "cover": "https://img.moegirl.org.cn/common/1/16/BLHX_%E9%98%BF%E8%B4%9D%E5%85%8B%E9%9A%86%E6%AF%94%E7%9A%AE%E8%82%A42%E5%9B%BD%E9%99%85%E6%9C%8D%E5%AE%98%E5%AE%A3%E5%9B%BE.jpg"
     },
     {
+        "title": "爱宕",
         "name": "aidang_2",
         "position": [
             0,
@@ -21,9 +24,11 @@
         "stageStyle": {
             "height": 400,
             "width": 300
-        }
+        },
+        "cover": "https://patchwiki.biligame.com/images/blhx/thumb/8/8b/p5diwmi5wj1x9w4g4p9liqc3d9a79k8.jpg/450px-%E7%88%B1%E5%AE%95%E8%AA%93%E7%BA%A6%E5%AE%98%E6%96%B9%E6%B5%B7%E6%8A%A5.jpg"
     },
     {
+        "title": "埃吉尔",
         "name": "aijier_2",
         "position": [
             -50,
@@ -33,9 +38,11 @@
         "stageStyle": {
             "height": 300,
             "width": 300
-        }
+        },
+        "cover": "https://patchwiki.biligame.com/images/blhx/thumb/8/83/jb0ecayjw62xmrn5czilswodvpqb0md.jpg/577px-%E5%9F%83%E5%90%89%E5%B0%94%E6%8D%A2%E8%A3%85%E6%97%A5%E6%9C%8D%E9%A2%84%E5%91%8A.jpg"
     },
     {
+        "title": "埃吉尔",
         "name": "aijier_3",
         "position": [
             -70,
@@ -45,9 +52,11 @@
         "stageStyle": {
             "height": 470,
             "width": 280
-        }
+        },
+        "cover": "https://patchwiki.biligame.com/images/blhx/thumb/d/d6/2w5qk0tmamf103hf8cw9xnihui00e4l.jpg/577px-%E5%9F%83%E5%90%89%E5%B0%94%E6%8D%A2%E8%A3%852%E6%97%A5%E6%9C%8D%E9%A2%84%E5%91%8A.jpg"
     },
     {
+        "title": "埃米尔·贝尔汀",
         "name": "aimierbeierding_3",
         "position": [
             -180,
@@ -57,9 +66,11 @@
         "stageStyle": {
             "height": 400,
             "width": 250
-        }
+        },
+        "cover": "https://patchwiki.biligame.com/images/blhx/thumb/4/47/dbmiqp6kph4sfwgaaenn54k0c3iw1tv.jpg/842px-%E5%9F%83%E7%B1%B3%E5%B0%94%C2%B7%E8%B4%9D%E5%B0%94%E6%B1%80%E6%8D%A2%E8%A3%852%E5%AE%98%E6%96%B9%E6%B5%B7%E6%8A%A5.jpg"
     },
     {
+        "title": "安克雷奇",
         "name": "ankeleiqi_2",
         "position": [
             -200,
@@ -69,9 +80,11 @@
         "stageStyle": {
             "height": 300,
             "width": 350
-        }
+        },
+        "cover": "https://patchwiki.biligame.com/images/blhx/thumb/8/82/mknesec7b0akyemsi6p8x1lgrd604i0.jpg/992px-%E5%AE%89%E5%85%8B%E9%9B%B7%E5%A5%87%E6%8D%A2%E8%A3%85%E5%AE%98%E6%96%B9%E6%B5%B7%E6%8A%A5.jpg"
     },
     {
+        "title": "巴尔的摩",
         "name": "baerdimo_6",
         "position": [
             -250,
@@ -81,9 +94,11 @@
         "stageStyle": {
             "height": 400,
             "width": 300
-        }
+        },
+        "cover": "https://patchwiki.biligame.com/images/blhx/thumb/d/de/0y052iwxrku8h9h4y78gf91av1kuk8e.jpg/690px-%E5%B7%B4%E5%B0%94%E7%9A%84%E6%91%A9%E6%8D%A2%E8%A3%855%E6%97%A5%E6%9C%8D%E9%A2%84%E5%91%8A.jpg"
     },
     {
+        "title": "贝尔法斯特",
         "name": "beierfasite_2",
         "position": [
             -120,
@@ -93,9 +108,11 @@
         "stageStyle": {
             "height": 450,
             "width": 250
-        }
+        },
+        "cover": "https://patchwiki.biligame.com/images/blhx/thumb/3/31/qtp0wqeopn2js4qb8vw7aojomwzlkhl.jpg/334px-%E8%B4%9D%E5%B0%94%E6%B3%95%E6%96%AF%E7%89%B9%E6%8D%A2%E8%A3%85%E5%AE%98%E6%96%B9%E6%B5%B7%E6%8A%A5.jpg"
     },
     {
+        "title": "北卡罗来纳",
         "name": "beikaluolaina_2",
         "position": [
             -190,
@@ -105,9 +122,11 @@
         "stageStyle": {
             "height": 350,
             "width": 400
-        }
+        },
+        "cover": "https://patchwiki.biligame.com/images/blhx/thumb/6/6c/5e5tvfmj4x7medsrhz2jki1iyrblra3.jpg/928px-%E5%8C%97%E5%8D%A1%E7%BD%97%E6%9D%A5%E7%BA%B3%E6%8D%A2%E8%A3%85%E5%AE%98%E6%96%B9%E6%B5%B7%E6%8A%A5.jpg"
     },
     {
+        "title": "俾斯麦",
         "name": "bisimai_2",
         "position": [
             -200,
@@ -117,9 +136,11 @@
         "stageStyle": {
             "height": 350,
             "width": 350
-        }
+        },
+        "cover": "https://patchwiki.biligame.com/images/blhx/thumb/9/90/egjvq00gj6ni1605021ds5aps30c9fu.jpg/344px-%E4%BF%BE%E6%96%AF%E9%BA%A6%E6%8D%A2%E8%A3%85%E5%AE%98%E6%96%B9%E6%B5%B7%E6%8A%A5.jpg"
     },
     {
+        "title": "博伊西",
         "name": "boyixi_2",
         "position": [
             -200,
@@ -129,9 +150,11 @@
         "stageStyle": {
             "height": 400,
             "width": 300
-        }
+        },
+        "cover": "https://patchwiki.biligame.com/images/blhx/thumb/f/f7/fsygwf3bc65jeze57wqc8ov7ujhacbz.jpg/770px-%E5%8D%9A%E4%BC%8A%E8%A5%BF%E6%8D%A2%E8%A3%85%E5%AE%98%E6%96%B9%E6%B5%B7%E6%8A%A5.jpg"
     },
     {
+        "title": "柴郡",
         "name": "chaijun_3",
         "position": [
             -200,
@@ -141,9 +164,11 @@
         "stageStyle": {
             "height": 400,
             "width": 300
-        }
+        },
+        "cover": "https://patchwiki.biligame.com/images/blhx/thumb/b/ba/o1yyg834vias52gnzhk3d09s5tcj31p.jpg/827px-%E6%9F%B4%E9%83%A1%E6%8D%A2%E8%A3%852%E5%AE%98%E6%96%B9%E6%B5%B7%E6%8A%A5.jpg"
     },
     {
+        "title": "大凤",
         "name": "dafeng_2",
         "position": [
             -150,
@@ -153,9 +178,11 @@
         "stageStyle": {
             "height": 450,
             "width": 330
-        }
+        },
+        "cover": "https://patchwiki.biligame.com/images/blhx/thumb/1/1c/8o84jlspc1zsi1q13ki4mf13sezcl3h.jpg/334px-%E5%A4%A7%E5%87%A4%E6%8D%A2%E8%A3%85%E5%AE%98%E6%96%B9%E6%B5%B7%E6%8A%A5.jpg"
     },
     {
+        "title": "大凤",
         "name": "dafeng_3",
         "position": [
             -35,
@@ -165,9 +192,11 @@
         "stageStyle": {
             "height": 300,
             "width": 350
-        }
+        },
+        "cover": "https://patchwiki.biligame.com/images/blhx/thumb/5/5b/39bdarus6lyb5bct6a6bve0nsfhzegq.jpg/1030px-%E5%A4%A7%E5%87%A4%E6%8D%A2%E8%A3%854%E5%AE%98%E6%96%B9%E6%B5%B7%E6%8A%A5.jpg"
     },
     {
+        "title": "大凤",
         "name": "dafeng_4",
         "position": [
             -160,
@@ -177,9 +206,11 @@
         "stageStyle": {
             "height": 400,
             "width": 300
-        }
+        },
+        "cover": "https://patchwiki.biligame.com/images/blhx/thumb/6/6a/07pesacitg6ijl45ld2y8yyqfcvifdb.jpg/819px-%E5%A4%A7%E5%87%A4%E6%8D%A2%E8%A3%852%E5%AE%98%E6%96%B9%E6%B5%B7%E6%8A%A5.jpg"
     },
     {
+        "title": "大凤",
         "name": "dafeng_6",
         "position": [
             -80,
@@ -189,9 +220,11 @@
         "stageStyle": {
             "height": 300,
             "width": 350
-        }
+        },
+        "cover": "https://patchwiki.biligame.com/images/blhx/thumb/2/24/k8nip9sp0qbvr6z70k8viexa6i8zpiz.jpg/672px-%E5%A4%A7%E5%87%A4%E6%8D%A2%E8%A3%855%E6%97%A5%E6%9C%8D%E9%A2%84%E5%91%8A.jpg"
     },
     {
+        "title": "敦刻尔克",
         "name": "dunkeerke_2",
         "position": [
             -130,
@@ -201,9 +234,11 @@
         "stageStyle": {
             "height": 450,
             "width": 300
-        }
+        },
+        "cover": "https://patchwiki.biligame.com/images/blhx/thumb/9/95/k58gdwz4lq8jsiwozsik17livy9qbhh.jpg/312px-%E6%95%A6%E5%88%BB%E5%B0%94%E5%85%8B%E6%8D%A2%E8%A3%85%E5%AE%98%E6%96%B9%E6%B5%B7%E6%8A%A5%E6%97%A0%E6%B0%B4%E5%8D%B0%E7%89%88.jpg"
     },
     {
+        "title": "(未搜索到)",
         "name": "edu_4",
         "position": [
             -340,
@@ -213,9 +248,11 @@
         "stageStyle": {
             "height": 450,
             "width": 300
-        }
+        },
+        "cover": ""
     },
     {
+        "title": "戈里齐亚",
         "name": "geliqiya_2",
         "position": [
             -170,
@@ -225,9 +262,11 @@
         "stageStyle": {
             "height": 450,
             "width": 300
-        }
+        },
+        "cover": "https://patchwiki.biligame.com/images/blhx/thumb/b/b2/dbqbvxgvxitkgnkxe2ae4idunbzmead.jpg/732px-%E6%88%88%E9%87%8C%E9%BD%90%E4%BA%9A%E6%8D%A2%E8%A3%85%E5%AE%98%E6%96%B9%E6%B5%B7%E6%8A%A5.jpg"
     },
     {
+        "title": "光荣",
         "name": "guangrong_3",
         "position": [
             -80,
@@ -237,9 +276,11 @@
         "stageStyle": {
             "height": 400,
             "width": 300
-        }
+        },
+        "cover": "https://patchwiki.biligame.com/images/blhx/thumb/7/7d/qikhiug47mnm9e01pmrug2shhsn8ggh.jpg/827px-%E5%85%89%E8%8D%A3%E6%8D%A2%E8%A3%852%E5%AE%98%E6%96%B9%E6%B5%B7%E6%8A%A5.jpg"
     },
     {
+        "title": " 海伦娜",
         "name": "hailunna_4",
         "position": [
             -100,
@@ -249,9 +290,11 @@
         "stageStyle": {
             "height": 400,
             "width": 300
-        }
+        },
+        "cover": "https://patchwiki.biligame.com/images/blhx/thumb/0/01/s37vaqdgyho7pvry442vfph2bhgyotz.jpg/748px-%E6%B5%B7%E4%BC%A6%E5%A8%9C%E6%8D%A2%E8%A3%853%E5%AE%98%E6%96%B9%E6%B5%B7%E6%8A%A5.jpg"
     },
     {
+        "title": "赫敏",
         "name": "hemin_2",
         "position": [
             -100,
@@ -261,9 +304,11 @@
         "stageStyle": {
             "height": 400,
             "width": 300
-        }
+        },
+        "cover": "https://patchwiki.biligame.com/images/blhx/thumb/f/f6/ohw5e6a6dvjmb0nudwx4u79or17bigw.jpg/782px-%E8%B5%AB%E6%95%8F%E6%8D%A2%E8%A3%852%E5%AE%98%E6%96%B9%E6%B5%B7%E6%8A%A5.jpg"
     },
     {
+        "title": "赫敏",
         "name": "hemin_3",
         "position": [
             -170,
@@ -273,9 +318,11 @@
         "stageStyle": {
             "height": 400,
             "width": 300
-        }
+        },
+        "cover": "https://patchwiki.biligame.com/images/blhx/thumb/8/85/6q23gt9phaxzydbum6kqdrk360l8ni3.jpg/834px-%E8%B5%AB%E6%95%8F%E6%8D%A2%E8%A3%85%E5%AE%98%E6%96%B9%E6%B5%B7%E6%8A%A5.jpg"
     },
     {
+        "title": "㭴野",
         "name": "jianye_2",
         "position": [
             -120,
@@ -285,9 +332,11 @@
         "stageStyle": {
             "height": 300,
             "width": 350
-        }
+        },
+        "cover": "https://patchwiki.biligame.com/images/blhx/thumb/9/95/rvei0j9gottu1462uxekzkdavunabn8.jpg/510px-%E6%A8%AB%E9%87%8E%E6%8D%A2%E8%A3%85%E6%97%A5%E6%9C%8D%E9%A2%84%E5%91%8A.jpg.png"
     },
     {
+        "title": "㭴野",
         "name": "jianye_3",
         "position": [
             -140,
@@ -297,9 +346,11 @@
         "stageStyle": {
             "height": 300,
             "width": 350
-        }
+        },
+        "cover": "https://patchwiki.biligame.com/images/blhx/thumb/1/13/hu32pm6jhab3jbxperx956kns0qms0y.jpg/577px-%E6%A8%AB%E9%87%8E%E6%8D%A2%E8%A3%852%E6%97%A5%E6%9C%8D%E9%A2%84%E5%91%8A.jpg"
     },
     {
+        "title": "喀琅施塔得",
         "name": "kalangshitade_2",
         "position": [
             -250,
@@ -309,9 +360,11 @@
         "stageStyle": {
             "height": 500,
             "width": 300
-        }
+        },
+        "cover": "https://patchwiki.biligame.com/images/blhx/thumb/2/2a/ft6cku76sh7zop66z21qad1o70aespi.jpg/681px-%E5%96%80%E7%90%85%E6%96%BD%E5%A1%94%E5%BE%97%E6%8D%A2%E8%A3%85%E5%AE%98%E6%96%B9%E6%B5%B7%E6%8A%A5.jpg"
     },
     {
+        "title": "卡律布狄斯",
         "name": "kalvbudisi_2",
         "position": [
             -200,
@@ -321,9 +374,11 @@
         "stageStyle": {
             "height": 400,
             "width": 300
-        }
+        },
+        "cover": "https://patchwiki.biligame.com/images/blhx/thumb/5/50/d1ts301mrypu0ls66mtey2686ak0gev.jpg/577px-%E5%8D%A1%E5%BE%8B%E5%B8%83%E7%8B%84%E6%96%AF%E6%8D%A2%E8%A3%85%E6%97%A5%E6%9C%8D%E9%A2%84%E5%91%8A.jpg"
     },
     {
+        "title": "库尔斯克",
         "name": "kuersike_2",
         "position": [
             -120,
@@ -333,9 +388,11 @@
         "stageStyle": {
             "height": 400,
             "width": 300
-        }
+        },
+        "cover": "https://patchwiki.biligame.com/images/blhx/thumb/5/56/1i4l8mdd0hfwxn7buy9xwux621fpm29.jpg/574px-%E5%BA%93%E5%B0%94%E6%96%AF%E5%85%8B%E6%8D%A2%E8%A3%85%E6%97%A5%E6%9C%8D%E9%A2%84%E5%91%8A.jpg"
     },
     {
+        "title": "拉菲",
         "name": "lafei_4",
         "position": [
             -120,
@@ -345,9 +402,11 @@
         "stageStyle": {
             "height": 400,
             "width": 300
-        }
+        },
+        "cover": "https://patchwiki.biligame.com/images/blhx/thumb/9/9a/s2qhusok9y7zede0lgz8tduoy6i86u6.jpg/234px-%E6%8B%89%E8%8F%B2%E6%8D%A2%E8%A3%853%E5%AE%98%E6%96%B9%E6%B5%B7%E6%8A%A5.jpg"
     },
     {
+        "title": "路易九世",
         "name": "luyijiushi_2",
         "position": [
             -50,
@@ -357,9 +416,11 @@
         "stageStyle": {
             "height": 400,
             "width": 300
-        }
+        },
+        "cover": "https://patchwiki.biligame.com/images/blhx/thumb/8/85/t96o7b5qxbrjt25e9tvdchmutqdpoaq.jpg/815px-%E8%B7%AF%E6%98%93%E4%B9%9D%E4%B8%96%E6%8D%A2%E8%A3%85%E5%AE%98%E6%96%B9%E6%B5%B7%E6%8A%A5.jpg"
     },
     {
+        "title": "欧根亲王",
         "name": "ougen_5",
         "position": [
             -250,
@@ -369,9 +430,11 @@
         "stageStyle": {
             "height": 400,
             "width": 300
-        }
+        },
+        "cover": "https://patchwiki.biligame.com/images/blhx/thumb/e/ed/cijekw0a9jvqancme6a1sm2aecby2l5.jpg/595px-%E6%AC%A7%E6%A0%B9%E4%BA%B2%E7%8E%8B%E6%8D%A2%E8%A3%854%E5%AE%98%E6%96%B9%E6%B5%B7%E6%8A%A5.jpg"
     },
     {
+        "title": "欧根亲王",
         "name": "ougen_6",
         "position": [
             -220,
@@ -381,9 +444,11 @@
         "stageStyle": {
             "height": 400,
             "width": 300
-        }
+        },
+        "cover": "https://patchwiki.biligame.com/images/blhx/thumb/7/7e/05xlg522fqu7gmgs2i6s584511oeiyz.jpg/687px-%E6%AC%A7%E6%A0%B9%E4%BA%B2%E7%8E%8B%E6%8D%A2%E8%A3%855%E5%AE%98%E6%96%B9%E6%B5%B7%E6%8A%A5.jpg"
     },
     {
+        "title": "欧若拉",
         "name": "ouruola_4",
         "position": [
             -100,
@@ -393,9 +458,11 @@
         "stageStyle": {
             "height": 400,
             "width": 300
-        }
+        },
+        "cover": "https://patchwiki.biligame.com/images/blhx/thumb/9/91/bhl6a3shobgol8iysauvmf8qqb36rps.jpg/750px-%E6%AC%A7%E8%8B%A5%E6%8B%89%E6%8D%A2%E8%A3%853%E5%AE%98%E6%96%B9%E6%B5%B7%E6%8A%A5.jpg"
     },
     {
+        "title": "企业",
         "name": "qiye_7",
         "position": [
             -200,
@@ -405,9 +472,11 @@
         "stageStyle": {
             "height": 450,
             "width": 300
-        }
+        },
+        "cover": "https://patchwiki.biligame.com/images/blhx/thumb/1/1c/jhcjkl3a958gpj57vnmrh5scuasused.jpg/447px-%E4%BC%81%E4%B8%9A%E6%8D%A2%E8%A3%856%E5%AE%98%E6%96%B9%E6%B5%B7%E6%8A%A5.jpg"
     },
     {
+        "title": "企业",
         "name": "qiye_9",
         "position": [
             -150,
@@ -417,9 +486,11 @@
         "stageStyle": {
             "height": 400,
             "width": 300
-        }
+        },
+        "cover": "https://patchwiki.biligame.com/images/blhx/thumb/6/61/mucmwtz6w9wb1b1n565wbejldd0c737.jpg/468px-%E4%BC%81%E4%B8%9A%E6%8D%A2%E8%A3%858%E5%AE%98%E6%96%B9%E6%B5%B7%E6%8A%A5.jpg"
     },
     {
+        "title": "圣路易斯",
         "name": "shengluyisi_2",
         "position": [
             -80,
@@ -429,9 +500,11 @@
         "stageStyle": {
             "height": 420,
             "width": 300
-        }
+        },
+        "cover": "https://patchwiki.biligame.com/images/blhx/thumb/c/c3/grez9jtdmn003rmlm6deyhaxzbms2fq.gif/402px-%E5%9C%A3%E8%B7%AF%E6%98%93%E6%96%AF%E6%8D%A2%E8%A3%85LIVE2D.gif"
     },
     {
+        "title": "圣路易斯",
         "name": "shengluyisi_4",
         "position": [
             -30,
@@ -441,9 +514,11 @@
         "stageStyle": {
             "height": 450,
             "width": 300
-        }
+        },
+        "cover": "https://patchwiki.biligame.com/images/blhx/4/41/ozx7ngien5i2f56trb5eye86wt19zjx.jpg"
     },
     {
+        "title": "天城",
         "name": "tiancheng_3",
         "position": [
             -180,
@@ -453,9 +528,11 @@
         "stageStyle": {
             "height": 300,
             "width": 400
-        }
+        },
+        "cover": "https://patchwiki.biligame.com/images/blhx/thumb/9/9d/2x8niwvjxxyoem9v7k5j6qc1pduhhxi.png/992px-%E5%A4%A9%E5%9F%8E%E6%8D%A2%E8%A3%852%E5%AE%98%E6%96%B9%E6%B5%B7%E6%8A%A5.png.jpeg"
     },
     {
+        "title": "天狼星",
         "name": "tianlangxing_3",
         "position": [
             -140,
@@ -465,9 +542,11 @@
         "stageStyle": {
             "height": 450,
             "width": 300
-        }
+        },
+        "cover": "https://patchwiki.biligame.com/images/blhx/thumb/5/5c/61zdw9yjhn62ijw9qrkyj03xfbmgguj.jpg/312px-%E5%A4%A9%E7%8B%BC%E6%98%9F%E6%8D%A2%E8%A3%852%E5%AE%98%E6%96%B9%E6%B5%B7%E6%8A%A5.jpg"
     },
     {
+        "title": "（未搜索到）",
         "name": "wuqi_2",
         "position": [
             -150,
@@ -477,9 +556,11 @@
         "stageStyle": {
             "height": 450,
             "width": 300
-        }
+        },
+        "cover": ""
     },
     {
+        "title": "信浓",
         "name": "xinnong_3",
         "position": [
             -170,
@@ -489,9 +570,11 @@
         "stageStyle": {
             "height": 400,
             "width": 300
-        }
+        },
+        "cover": "https://patchwiki.biligame.com/images/blhx/thumb/c/c2/r9v0b6lkzbdxyncwd99qy6ievsfkk16.jpg/690px-%E4%BF%A1%E6%B5%93%E6%8D%A2%E8%A3%852%E6%97%A5%E6%9C%8D%E9%A2%84%E5%91%8A.jpg"
     },
     {
+        "title": "新泽西",
         "name": "xinzexi_3",
         "position": [
             -150,
@@ -501,9 +584,11 @@
         "stageStyle": {
             "height": 400,
             "width": 300
-        }
+        },
+        "cover": "https://patchwiki.biligame.com/images/blhx/thumb/5/5e/fci5ihdkuhcvk3mkunq7kiv4bffxtfo.jpg/560px-%E6%96%B0%E6%B3%BD%E8%A5%BF%E6%8D%A2%E8%A3%852%E6%97%A5%E6%9C%8D%E9%A2%84%E5%91%8A.jpg"
     },
     {
+        "title": "絮库夫",
         "name": "xukufu_3",
         "position": [
             -80,
@@ -513,9 +598,11 @@
         "stageStyle": {
             "height": 450,
             "width": 300
-        }
+        },
+        "cover": ""
     },
     {
+        "title": "雅努斯",
         "name": "yanusi_3",
         "position": [
             -160,
@@ -525,9 +612,11 @@
         "stageStyle": {
             "height": 400,
             "width": 300
-        }
+        },
+        "cover": "https://patchwiki.biligame.com/images/blhx/thumb/9/96/teodz3c75inygiuyvcci8rq95gnwix2.jpg/668px-%E9%9B%85%E5%8A%AA%E6%96%AF%E6%8D%A2%E8%A3%85%E6%97%A5%E6%9C%8D%E9%A2%84%E5%91%8A.jpg"
     },
     {
+        "title": "埃尔斯贝特",
         "name": "yibei_3",
         "position": [
             -100,
@@ -537,6 +626,7 @@
         "stageStyle": {
             "height": 450,
             "width": 300
-        }
+        },
+        "cover": "https://patchwiki.biligame.com/images/blhx/thumb/f/f9/aj216i7oxb149yu7e9ik7elvfpnthod.jpg/790px-%E6%98%93%E5%8C%97%E6%8D%A2%E8%A3%852%E5%AE%98%E6%96%B9%E6%B5%B7%E6%8A%A5.jpg"
     }
 ]
