@@ -1,7 +1,10 @@
+import dynamic from 'next/dynamic';
 import { AntdRegistry } from '@ant-design/nextjs-registry';
 
 import Plum from '../components/Plum';
-import Live2d from '../components/Live2d';
+const Live2d = dynamic(() => import('../components/Live2d'), {
+  ssr: false,
+})
 
 import '../style/globals.css';
 import '../style/normalize.css';
