@@ -45,7 +45,7 @@ const live2d = memo(() => {
 									body: { padding: '12px 16px' }
 								}}
 								cover={<img className='my-0 object-cover  w-[160px] h-[160px]' alt='' src={item.cover} loading='lazy' />}>
-								<Meta title={item.title} description={item.description} />
+								<Meta title={item.title}  description={item.description} />
 							</Card>
 						))}
 					</Space>
