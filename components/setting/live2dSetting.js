@@ -24,7 +24,7 @@ const live2d = memo(() => {
 		const list = JSON.parse(localStorage.getItem('modelsList') || '{}');
 
 		const renderResult = [];
-		const keyMap = { Azur: '碧蓝航线' };
+		const keyMap = { Azur: '碧蓝航线', BengHuai2: '崩坏学园2' };
 
 		// 获取模型预览图
 		let count = 0;
@@ -62,7 +62,7 @@ const live2d = memo(() => {
 					{Object.keys(list).map(key => (
 						<span
 							key={`type_${key}`}
-							className='hover:text-violet-500 hover:underline underline-offset-4 cursor-pointer'
+							className='mx-4 hover:text-violet-500 hover:underline underline-offset-4 cursor-pointer'
 							onClick={() => {
 								document.getElementById(key).scrollIntoView();
 							}}>

@@ -675,5 +675,115 @@
             },
             "cover": "https://cdn.jsdelivr.net/gh/kisssssssss/IMG@main/20240428230825.png"
         }
+    ],
+    "BengHuai2": [
+        {
+            "name": "bronya",
+            "position": [
+                -15,
+                0
+            ],
+            "scale": 0.13,
+            "stageStyle": {
+                "height": 350,
+                "width": 300
+            }
+        },
+        {
+            "name": "BYC",
+            "position": [
+                -15,
+                -50
+            ],
+            "scale": 0.13,
+            "stageStyle": {
+                "height": 350,
+                "width": 300
+            }
+        },
+        {
+            "name": "kaguya",
+            "position": [
+                -50,
+                0
+            ],
+            "scale": 0.2,
+            "stageStyle": {
+                "height": 400,
+                "width": 350
+            }
+        },
+        {
+            "name": "keluoyi",
+            "position": [
+                -50,
+                0
+            ],
+            "scale": 0.2,
+            "stageStyle": {
+                "height": 400,
+                "width": 350
+            }
+        },
+        {
+            "name": "Kiro",
+            "position": [
+                -80,
+                20
+            ],
+            "scale": 0.22,
+            "stageStyle": {
+                "height": 450,
+                "width": 300
+            }
+        },
+        {
+            "name": "Lita",
+            "position": [
+                -60,
+                20
+            ],
+            "scale": 0.22,
+            "stageStyle": {
+                "height": 450,
+                "width": 300
+            }
+        },
+        {
+            "name": "Nindi",
+            "position": [
+                20,
+                0
+            ],
+            "scale": 0.09,
+            "stageStyle": {
+                "height": 450,
+                "width": 300
+            }
+        },
+        {
+            "name": "xier",
+            "position": [
+                30,
+                20
+            ],
+            "scale": 0.15,
+            "stageStyle": {
+                "height": 450,
+                "width": 300
+            }
+        },
+        {
+            "name": "'xilin2.1'",
+            "position": [
+                -100,
+                -90
+            ],
+            "scale": 0.2,
+            "stageStyle": {
+                "height": 450,
+                "width": 400
+            }
+        }
     ]
 }

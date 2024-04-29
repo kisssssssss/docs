@@ -3,8 +3,8 @@ import { AntdRegistry } from '@ant-design/nextjs-registry';
 
 import Plum from '../components/Plum';
 const Live2d = dynamic(() => import('../components/Live2d'), {
-  ssr: false,
-})
+	ssr: false
+});
 
 import '../style/globals.css';
 import '../style/normalize.css';
@@ -18,9 +18,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
 	return (
 		<html lang='en'>
+			<head>
+				<link rel='dns-prefetch' href='//cdn.jsdelivr.net' />
+			</head>
 			<body>
 				<script src='https://unpkg.com/oh-my-live2d@latest'></script>
-
 				<AntdRegistry>{children}</AntdRegistry>
 				<Plum />
 				<Live2d />

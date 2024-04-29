@@ -17,13 +17,28 @@ const Live2d = memo(() => {
 					// 生成模型数组
 					let models = [];
 					for (const key in response) {
-						const temp = response[key].map(item => ({
-							name: item.name,
-							position: item.position.map(e => Number(e)),
-							scale: Number(item.scale),
-							stageStyle: item.stageStyle,
-							path: `/model/${key}/${item.name}/${item.name}.model3.json`
-						}));
+						if (key == 'Azur') continue;
+
+						const temp = response[key].map(item => {
+							// 获取模型文件路径（由于修改模型文件名称费劲，因此暂时用这个方法，如果统一修改模型文件名再修改此段代码）
+							let path;
+							switch (key) {
+								case 'Azur':
+									path = `https://cdn.jsdelivr.net/gh/kisssssssss/docs/public/model/${key}/${item.name}/${item.name}.model3.json`;
+									break;
+								case 'BengHuai2':
+									path = `https://cdn.jsdelivr.net/gh/kisssssssss/docs/public/model/${key}/${item.name}/model.json`;
+									break;
+							}
+
+							return {
+								name: item.name,
+								position: item.position.map(e => Number(e)),
+								scale: Number(item.scale),
+								stageStyle: item.stageStyle,
+								path
+							};
+						});
 						models.push(...temp);
 					}
 
