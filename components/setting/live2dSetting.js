@@ -5,21 +5,33 @@ import { Switch, Card, Divider, Space, FloatButton } from 'antd';
 import { SwapLeftOutlined, ArrowUpOutlined } from '@ant-design/icons';
 import Cookies from 'js-cookie';
 
+import { oml2d } from '../Live2d.js';
+
 const { Meta } = Card;
 
 const live2d = memo(() => {
 	const router = useRouter();
 
+	//	live2d 是否启用
+	const live2d_enable = Cookies.get('live2d_enable') == 'true';
+
 	// 启用/禁用 Live2d
-	const change = useCallback(checked => {
-		Cookies.set('live2d_open', checked, { expires: 365 });
-		// 通过 setTimeout 防止 Switch 卡顿
+	const enableLive2d = useCallback(checked => {
+		Cookies.set('live2d_enable', checked, { expires: 365 });
+		Cookies.set('live2d_mounted', 'false');
+
+		// 通过 setTimeout 防止 Switch组件动画 卡顿
 		setTimeout(() => window.location.reload(), 100);
+	}, []);
+
+	// 模型切换
+	const changeModel = useCallback(modelIndex => {
+		console.log(modelIndex);
 	}, []);
 
 	// 模型列表
 	const ModelList = useCallback(() => {
-		if (Cookies.get('live2d_open') != 'true') return <></>;
+		if (!live2d_enable) return <></>;
 
 		const list = JSON.parse(localStorage.getItem('modelsList') || '{}');
 
@@ -29,28 +41,31 @@ const live2d = memo(() => {
 		// 获取模型预览图
 		let count = 0;
 		for (const key in list) {
-			count += list[key].length;
-
 			renderResult.push(
 				<div key={key} id={key}>
 					<p className='text-lg font-bold'>{keyMap[key]}</p>
 					<Space wrap size='large'>
-						{list[key].map(item => (
-							<Card
-								key={item.name}
-								hoverable
-								style={{ width: 160 }}
-								styles={{
-									cover: { width: '160px', height: '160px', overflow: 'hidden' },
-									body: { padding: '12px 16px' }
-								}}
-								cover={<img className='my-0 object-cover  w-[160px] h-[160px]' alt='' src={item.cover} loading='lazy' />}>
-								<Meta title={item.title}  description={item.description} />
-							</Card>
-						))}
+						{list[key].map((item, index) => {
+							const currentCount = count + index;
+							return (
+								<Card
+									hoverable
+									key={item.name}
+									style={{ width: 160 }}
+									cover={<img className='my-0 object-cover  w-[160px] h-[160px]' alt='' src={item.cover} loading='lazy' />}
+									styles={{
+										cover: { width: '160px', height: '160px', overflow: 'hidden' },
+										body: { padding: '12px 16px' }
+									}}
+									onClick={() => changeModel(currentCount)}>
+									<Meta title={item.title} description={item.description} />
+								</Card>
+							);
+						})}
 					</Space>
 				</div>
 			);
+			count += list[key].length;
 		}
 
 		// 获取模型数量及类型
@@ -87,7 +102,7 @@ const live2d = memo(() => {
 			/>
 			<div className='flex items-center justify-between'>
 				<p className='inline-block text-xl font-bold'>显示 Live2D</p>
-				<Switch defaultChecked={Cookies.get('live2d_open') == 'true'} onChange={change} />
+				<Switch defaultChecked={live2d_enable} onChange={enableLive2d} />
 			</div>
 			<Divider />
 			<ModelList />

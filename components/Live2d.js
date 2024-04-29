@@ -8,11 +8,10 @@ const publicModel = [];
 const Live2d = memo(() => {
 	useEffect(() => {
 		(async function () {
-			if (Cookies.get('live2d_open') == 'true') {
+			if (Cookies.get('live2d_enable') == 'true' && Cookies.get('live2d_mounted') != 'true') {
 				try {
-					// 获取并存储 模型信息
+					// 获取模型信息
 					const response = await (await fetch('/ModelList.json')).json();
-					localStorage.setItem('modelsList', JSON.stringify(response));
 
 					// 生成模型数组
 					let models = [];
@@ -42,8 +41,8 @@ const Live2d = memo(() => {
 						models.push(...temp);
 					}
 
-					// 加载模型
-					const oml2d = loadOml2d({
+					// 加载模型并挂载到 window
+					window.oml2d = loadOml2d({
 						primaryColor: '#8b5cf6',
 						models
 						// 模型筛选
@@ -76,6 +75,12 @@ const Live2d = memo(() => {
 					// 			return;
 					// 	}
 					// });
+
+					// 存储模型信息
+					localStorage.setItem('modelsList', JSON.stringify(response));
+
+					// 设置 live2d 挂载标志
+					Cookies.set('live2d_mounted', 'true');
 				} catch (error) {}
 			}
 		})();
