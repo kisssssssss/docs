@@ -62,7 +62,7 @@
         },
         {
             "title": "埃米尔·贝尔汀",
-            "description": "无背景",
+            "description": "有背景",
             "name": "aimierbeierding_3",
             "position": [
                 -180,
@@ -137,7 +137,7 @@
         },
         {
             "title": "俾斯麦",
-            "description": "无背景",
+            "description": "有背景",
             "name": "bisimai_2",
             "position": [
                 -200,
@@ -256,7 +256,7 @@
             "cover": "https://cdn.jsdelivr.net/gh/kisssssssss/IMG@main/20240428225750.png"
         },
         {
-            "title": "(未搜索到)",
+            "title": "恶毒",
             "description": "有背景",
             "name": "edu_4",
             "position": [
@@ -572,7 +572,7 @@
         },
         {
             "title": "天狼星",
-            "description": "无背景",
+            "description": "有背景",
             "name": "tianlangxing_3",
             "position": [
                 -140,
@@ -586,8 +586,8 @@
             "cover": "https://cdn.jsdelivr.net/gh/kisssssssss/IMG@main/20240428230558.png"
         },
         {
-            "title": "（未搜索到）",
-            "description": "无背景",
+            "title": "吾妻",
+            "description": "有背景",
             "name": "wuqi_2",
             "position": [
                 -150,
@@ -662,7 +662,7 @@
         },
         {
             "title": "埃尔斯贝特",
-            "description": "无背景",
+            "description": "有背景",
             "name": "yibei_3",
             "position": [
                 -100,
@@ -802,6 +802,368 @@
                 "width": 400
             },
             "cover": "https://cdn.jsdelivr.net/gh/kisssssssss/IMG@main/20240429135158.png"
+        }
+    ],
+    "GirlsFrontline": [
+        {
+            "name": "88@destroy",
+            "position": [
+                -30,
+                -10
+            ],
+            "scale": 0.1,
+            "stageStyle": {
+                "height": 400,
+                "width": 300
+            }
+        },
+        {
+            "name": "88@normal",
+            "position": [
+                -100,
+                -5
+            ],
+            "scale": 0.08,
+            "stageStyle": {
+                "height": 450,
+                "width": 400
+            }
+        },
+        {
+            "name": "95@destroy",
+            "position": [
+                -40,
+                5
+            ],
+            "scale": 0.4,
+            "stageStyle": {
+                "height": 400,
+                "width": 350
+            }
+        },
+        {
+            "name": "dp12@destroy",
+            "position": [
+                -10,
+                20
+            ],
+            "scale": 0.04,
+            "stageStyle": {
+                "height": 400,
+                "width": 400
+            }
+        },
+        {
+            "name": "dsr50@destroy",
+            "position": [
+                -10,
+                0
+            ],
+            "scale": 0.07,
+            "stageStyle": {
+                "height": 400,
+                "width": 350
+            }
+        },
+        {
+            "name": "dsr50@normal",
+            "position": [
+                10,
+                -15
+            ],
+            "scale": 0.07,
+            "stageStyle": {
+                "height": 400,
+                "width": 400
+            }
+        },
+        {
+            "name": "dsr50_2101@destroy",
+            "position": [
+                -20,
+                -40
+            ],
+            "scale": 0.07,
+            "stageStyle": {
+                "height": 400,
+                "width": 400
+            }
+        },
+        {
+            "name": "dsr50_2101@normal",
+            "position": [
+                -30,
+                40
+            ],
+            "scale": 0.06,
+            "stageStyle": {
+                "height": 450,
+                "width": 350
+            }
+        },
+        {
+            "name": "g36c_3802@destroy",
+            "position": [
+                -10,
+                40
+            ],
+            "scale": 0.1,
+            "stageStyle": {
+                "height": 450,
+                "width": 350
+            }
+        },
+        {
+            "name": "g36c_3802@normal",
+            "position": [
+                -30,
+                35
+            ],
+            "scale": 0.1,
+            "stageStyle": {
+                "height": 450,
+                "width": 350
+            }
+        },
+        {
+            "name": "g41_2401@normal",
+            "position": [
+                0,
+                0
+            ],
+            "scale": 0.08,
+            "stageStyle": {
+                "height": 400,
+                "width": 400
+            }
+        },
+        {
+            "name": "generalliu_5101@destroy",
+            "position": [
+                -15,
+                -20
+            ],
+            "scale": 0.1,
+            "stageStyle": {
+                "height": 400,
+                "width": 400
+            }
+        },
+        {
+            "name": "hk416_805@normal",
+            "position": [
+                -30,
+                15
+            ],
+            "scale": 0.08,
+            "stageStyle": {
+                "height": 400,
+                "width": 350
+            }
+        },
+        {
+            "name": "k2_3301@destroy",
+            "position": [
+                -40,
+                50
+            ],
+            "scale": 0.1,
+            "stageStyle": {
+                "height": 350,
+                "width": 420
+            }
+        },
+        {
+            "name": "k2_3301@normal",
+            "position": [
+                -40,
+                40
+            ],
+            "scale": 0.09,
+            "stageStyle": {
+                "height": 400,
+                "width": 400
+            }
+        },
+        {
+            "name": "kp31_3101@destroy",
+            "position": [
+                -40,
+                40
+            ],
+            "scale": 0.07,
+            "stageStyle": {
+                "height": 450,
+                "width": 350
+            }
+        },
+        {
+            "name": "lewis_4001@destroy",
+            "position": [
+                -40,
+                35
+            ],
+            "scale": 0.09,
+            "stageStyle": {
+                "height": 400,
+                "width": 400
+            }
+        },
+        {
+            "name": "lewis_5501@normal",
+            "position": [
+                0,
+                10
+            ],
+            "scale": 0.1,
+            "stageStyle": {
+                "height": 400,
+                "width": 400
+            }
+        },
+        {
+            "name": "m950a_4302@normal",
+            "position": [
+                20,
+                0
+            ],
+            "scale": 0.1,
+            "stageStyle": {
+                "height": 400,
+                "width": 400
+            }
+        },
+        {
+            "name": "ots14_3001@destroy",
+            "position": [
+                0,
+                -10
+            ],
+            "scale": 0.1,
+            "stageStyle": {
+                "height": 400,
+                "width": 400
+            }
+        },
+        {
+            "name": "ots14_3001@normal",
+            "position": [
+                -20,
+                25
+            ],
+            "scale": 0.08,
+            "stageStyle": {
+                "height": 450,
+                "width": 350
+            }
+        },
+        {
+            "name": "pa15_3701@destroy",
+            "position": [
+                -30,
+                -20
+            ],
+            "scale": 0.15,
+            "stageStyle": {
+                "height": 450,
+                "width": 350
+            }
+        },
+        {
+            "name": "pa15_3701@normal",
+            "position": [
+                -10,
+                10
+            ],
+            "scale": 0.13,
+            "stageStyle": {
+                "height": 450,
+                "width": 350
+            }
+        },
+        {
+            "name": "r93_3501@destroy",
+            "position": [
+                -60,
+                -20
+            ],
+            "scale": 0.09,
+            "stageStyle": {
+                "height": 400,
+                "width": 400
+            }
+        },
+        {
+            "name": "r93_3501@normal",
+            "position": [
+                -140,
+                -20
+            ],
+            "scale": 0.09,
+            "stageStyle": {
+                "height": 400,
+                "width": 400
+            }
+        },
+        {
+            "name": "rfb_1601@destroy",
+            "position": [
+                -10,
+                0
+            ],
+            "scale": 0.1,
+            "stageStyle": {
+                "height": 450,
+                "width": 350
+            }
+        },
+        {
+            "name": "rfb_1601@normal",
+            "position": [
+                -10,
+                0
+            ],
+            "scale": 0.08,
+            "stageStyle": {
+                "height": 450,
+                "width": 350
+            }
+        },
+        {
+            "name": "type64-ar_2901@destroy",
+            "position": [
+                0,
+                0
+            ],
+            "scale": 0.11,
+            "stageStyle": {
+                "height": 450,
+                "width": 400
+            }
+        },
+        {
+            "name": "vector_1901@normal",
+            "position": [
+                0,
+                30
+            ],
+            "scale": 0.11,
+            "stageStyle": {
+                "height": 450,
+                "width": 400
+            }
+        },
+        {
+            "name": "zb26_4703@destroy",
+            "position": [
+                10,
+                50
+            ],
+            "scale": 0.1,
+            "stageStyle": {
+                "height": 400,
+                "width": 350
+            }
         }
     ]
 }

@@ -38,3 +38,5 @@ next-env.d.ts
 /live2d
 
 ignore
+
+public/model/test

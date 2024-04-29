@@ -5,8 +5,6 @@ import { Switch, Card, Divider, Space, FloatButton } from 'antd';
 import { SwapLeftOutlined, ArrowUpOutlined } from '@ant-design/icons';
 import Cookies from 'js-cookie';
 
-import { oml2d } from '../Live2d.js';
-
 const { Meta } = Card;
 
 const live2d = memo(() => {
@@ -18,7 +16,6 @@ const live2d = memo(() => {
 	// 启用/禁用 Live2d
 	const enableLive2d = useCallback(checked => {
 		Cookies.set('live2d_enable', checked, { expires: 365 });
-		Cookies.set('live2d_mounted', 'false');
 
 		// 通过 setTimeout 防止 Switch组件动画 卡顿
 		setTimeout(() => window.location.reload(), 100);
@@ -26,7 +23,9 @@ const live2d = memo(() => {
 
 	// 模型切换
 	const changeModel = useCallback(modelIndex => {
-		console.log(modelIndex);
+		if (window.oml2d && modelIndex) {
+			window.oml2d.loadSpecificModel(modelIndex);
+		}
 	}, []);
 
 	// 模型列表
@@ -36,14 +35,16 @@ const live2d = memo(() => {
 		const list = JSON.parse(localStorage.getItem('modelsList') || '{}');
 
 		const renderResult = [];
-		const keyMap = { Azur: '碧蓝航线', BengHuai2: '崩坏学园2' };
+		const keyMap = { Azur: '碧蓝航线', BengHuai2: '崩坏学园2', GirlsFrontline: '少女前线' };
 
 		// 获取模型预览图
 		let count = 0;
 		for (const key in list) {
 			renderResult.push(
 				<div key={key} id={key}>
-					<p className='text-lg font-bold'>{keyMap[key]}</p>
+					<p className='text-lg font-bold'>
+						{keyMap[key]} <span className='mx-2 text-base text-[#00000073] font-semibold'>数量：{list[key].length}</span>
+					</p>
 					<Space wrap size='large'>
 						{list[key].map((item, index) => {
 							const currentCount = count + index;
