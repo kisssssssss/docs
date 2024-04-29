@@ -678,6 +678,7 @@
     ],
     "BengHuai2": [
         {
+            "title": "布洛妮娅",
             "name": "bronya",
             "position": [
                 -15,
@@ -687,9 +688,11 @@
             "stageStyle": {
                 "height": 350,
                 "width": 300
-            }
+            },
+            "cover": "https://cdn.jsdelivr.net/gh/kisssssssss/IMG@main/20240429133112.png"
         },
         {
+            "title": "八重樱",
             "name": "BYC",
             "position": [
                 -15,
@@ -699,9 +702,11 @@
             "stageStyle": {
                 "height": 350,
                 "width": 300
-            }
+            },
+            "cover": "https://cdn.jsdelivr.net/gh/kisssssssss/IMG@main/20240429133145.png"
         },
         {
+            "title": "",
             "name": "kaguya",
             "position": [
                 -50,
@@ -711,9 +716,11 @@
             "stageStyle": {
                 "height": 400,
                 "width": 350
-            }
+            },
+            "cover": "https://cdn.jsdelivr.net/gh/kisssssssss/IMG@main/20240429133252.png"
         },
         {
+            "title": "",
             "name": "keluoyi",
             "position": [
                 -50,
@@ -723,9 +730,11 @@
             "stageStyle": {
                 "height": 400,
                 "width": 350
-            }
+            },
+            "cover": "https://cdn.jsdelivr.net/gh/kisssssssss/IMG@main/20240429134335.png"
         },
         {
+            "title": "",
             "name": "Kiro",
             "position": [
                 -80,
@@ -735,9 +744,11 @@
             "stageStyle": {
                 "height": 450,
                 "width": 300
-            }
+            },
+            "cover": "https://cdn.jsdelivr.net/gh/kisssssssss/IMG@main/20240429134422.png"
         },
         {
+            "title": "丽塔",
             "name": "Lita",
             "position": [
                 -60,
@@ -747,9 +758,11 @@
             "stageStyle": {
                 "height": 450,
                 "width": 300
-            }
+            },
+            "cover": "https://cdn.jsdelivr.net/gh/kisssssssss/IMG@main/20240429134501.png"
         },
         {
+            "title": "",
             "name": "Nindi",
             "position": [
                 20,
@@ -759,9 +772,11 @@
             "stageStyle": {
                 "height": 450,
                 "width": 300
-            }
+            },
+            "cover": "https://cdn.jsdelivr.net/gh/kisssssssss/IMG@main/20240429134518.png"
         },
         {
+            "title": "希儿",
             "name": "xier",
             "position": [
                 30,
@@ -771,9 +786,11 @@
             "stageStyle": {
                 "height": 450,
                 "width": 300
-            }
+            },
+            "cover": "https://cdn.jsdelivr.net/gh/kisssssssss/IMG@main/20240429134543.png"
         },
         {
+            "title": "西琳",
             "name": "xilin2.1",
             "position": [
                 -100,
@@ -783,7 +800,8 @@
             "stageStyle": {
                 "height": 450,
                 "width": 400
-            }
+            },
+            "cover": "https://cdn.jsdelivr.net/gh/kisssssssss/IMG@main/20240429135158.png"
         }
     ]
 }
