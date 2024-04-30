@@ -8,7 +8,7 @@ import Cookies from 'js-cookie';
 
 const { Meta } = Card;
 
-const keyMap = { Azur: '碧蓝航线', BengHuai2: '崩坏学园2', GirlsFrontline: '少女前线' };
+const keyMap = { Azur: '碧蓝航线', BengHuai2: '崩坏学园2', GirlsFrontline: '少女前线', sin: 'sin 七大罪～魔王崇拜～',VenusScramble:"女神大乱战" };
 
 const ModelList = memo(({ enable }) => {
 	if (!enable) return <></>;

@@ -4,6 +4,7 @@ import { loadOml2d } from 'oh-my-live2d';
 import Cookies from 'js-cookie';
 import getModelsList from '../utils/getModelsList';
 
+
 const publicModel = [];
 
 const Live2d = memo(() => {
@@ -51,11 +52,11 @@ const Live2d = memo(() => {
 						models
 						// models: publicModel.map(item => {
 						// 	return {
-						// 		path: `/model/test/${item}/${item.split('@')[1]}.model3.json`,
+						// 		path: `/model/test/${item}//${item}.model3.json`,
 						// 		name: item,
-						// 		position: [10, 50],
-						// 		scale: 0.1,
-						// 		stageStyle: { height: 400, width: 350 }
+						// 		position: [10, 30],
+						// 		scale: 0.15,
+						// 		stageStyle: { height: 400, width: 400 }
 						// 	};
 						// })
 					});
@@ -65,13 +66,13 @@ const Live2d = memo(() => {
 							case 'success':
 								console.log('模型: ' + oml2d.model.name + '加载成功');
 								console.log(oml2d.modelIndex);
-								// oml2d.showModelHitAreaFrames();
+								oml2d.showModelHitAreaFrames();
 								return;
 							case 'fail':
-								console.log('模型: ' + oml2d.model.name + '加载失败');
+								// console.log('模型: ' + oml2d.model.name + '加载失败');
 								return;
 							case 'loading':
-								console.log('模型: ' + oml2d.model.name + '正在加载中');
+								// console.log('模型: ' + oml2d.model.name + '正在加载中');
 								return;
 						}
 					});
