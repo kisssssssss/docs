@@ -12,7 +12,7 @@ const Live2d = memo(() => {
 			if (Cookies.get('live2d_enable') == 'true' && !window.live2d_mounted) {
 				try {
 					// 获取模型信息
-					const list = getModelsList();
+					const list = await getModelsList();
 
 					// 生成模型数组
 					let models = [];
