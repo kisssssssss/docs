@@ -1,25 +1,23 @@
 'use client';
-async function fetchModelList() {
+async function fetchModelList(newTime) {
 	const result = await (await fetch('/ModelList.json')).json();
 	localStorage.setItem('modelsList', JSON.stringify(result));
+	localStorage.setItem('modelsList_updateTime', newTime);
 	return result;
 }
 
 export default async function getModelsList() {
-	let newTime, res;
 	try {
-		res = localStorage.getItem('modelsList');
-		newTime = await (await fetch('/ModelListUpdateTime.json')).json();
+		let localTime = parseInt(localStorage.getItem('modelsList_updateTime'));
 
-		if (res) {
-			res = JSON.parse(res);
-			if (Object.hasOwnProperty.call(res, 'UpdateTime') && res.UpdateTime < newTime) {
-				return fetchModelList();
-			} else {
-				return res;
-			}
+		let newTime = (await (await fetch('/ModelListUpdateTime.json')).json()).UpdateTime;
+
+		console.log('最新模型列表发布时间: ', new Date(parseInt(newTime)).toLocaleString().replace(/:\d{1,2}$/, ' '));
+
+		if (!localTime || localTime < newTime) {
+			return await fetchModelList(newTime);
 		} else {
-			return fetchModelList();
+			return JSON.parse(localStorage.getItem('modelsList') || '{}');
 		}
 	} catch (error) {
 		console.log(error);

@@ -24,6 +24,10 @@ export default function Home({ docs }) {
 		{
 			title: 'Live2D',
 			link: '/setting/live2d'
+		},
+		{
+			title: 'Setting',
+			link: '/setting/base'
 		}
 	];
 

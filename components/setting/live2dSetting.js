@@ -8,7 +8,13 @@ import Cookies from 'js-cookie';
 
 const { Meta } = Card;
 
-const keyMap = { Azur: '碧蓝航线', BengHuai2: '崩坏学园2', GirlsFrontline: '少女前线', sin: 'sin 七大罪～魔王崇拜～',VenusScramble:"女神大乱战" };
+const keyMap = {
+	Azur: '碧蓝航线',
+	BengHuai2: '崩坏学园2',
+	GirlsFrontline: '少女前线',
+	Sin: 'sin 七大罪～魔王崇拜～',
+	VenusScramble: '女神大乱战'
+};
 
 const ModelList = memo(({ enable }) => {
 	if (!enable) return <></>;
@@ -19,8 +25,8 @@ const ModelList = memo(({ enable }) => {
 
 	// 模型切换
 	const changeModel = useCallback(modelIndex => {
-		if (window.oml2d && modelIndex) {
-			window.oml2d.loadSpecificModel(modelIndex);
+		if (window.oml2d.modelIndex != modelIndex) {
+			window.oml2d?.loadSpecificModel(modelIndex);
 		}
 	}, []);
 
@@ -59,6 +65,7 @@ const ModelList = memo(({ enable }) => {
 									);
 								})}
 							</Space>
+							<Divider />
 						</div>
 					);
 					count += list.current[key].length;
