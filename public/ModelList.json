@@ -806,6 +806,8 @@
     ],
     "GirlsFrontline": [
         {
+            "title": "88式",
+            "description": "默认立绘-重创",
             "name": "88@destroy",
             "position": [
                 -30,
@@ -815,9 +817,12 @@
             "stageStyle": {
                 "height": 400,
                 "width": 300
-            }
+            },
+            "cover": "https://cdn.jsdelivr.net/gh/kisssssssss/IMG@main/20240430114810.png"
         },
         {
+            "title": "88式",
+            "description": "默认立绘-正常",
             "name": "88@normal",
             "position": [
                 -100,
@@ -827,9 +832,12 @@
             "stageStyle": {
                 "height": 450,
                 "width": 400
-            }
+            },
+            "cover": "https://cdn.jsdelivr.net/gh/kisssssssss/IMG@main/20240430114845.png"
         },
         {
+            "title": "95式",
+            "description": "玉玲珑-重创",
             "name": "95@destroy",
             "position": [
                 -40,
@@ -839,9 +847,12 @@
             "stageStyle": {
                 "height": 400,
                 "width": 350
-            }
+            },
+            "cover": "https://cdn.jsdelivr.net/gh/kisssssssss/IMG@main/20240430114908.png"
         },
         {
+            "title": "DP-12",
+            "description": "花月夜行灯-重创",
             "name": "dp12@destroy",
             "position": [
                 -10,
@@ -851,9 +862,12 @@
             "stageStyle": {
                 "height": 400,
                 "width": 400
-            }
+            },
+            "cover": "https://cdn.jsdelivr.net/gh/kisssssssss/IMG@main/20240430114923.png"
         },
         {
+            "title": "DSR-50",
+            "description": "红牡丹-正常",
             "name": "dsr50@destroy",
             "position": [
                 -10,
@@ -863,9 +877,12 @@
             "stageStyle": {
                 "height": 400,
                 "width": 350
-            }
+            },
+            "cover": "https://cdn.jsdelivr.net/gh/kisssssssss/IMG@main/20240430114950.png"
         },
         {
+            "title": "DSR-50",
+            "description": "红牡丹-重创",
             "name": "dsr50@normal",
             "position": [
                 10,
@@ -875,9 +892,12 @@
             "stageStyle": {
                 "height": 400,
                 "width": 400
-            }
+            },
+            "cover": "https://cdn.jsdelivr.net/gh/kisssssssss/IMG@main/20240430115017.png"
         },
         {
+            "title": "DSR-50",
+            "description": "最高出价-重创",
             "name": "dsr50_2101@destroy",
             "position": [
                 -20,
@@ -887,9 +907,12 @@
             "stageStyle": {
                 "height": 400,
                 "width": 400
-            }
+            },
+            "cover": "https://cdn.jsdelivr.net/gh/kisssssssss/IMG@main/20240430115036.png"
         },
         {
+            "title": "DSR-50",
+            "description": "最高出价-正常",
             "name": "dsr50_2101@normal",
             "position": [
                 -30,
@@ -899,9 +922,12 @@
             "stageStyle": {
                 "height": 450,
                 "width": 350
-            }
+            },
+            "cover": "https://cdn.jsdelivr.net/gh/kisssssssss/IMG@main/20240430115105.png"
         },
         {
+            "title": "G36C",
+            "description": "灼眼的G36C-重创",
             "name": "g36c_3802@destroy",
             "position": [
                 -10,
@@ -911,9 +937,12 @@
             "stageStyle": {
                 "height": 450,
                 "width": 350
-            }
+            },
+            "cover": "https://cdn.jsdelivr.net/gh/kisssssssss/IMG@main/20240430115128.png"
         },
         {
+            "title": "G36C",
+            "description": "灼眼的G36C-正常",
             "name": "g36c_3802@normal",
             "position": [
                 -30,
@@ -923,9 +952,12 @@
             "stageStyle": {
                 "height": 450,
                 "width": 350
-            }
+            },
+            "cover": "https://cdn.jsdelivr.net/gh/kisssssssss/IMG@main/20240430115145.png"
         },
         {
+            "title": "G41",
+            "description": "沙滩朋克2064-正常",
             "name": "g41_2401@normal",
             "position": [
                 0,
@@ -935,9 +967,12 @@
             "stageStyle": {
                 "height": 400,
                 "width": 400
-            }
+            },
+            "cover": "https://cdn.jsdelivr.net/gh/kisssssssss/IMG@main/20240430115211.png"
         },
         {
+            "title": "刘氏步枪",
+            "description": "垂枝梦狐影-重创",
             "name": "generalliu_5101@destroy",
             "position": [
                 -15,
@@ -947,9 +982,12 @@
             "stageStyle": {
                 "height": 400,
                 "width": 400
-            }
+            },
+            "cover": "https://cdn.jsdelivr.net/gh/kisssssssss/IMG@main/20240430115228.png"
         },
         {
+            "title": "HK416",
+            "description": "星之茧-正常",
             "name": "hk416_805@normal",
             "position": [
                 -30,
@@ -959,9 +997,12 @@
             "stageStyle": {
                 "height": 400,
                 "width": 350
-            }
+            },
+            "cover": "https://cdn.jsdelivr.net/gh/kisssssssss/IMG@main/20240430115249.png"
         },
         {
+            "title": "K2",
+            "description": "黎明之前-重创",
             "name": "k2_3301@destroy",
             "position": [
                 -40,
@@ -971,9 +1012,12 @@
             "stageStyle": {
                 "height": 350,
                 "width": 420
-            }
+            },
+            "cover": "https://cdn.jsdelivr.net/gh/kisssssssss/IMG@main/20240430115326.png"
         },
         {
+            "title": "K2",
+            "description": "黎明之前-正常",
             "name": "k2_3301@normal",
             "position": [
                 -40,
@@ -983,9 +1027,12 @@
             "stageStyle": {
                 "height": 400,
                 "width": 400
-            }
+            },
+            "cover": "https://cdn.jsdelivr.net/gh/kisssssssss/IMG@main/20240430115347.png"
         },
         {
+            "title": "索米",
+            "description": "幸福使命-重创",
             "name": "kp31_3101@destroy",
             "position": [
                 -40,
@@ -995,9 +1042,12 @@
             "stageStyle": {
                 "height": 450,
                 "width": 350
-            }
+            },
+            "cover": "https://cdn.jsdelivr.net/gh/kisssssssss/IMG@main/20240430115417.png"
         },
         {
+            "title": "刘易斯",
+            "description": "圣夜约定-重创",
             "name": "lewis_4001@destroy",
             "position": [
                 -40,
@@ -1007,9 +1057,12 @@
             "stageStyle": {
                 "height": 400,
                 "width": 400
-            }
+            },
+            "cover": "https://cdn.jsdelivr.net/gh/kisssssssss/IMG@main/20240430115441.png"
         },
         {
+            "title": "刘易斯",
+            "description": "迎寒客-正常",
             "name": "lewis_5501@normal",
             "position": [
                 0,
@@ -1019,9 +1072,12 @@
             "stageStyle": {
                 "height": 400,
                 "width": 400
-            }
+            },
+            "cover": "https://cdn.jsdelivr.net/gh/kisssssssss/IMG@main/20240430115501.png"
         },
         {
+            "title": "M950A",
+            "description": "柳莺与蔷薇-正常",
             "name": "m950a_4302@normal",
             "position": [
                 20,
@@ -1031,9 +1087,12 @@
             "stageStyle": {
                 "height": 400,
                 "width": 400
-            }
+            },
+            "cover": "https://cdn.jsdelivr.net/gh/kisssssssss/IMG@main/20240430115524.png"
         },
         {
+            "title": "OTs-14",
+            "description": "紫雨心-重创",
             "name": "ots14_3001@destroy",
             "position": [
                 0,
@@ -1043,9 +1102,12 @@
             "stageStyle": {
                 "height": 400,
                 "width": 400
-            }
+            },
+            "cover": "https://cdn.jsdelivr.net/gh/kisssssssss/IMG@main/20240430115542.png"
         },
         {
+            "title": "OTs-14",
+            "description": "紫雨心-正常",
             "name": "ots14_3001@normal",
             "position": [
                 -20,
@@ -1055,9 +1117,12 @@
             "stageStyle": {
                 "height": 450,
                 "width": 350
-            }
+            },
+            "cover": "https://cdn.jsdelivr.net/gh/kisssssssss/IMG@main/20240430115614.png"
         },
         {
+            "title": "PA-15",
+            "description": "高校心跳物语-重创",
             "name": "pa15_3701@destroy",
             "position": [
                 -30,
@@ -1067,9 +1132,12 @@
             "stageStyle": {
                 "height": 450,
                 "width": 350
-            }
+            },
+            "cover": "https://cdn.jsdelivr.net/gh/kisssssssss/IMG@main/20240430115636.png"
         },
         {
+            "title": "PA-15",
+            "description": "高校心跳物语-正常",
             "name": "pa15_3701@normal",
             "position": [
                 -10,
@@ -1079,9 +1147,12 @@
             "stageStyle": {
                 "height": 450,
                 "width": 350
-            }
+            },
+            "cover": "https://cdn.jsdelivr.net/gh/kisssssssss/IMG@main/20240430115703.png"
         },
         {
+            "title": "R93",
+            "description": "长假幸运星-重创",
             "name": "r93_3501@destroy",
             "position": [
                 -60,
@@ -1091,9 +1162,12 @@
             "stageStyle": {
                 "height": 400,
                 "width": 400
-            }
+            },
+            "cover": "https://cdn.jsdelivr.net/gh/kisssssssss/IMG@main/20240430115743.png"
         },
         {
+            "title": "R93",
+            "description": "长假幸运星-正常",
             "name": "r93_3501@normal",
             "position": [
                 -140,
@@ -1103,9 +1177,12 @@
             "stageStyle": {
                 "height": 400,
                 "width": 400
-            }
+            },
+            "cover": "https://cdn.jsdelivr.net/gh/kisssssssss/IMG@main/20240430115801.png"
         },
         {
+            "title": "RFB",
+            "description": "RFB偷走圣诞节-重创",
             "name": "rfb_1601@destroy",
             "position": [
                 -10,
@@ -1115,9 +1192,12 @@
             "stageStyle": {
                 "height": 450,
                 "width": 350
-            }
+            },
+            "cover": "https://cdn.jsdelivr.net/gh/kisssssssss/IMG@main/20240430115835.png"
         },
         {
+            "title": "RFB",
+            "description": "RFB偷走圣诞节-正常",
             "name": "rfb_1601@normal",
             "position": [
                 -10,
@@ -1127,9 +1207,12 @@
             "stageStyle": {
                 "height": 450,
                 "width": 350
-            }
+            },
+            "cover": "https://cdn.jsdelivr.net/gh/kisssssssss/IMG@main/20240430115905.png"
         },
         {
+            "title": "64式自",
+            "description": "新年祈愿-重创",
             "name": "type64-ar_2901@destroy",
             "position": [
                 0,
@@ -1139,9 +1222,12 @@
             "stageStyle": {
                 "height": 450,
                 "width": 400
-            }
+            },
+            "cover": "https://cdn.jsdelivr.net/gh/kisssssssss/IMG@main/20240430115925.png"
         },
         {
+            "title": "维克托",
+            "description": "盲信者-正常",
             "name": "vector_1901@normal",
             "position": [
                 0,
@@ -1151,9 +1237,12 @@
             "stageStyle": {
                 "height": 450,
                 "width": 400
-            }
+            },
+            "cover": "https://cdn.jsdelivr.net/gh/kisssssssss/IMG@main/20240430115944.png"
         },
         {
+            "title": "ZB-26",
+            "description": "旖梦之隅-重创",
             "name": "zb26_4703@destroy",
             "position": [
                 10,
@@ -1163,7 +1252,8 @@
             "stageStyle": {
                 "height": 400,
                 "width": 350
-            }
+            },
+            "cover": "https://cdn.jsdelivr.net/gh/kisssssssss/IMG@main/20240430120007.png"
         }
     ]
 }

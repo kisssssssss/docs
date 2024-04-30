@@ -17,7 +17,7 @@ const Live2d = memo(() => {
 					let models = [];
 					for (const key in response) {
 						const temp = response[key].map(item => {
-							// 获取模型文件路径（由于修改模型文件名称费劲，因此暂时用这个方法，如果统一修改模型文件名再修改此段代码）
+							// 获取模型文件路径
 							let path = 'https://cdn.jsdelivr.net/gh/kisssssssss/docs/public';
 							switch (key) {
 								case 'Azur':
@@ -27,7 +27,7 @@ const Live2d = memo(() => {
 									path += `/model/${key}/${item.name}/model.json`;
 									break;
 								case 'GirlsFrontline':
-									path += `/model/test/${item}/${item.split('@')[1]}.model3.json`;
+									path += `/model/${key}/${item.name}/${item.name.split('@')[1]}.model3.json`;
 									break;
 							}
 
@@ -56,13 +56,14 @@ const Live2d = memo(() => {
 						// 	};
 						// })
 					});
+					console.log(oml2d);
 
 					oml2d.onLoad(status => {
 						switch (status) {
 							case 'success':
 								console.log('模型: ' + oml2d.model.name + '加载成功');
 								console.log(oml2d.modelIndex);
-								oml2d.showModelHitAreaFrames();
+								// oml2d.showModelHitAreaFrames();
 								return;
 							case 'fail':
 								console.log('模型: ' + oml2d.model.name + '加载失败');
@@ -78,7 +79,9 @@ const Live2d = memo(() => {
 
 					// 设置 live2d 挂载标志
 					window.live2d_mounted = true;
-				} catch (error) {}
+				} catch (error) {
+					console.error(error);
+				}
 			}
 		})();
 	}, []);
