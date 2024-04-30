@@ -2,6 +2,7 @@
 import React, { memo, useEffect } from 'react';
 import { loadOml2d } from 'oh-my-live2d';
 import Cookies from 'js-cookie';
+import getModelsList from '../utils/getModelsList';
 
 const publicModel = [];
 
@@ -11,12 +12,12 @@ const Live2d = memo(() => {
 			if (Cookies.get('live2d_enable') == 'true' && !window.live2d_mounted) {
 				try {
 					// 获取模型信息
-					const response = await (await fetch('/ModelList.json')).json();
+					const list = getModelsList();
 
 					// 生成模型数组
 					let models = [];
-					for (const key in response) {
-						const temp = response[key].map(item => {
+					for (const key in list) {
+						const temp = list[key].map(item => {
 							// 获取模型文件路径
 							let path = 'https://cdn.jsdelivr.net/gh/kisssssssss/docs/public';
 							switch (key) {
@@ -42,6 +43,8 @@ const Live2d = memo(() => {
 						models.push(...temp);
 					}
 
+					// 设置 live2d 挂载标志
+					window.live2d_mounted = true;
 					// 加载模型并挂载到 window
 					window.oml2d = loadOml2d({
 						primaryColor: '#8b5cf6',
@@ -56,7 +59,6 @@ const Live2d = memo(() => {
 						// 	};
 						// })
 					});
-					console.log(oml2d);
 
 					oml2d.onLoad(status => {
 						switch (status) {
@@ -73,13 +75,8 @@ const Live2d = memo(() => {
 								return;
 						}
 					});
-
-					// 存储模型信息
-					localStorage.setItem('modelsList', JSON.stringify(response));
-
-					// 设置 live2d 挂载标志
-					window.live2d_mounted = true;
 				} catch (error) {
+					window.live2d_mounted = false;
 					console.error(error);
 				}
 			}
