@@ -22,9 +22,10 @@ body {
   ;
 }
 
-a{
+a {
   @apply underline-offset-[6px];
 }
+
 a:hover {
   color: #8b5cf6;
 }
@@ -49,9 +50,19 @@ a:hover {
   background-color: rgba(142, 150, 170, .24);
 }
 
+.dark .custom-container.info {
+  color: #8e8e8e;
+  background-color: rgba(142, 150, 170, .4);
+}
+
 .custom-container.tip {
   color: rgba(60, 60, 67);
   background-color: rgba(100, 108, 255, .24);
+}
+
+.dark .custom-container.tip {
+  color: #8e8e8e;
+  background-color: rgba(100, 108, 255, .4);
 }
 
 .custom-container.warning {
@@ -59,9 +70,19 @@ a:hover {
   background-color: rgba(234, 179, 8, .24);
 }
 
+.dark .custom-container.warning {
+  color: #8e8e8e;
+  background-color: rgba(234, 179, 8, .4);
+}
+
 .custom-container.error {
   color: rgba(60, 60, 67);
   background-color: rgba(244, 63, 94, .24);
+}
+
+.dark .custom-container.error {
+  color: #8e8e8e;
+  background-color: rgba(244, 63, 94, .4);
 }
 
 .custom-container-title {
@@ -83,7 +104,7 @@ mark {
 
 /* 图片样式优化 */
 p>img {
-  @apply shadow-lg rounded-lg hover:shadow-xl transition-all;
+  @apply shadow-lg rounded-lg hover:shadow-xl transition-all dark:brightness-[.6];
 }
 
 /* 行内代码块优化 */
@@ -108,7 +129,22 @@ blockquote>p::after {
   margin-left: 5px;
 }
 
-/* 隐藏目录滚动条 */
-#Catalog::-webkit-scrollbar {
+/* 隐藏文章页的抽屉目录滚动条 */
+.ant-drawer-body::-webkit-scrollbar {
   display: none;
+}
+
+.ant-drawer-body {
+  -ms-overflow-style: none;
+}
+
+/* Antd 树形菜单选中样式优化 */
+.ant-tree.ant-tree-directory .ant-tree-treenode-selected::before,
+.ant-tree.ant-tree-directory .ant-tree-treenode:hover:before {
+  border-radius: 4px !important;
+  margin-left: -10px !important;
+}
+
+.ant-tree-treenode .ant-tree-treenode-switcher-close {
+  height: 42px !important;
 }

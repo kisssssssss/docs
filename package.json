@@ -21,6 +21,7 @@
     "@mdit/plugin-tasklist": "^0.8.0",
     "@tailwindcss/typography": "^0.5.10",
     "antd": "^5.15.3",
+    "babel-plugin-styled-components": "^2.1.4",
     "highlight.js": "^11.9.0",
     "js-cookie": "^3.0.5",
     "js-yaml": "^4.1.0",
