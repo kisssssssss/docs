@@ -19,18 +19,18 @@ const Live2d = memo(() => {
 					for (const key in list) {
 						const temp = list[key].map(item => {
 							// 获取模型文件路径
-							let path = 'https://cdn.jsdelivr.net/gh/kisssssssss/docs/public';
+							let path = 'https://cdn.jsdelivr.net/gh/kisssssssss/model/live2d';
 							switch (key) {
 								case 'Azur':
 								case 'Sin':
-									path += `/model/${key}/${item.name}/${item.name}.model3.json`;
+									path += `/${key}/${item.name}/${item.name}.model3.json`;
 									break;
 								case 'BengHuai2':
 								case 'VenusScramble':
-									path += `/model/${key}/${item.name}/model.json`;
+									path += `/${key}/${item.name}/model.json`;
 									break;
 								case 'GirlsFrontline':
-									path += `/model/${key}/${item.name}/${item.name.split('@')[1]}.model3.json`;
+									path += `/${key}/${item.name}/${item.name.split('@')[1]}.model3.json`;
 									break;
 							}
 
