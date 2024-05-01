@@ -3,7 +3,7 @@ title: react初体验
 index: 1
 ---
 
-![](../../../images/WEB/react/Snipaste_1.png)
+![](https://cdn.jsdelivr.net/gh/kisssssssss/IMG/docs/WEB/react/Snipaste_1.png)
 
 ## React 是什么
 
@@ -20,7 +20,7 @@ React 的官网文档（旧版）：https://zh-hans.legacy.reactjs.org/docs/gett
 - 声明式编程是目前整个大前端开发的模式：Vue、React、Flutter、SwiftUI
 - 它允许我们只需要维护自己的状态，当状态改变时，React 可以根据最新的状态去渲染我们的 UI 界面
 
-![](../../../images/WEB/react/Snipaste_2.png)
+![](https://cdn.jsdelivr.net/gh/kisssssssss/IMG/docs/WEB/react/Snipaste_2.png)
 
 ### 组件化开发
 

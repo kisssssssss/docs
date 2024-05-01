@@ -22,7 +22,7 @@ index: 5
 
 <br/>
 
-![](../../../images/WEB/react/43.png)
+![](https://cdn.jsdelivr.net/gh/kisssssssss/IMG/docs/WEB/react/43.png)
 
 ## React 的组件化
 
@@ -31,7 +31,7 @@ index: 5
 组件化提供了一种抽象，让我们可以开发出一个个独立可复用的小组件来构造我们的应用。
 任何的应用都会被抽象成一颗组件树。
 
-![](../../../images/WEB/react/44.png)
+![](https://cdn.jsdelivr.net/gh/kisssssssss/IMG/docs/WEB/react/44.png)
 
 1. 组件化思想的应用：
    有了组件化的思想，我们在之后的开发中就要充分的利用它。尽可能的将页面拆分成一个个小的、可复用的组件。这样让我们的代码更加方便组织和管理，并且扩展性也更强。
@@ -146,7 +146,7 @@ index: 5
     }
     ```
 
-    ![](../../../images/WEB/react/45.png)
+    ![](https://cdn.jsdelivr.net/gh/kisssssssss/IMG/docs/WEB/react/45.png)
 
     ```tsx
     render() {
@@ -158,7 +158,7 @@ index: 5
     }
     ```
 
-    ![](../../../images/WEB/react/46.png)
+    ![](https://cdn.jsdelivr.net/gh/kisssssssss/IMG/docs/WEB/react/46.png)
 
 3.  **Portals**(后续学习)：
 
@@ -242,7 +242,7 @@ React 组件也有自己的生命周期，了解组件的生命周期可以让�
 
 ### 生命周期函数
 
-![](../../../images/WEB/react/47.png)
+![](https://cdn.jsdelivr.net/gh/kisssssssss/IMG/docs/WEB/react/47.png)
 
 ---
 
@@ -292,7 +292,7 @@ componentDidMount 中通常进行哪里操作呢？
 
 ### 不常用生命周期函数
 
-![](../../../images/WEB/react/48.jpg)
+![](https://cdn.jsdelivr.net/gh/kisssssssss/IMG/docs/WEB/react/48.jpg)
 
 #### [getDerivedStateFromProps](https://zh-hans.react.dev/reference/react/Component#static-getderivedstatefromprops)
 
@@ -334,15 +334,15 @@ state 的值在任何时候都依赖于 props 时使用；该方法返回一个�
 
 ---
 
-![](../../../images/WEB/react/50.png)
+![](https://cdn.jsdelivr.net/gh/kisssssssss/IMG/docs/WEB/react/50.png)
 
-![](../../../images/WEB/react/51.png)
+![](https://cdn.jsdelivr.net/gh/kisssssssss/IMG/docs/WEB/react/51.png)
 
 上面的嵌套逻辑如下，它们存在如下关系：
 App 组件是 Header、Main、Footer 组件的父组件；
 Main 组件是 Banner、ProductList 组件的父组件；
 
-![](../../../images/WEB/react/49.png)
+![](https://cdn.jsdelivr.net/gh/kisssssssss/IMG/docs/WEB/react/49.png)
 
 ## 组件间的通信
 
@@ -359,7 +359,7 @@ Main 组件是 Banner、ProductList 组件的父组件；
 - 父组件通过   属性=值   的形式来传递给子组件数据；
 - 子组件通过  props  参数获取父组件传递过来的数据；
 
-![](../../../images/WEB/react/52.png)
+![](https://cdn.jsdelivr.net/gh/kisssssssss/IMG/docs/WEB/react/52.png)
 
 > [详细教程参考官方文档](https://zh-hans.react.dev/learn/passing-props-to-a-component#forwarding-props-with-the-jsx-spread-syntax)
 
@@ -395,10 +395,10 @@ npm install --save prop-types
 ```
 
 使用 prop-types
-![](../../../images/WEB/react/53.png)
+![](https://cdn.jsdelivr.net/gh/kisssssssss/IMG/docs/WEB/react/53.png)
 
 默认参数
-![](../../../images/WEB/react/54.png)
+![](https://cdn.jsdelivr.net/gh/kisssssssss/IMG/docs/WEB/react/54.png)
 
 > [prop-types 详细介绍](https://zh-hans.legacy.reactjs.org/docs/typechecking-with-proptypes.html)
 
@@ -491,7 +491,7 @@ export default Child;
 
 效果
 
-![](../../../images/WEB/react/55.gif)
+![](https://cdn.jsdelivr.net/gh/kisssssssss/IMG/docs/WEB/react/55.gif)
 
 ::: details APP.jsx
 
@@ -599,7 +599,7 @@ export default TabControl;
 
 我们应该让使用者可以决定某一块区域到底存放什么内容。
 
-![](../../../images/WEB/react/56.png)
+![](https://cdn.jsdelivr.net/gh/kisssssssss/IMG/docs/WEB/react/56.png)
 
 上面这种需求在 Vue 当中有一个固定的做法是通过 slot 来完成的，但是 react 没有插槽该如何实现？
 
@@ -832,7 +832,7 @@ const Context = React.createContext();
 ### 如何实现一个 Context
 
 ::: info 代码目录结构
-![](../../../images/WEB/react/58.png)
+![](https://cdn.jsdelivr.net/gh/kisssssssss/IMG/docs/WEB/react/58.png)
 :::
 
 #### 创建 Context
@@ -953,7 +953,7 @@ export default function HomeInfo() {
 }
 ```
 
-![](../../../images/WEB/react/57.png)
+![](https://cdn.jsdelivr.net/gh/kisssssssss/IMG/docs/WEB/react/57.png)
 
 ### 如何使用多个 Context 的数据
 
@@ -1032,7 +1032,7 @@ npm  i hy-event-store
 - 我们必须通过 setState 来告知 React 数据已经发生了变化；
 
 > 组件中的 setState 方法是从 Component 中继承过来的。
-> ![](../../../images/WEB/react/57.png)
+> ![](https://cdn.jsdelivr.net/gh/kisssssssss/IMG/docs/WEB/react/57.png)
 
 ### setState 的三种不同用法
 
@@ -1123,7 +1123,7 @@ console.log(this.state.message); // Hello,world
 
 2. 在生命周期函数中获取
 
-   ![](../../../images/WEB/react/61.png)
+   ![](https://cdn.jsdelivr.net/gh/kisssssssss/IMG/docs/WEB/react/61.png)
 
 ---
 
@@ -1269,7 +1269,7 @@ flushSync(() => {
 
 使用`this.componentRef.current`获取组件实例
 
-![](../../../images/WEB/react/62.png)
+![](https://cdn.jsdelivr.net/gh/kisssssssss/IMG/docs/WEB/react/62.png)
 
 既然都已经获取到了组件实例，那么就可以调用组件实例上的方法，如下面代码中的`this.componentRef.current.text()`
 
@@ -1313,7 +1313,7 @@ export default APP;
 
 如果在函数式组件中直接传入一个 ref 属性，控制台会报警告。
 
-![](../../../images/WEB/react/63.png)
+![](https://cdn.jsdelivr.net/gh/kisssssssss/IMG/docs/WEB/react/63.png)
 
 如何使用 forwardRef
 
