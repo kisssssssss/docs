@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { notFound } from 'next/navigation';
+
 import Article from '../../../components/docs/Article';
 
 // 把 markdown 抽离到其它文件后，vercel会显示500错误
