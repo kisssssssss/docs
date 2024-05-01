@@ -3,7 +3,7 @@ import Cookies from 'js-cookie';
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { FloatButton, Drawer, ConfigProvider, theme } from 'antd';
-import { HomeOutlined, ProfileOutlined } from '@ant-design/icons';
+import { HomeOutlined, ProfileOutlined, ArrowUpOutlined } from '@ant-design/icons';
 
 import Catalogs from './Catalogs';
 
