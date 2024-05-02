@@ -45,7 +45,7 @@ const baseSetting = memo(() => {
 							Alpha
 						</Tag>
 					</p>
-					<Switch defaultChecked={false} disabled />
+					<Switch defaultChecked={false}  onChange={() => router.push('/spine')}/>
 				</div>
 			</ConfigProvider>
 		</div>

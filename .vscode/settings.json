@@ -32,5 +32,10 @@
     "xisitina",
     "xmark"
   ],
-  "css.customData": [".vscode/tailwindcss.json"],
+  "css.customData": [
+    ".vscode/tailwindcss.json"
+  ],
+  "path-intellisense.mappings": {
+    "@": "${workspaceFolder}"
+  }
 }
