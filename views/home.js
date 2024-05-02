@@ -1,11 +1,14 @@
 'use client';
+import Cookies from 'js-cookie';
 import { useRouter } from 'next/navigation';
 import { Tree, ConfigProvider, theme } from 'antd';
 
 const { DirectoryTree } = Tree;
 
-export default function Home({ docs, darkMode }) {
+export default function Home({ docs }) {
 	const router = useRouter();
+
+	const darkMode = Cookies.get('darkMode') === 'true';
 
 	const onSelect = (keys, info) => {
 		if (info.node.isLeaf) {

@@ -1,10 +1,13 @@
 import dynamic from 'next/dynamic';
-import { cookies } from 'next/headers';
 
-const Live2dSetting = dynamic(() => import('../../../components/setting/live2dSetting'), {
+const Live2dSetting = dynamic(() => import('@/views/setting/live2dSetting'), {
 	ssr: false
 });
 
 export default async function () {
-	return <Live2dSetting darkMode={cookies().get('theme')?.value === 'dark'} />;
+	return (
+		<div className='prose mx-auto px-6 sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-[896px] xl:max-w-screen-[1120px] py-20'>
+			<Live2dSetting />
+		</div>
+	);
 }

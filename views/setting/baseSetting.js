@@ -6,7 +6,7 @@ import { SwapLeftOutlined } from '@ant-design/icons';
 import { Switch, Tag, ConfigProvider, theme } from 'antd';
 
 const changeTheme = checked => {
-	Cookies.set('darkMode', checked ? 'dark' : 'light');
+	Cookies.set('darkMode', checked ? 'true' : 'false');
 	window.location.reload();
 };
 
@@ -17,7 +17,7 @@ const changeIsCatalogClose = checked => {
 const baseSetting = memo(() => {
 	const router = useRouter();
 
-	const darkMode = Cookies.get('darkMode') === 'dark';
+	const darkMode = Cookies.get('darkMode') === 'true';
 
 	const isCatalogClose = !(Cookies.get('isCatalogClose') === 'false');
 

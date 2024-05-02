@@ -2,16 +2,16 @@ import dynamic from 'next/dynamic';
 import { cookies } from 'next/headers';
 import { AntdRegistry } from '@ant-design/nextjs-registry';
 
-import Sky from '../components/Sky';
-import Plum from '../components/Plum';
-const Live2d = dynamic(() => import('../components/Live2d'), {
+import Sky from '@/views/Sky';
+import Plum from '@/views/Plum';
+const Live2d = dynamic(() => import('../views/Live2d'), {
 	ssr: false
 });
 
-import '../style/sky.css';
-import '../style/globals.css';
-import '../style/normalize.css';
-import '../style/atom-one-dark.min.css';
+import '@/style/sky.css';
+import '@/style/globals.css';
+import '@/style/normalize.css';
+import '@/style/atom-one-dark.min.css';
 
 export const metadata = {
 	title: 'Docs',
@@ -19,7 +19,7 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-	const darkMode = cookies().get('darkMode')?.value === 'dark';
+	const darkMode = cookies().get('darkMode')?.value === 'true';
 
 	return (
 		<html lang='en'>

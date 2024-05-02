@@ -1,11 +1,14 @@
 'use client';
 import Cookies from 'js-cookie';
+import dynamic from 'next/dynamic';
+import { FloatButton } from 'antd';
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { FloatButton, Drawer, ConfigProvider, theme } from 'antd';
 import { HomeOutlined, ProfileOutlined, ArrowUpOutlined } from '@ant-design/icons';
 
-import Catalogs from './Catalogs';
+const Catalogs = dynamic(() => import('./Catalogs'), {
+	ssr: false
+});
 
 const getCatalogs = () => {
 	// 获取h1-h6节点
@@ -54,7 +57,7 @@ const getCatalogs = () => {
 export default function Article({ content }) {
 	const router = useRouter();
 
-	const darkMode = Cookies.get('darkMode') === 'dark';
+	const darkMode = Cookies.get('darkMode') === 'true';
 
 	// 目录
 	const [catalogs, setCatalogs] = useState([]);
@@ -66,17 +69,7 @@ export default function Article({ content }) {
 
 	return (
 		<>
-			<ConfigProvider theme={{ algorithm: darkMode ? theme.darkAlgorithm : theme.defaultAlgorithm }}>
-				<Drawer
-					rootStyle={{}}
-					title='目录'
-					width={252}
-					open={open}
-					onClose={() => setOpen(false)}
-					placement={window.innerWidth < 768 ? 'bottom' : 'right'}>
-					<Catalogs catalogs={catalogs} darkMode={darkMode} setOpen={setOpen} />
-				</Drawer>
-			</ConfigProvider>
+			<Catalogs catalogs={catalogs} darkMode={darkMode} open={open} setOpen={setOpen} />
 
 			<article
 				className={`prose dark:prose-invert prose-pre:font-[CaskaydiaCoveNerdFontMono] prose-code:font-medium prose-code:before:content-[''] prose-code:after:content-[''] prose-code:font-[CaskaydiaCoveNerdFontMono] prose-a:underline-offset-[6px] mx-auto px-6 sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-[896px] xl:max-w-screen-[1120px] py-20`}
