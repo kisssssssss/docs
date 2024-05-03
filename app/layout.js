@@ -22,11 +22,11 @@ export default function RootLayout({ children }) {
 	const darkMode = cookies().get('darkMode')?.value === 'true';
 
 	return (
-		<html lang='en'>
+		<html lang='en' className={`${darkMode ? 'dark' : 'light'}`}>
 			<head>
 				<link rel='dns-prefetch' href='//cdn.jsdelivr.net' />
 			</head>
-			<body className={`h-full ${darkMode ? 'dark' : 'light'}`}>
+			<body className='h-full'>
 				<AntdRegistry>{children}</AntdRegistry>
 				{darkMode ? <Sky /> : <Plum />}
 				<Live2d />

@@ -6,12 +6,12 @@ import { SwapLeftOutlined } from '@ant-design/icons';
 import { Switch, Tag, ConfigProvider, theme } from 'antd';
 
 const changeTheme = checked => {
-	Cookies.set('darkMode', checked ? 'true' : 'false');
+	Cookies.set('darkMode', String(checked), { expires: 365 });
 	window.location.reload();
 };
 
 const changeIsCatalogClose = checked => {
-	Cookies.set('isCatalogClose', checked ? 'true' : 'false');
+	Cookies.set('isCatalogClose', String(checked), { expires: 365 });
 };
 
 const baseSetting = memo(() => {
@@ -45,7 +45,7 @@ const baseSetting = memo(() => {
 							Alpha
 						</Tag>
 					</p>
-					<Switch defaultChecked={false}  onChange={() => router.push('/spine')}/>
+					<Switch defaultChecked={false} onChange={() => router.push('/spine')} />
 				</div>
 			</ConfigProvider>
 		</div>

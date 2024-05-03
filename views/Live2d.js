@@ -4,8 +4,26 @@ import { loadOml2d } from 'oh-my-live2d';
 import Cookies from 'js-cookie';
 import getModelsList from '../utils/getModelsList';
 
-const publicModel = [];
-
+// const publicModel = [
+// 	'girl01_l2d00.u',
+// 	'girl01_l2d01.u',
+// 	'girl01_l2d02.u',
+// 	'girl01_l2d03.u',
+// 	'girl01_l2d04.u',
+// 	'girl01_l2d26.u',
+// 	'girl01_l2d29.u',
+// 	'girl02_l2d00.u',
+// 	'girl02_l2d01.u',
+// 	'girl02_l2d02.u',
+// 	'girl02_l2d03.u',
+// 	'girl02_l2d04.u',
+// 	'girl02_l2d12.u',
+// 	'girl02_l2d17.u',
+// 	'girl02_l2d19.u',
+// 	'girl02_l2d22.u',
+// 	'girl02_l2d27.u',
+// 	'girl02_l2d5017.u'
+// ];
 const Live2d = memo(() => {
 	useEffect(() => {
 		(async function () {
@@ -58,11 +76,11 @@ const Live2d = memo(() => {
 						models
 						// models: publicModel.map(item => {
 						// 	return {
-						// 		path: `/model/test/${item}//${item}.model3.json`,
+						// 		path: `/model/test/少女咖啡枪 girls cafe gun/${item}/${item.split('_')[1]}.model3.json`,
 						// 		name: item,
-						// 		position: [10, 30],
-						// 		scale: 0.15,
-						// 		stageStyle: { height: 400, width: 400 }
+						// 		// position: [10, 30],
+						// 		scale: 0.2
+						// 		// stageStyle: { height: 400, width: 400 }
 						// 	};
 						// })
 					});
