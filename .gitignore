@@ -40,3 +40,7 @@ next-env.d.ts
 ignore
 
 public/model/test
+
+public/model/model
+
+public/model/ok
