@@ -1,6 +1,5 @@
 import { cookies } from "next/headers";
 
-import HomeTodo from "@/views/home/HomeTodo";
 import HomeDocs from "@/views/home/HomeDocs";
 import HomeLinks from "@/views/home/HomeLinks";
 
