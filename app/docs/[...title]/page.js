@@ -6,6 +6,8 @@ import Article from '@/views/docs/Article';
 
 import md from './md';
 
+import '@/style/atom-one-dark.min.css';
+
 function markdownToHtml(markdown) {
 	const fmRegex = /---(.*?)---/gs;
 	return {

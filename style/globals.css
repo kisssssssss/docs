@@ -37,58 +37,65 @@ a:hover {
   border-radius: 8px;
   padding: 16px 16px 8px;
   line-height: 24px;
-  font-size: 14px;
-  @apply mt-4 mb-2;
+  font-size: 16px;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .custom-container>p {
-  @apply my-[0.75em];
+  margin-top: 0.75em;
+  margin-bottom: 0.75em;
 }
 
 .custom-container.info {
   color: rgba(60, 60, 67);
-  background-color: rgba(142, 150, 170, .24);
+  background-color: rgba(142, 150, 170);
 }
 
 .dark .custom-container.info {
-  color: #8e8e8e;
-  background-color: rgba(142, 150, 170, .4);
+  color: #ffffff;
+  background-color: rgba(142, 150, 170);
+  filter: brightness(0.6);
 }
 
 .custom-container.tip {
-  color: rgba(60, 60, 67);
-  background-color: rgba(100, 108, 255, .24);
+  color: rgb(40 40 40);
+  background-color: rgb(126 132 255);
 }
 
 .dark .custom-container.tip {
-  color: #8e8e8e;
-  background-color: rgba(100, 108, 255, .4);
+  color: #ffffff;
+  background-color: rgb(100 108 255);
+  filter: brightness(0.6);
 }
 
 .custom-container.warning {
-  color: rgba(60, 60, 67);
-  background-color: rgba(234, 179, 8, .24);
+  color: rgb(40 40 40);
+  background-color: rgb(249 232 100);
 }
 
 .dark .custom-container.warning {
-  color: #8e8e8e;
-  background-color: rgba(234, 179, 8, .4);
+  color: #ffffff;
+  background-color: rgba(234, 179, 8);
+  filter: brightness(0.6);
 }
 
 .custom-container.error {
   color: rgba(60, 60, 67);
-  background-color: rgba(244, 63, 94, .24);
+  background-color: rgb(237 79 79);
 }
 
 .dark .custom-container.error {
-  color: #8e8e8e;
-  background-color: rgba(244, 63, 94, .4);
+  color: #ffffff;
+  background-color: rgba(244, 63, 94);
+  filter: brightness(0.6);
 }
 
 .custom-container-title {
   font-size: 16px;
   font-weight: bolder;
-  @apply my-0 !important;
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
 }
 
 /* 优化数学公式显示 */

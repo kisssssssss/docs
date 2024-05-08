@@ -72,7 +72,7 @@ React 的官网文档（旧版）：https://zh-hans.legacy.reactjs.org/docs/gett
 
 > 这个 crossorigin 属性的目的是为了拿到跨域脚本的错误信息
 
-```tsx
+``` html
 // 通过cdn引用
 <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
 <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>

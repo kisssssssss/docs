@@ -8,10 +8,8 @@ const Live2d = dynamic(() => import('../views/Live2d'), {
 	ssr: false
 });
 
-import '@/style/sky.css';
 import '@/style/globals.css';
 import '@/style/normalize.css';
-import '@/style/atom-one-dark.min.css';
 
 export const metadata = {
 	title: 'Docs',
@@ -26,7 +24,7 @@ export default function RootLayout({ children }) {
 			<head>
 				<link rel='dns-prefetch' href='//cdn.jsdelivr.net' />
 			</head>
-			<body className='h-full'>
+			<body className='h-full w-full'>
 				<AntdRegistry>{children}</AntdRegistry>
 				{darkMode ? <Sky /> : <Plum />}
 				<Live2d />

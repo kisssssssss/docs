@@ -349,30 +349,184 @@ const a = [
     title: "伊珂丝",
     description: "水着",
   },
+  {
+    name: "724upd__l2d_383.u",
+    position: [0, 70],
+    scale: 0.2,
+    stageStyle: { height: 400, width: 350 },
+    title: "洛可可",
+    description: "群青之翼",
+  },
+  {
+    name: "724upd__l2d_384.u",
+    position: [0, 70],
+    scale: 0.2,
+    stageStyle: { height: 400, width: 350 },
+    title: "沐恩",
+    description: "群青之翼",
+  },
+  {
+    name: "724upd__l2d_385.u",
+    position: [0, 70],
+    scale: 0.2,
+    stageStyle: { height: 400, width: 350 },
+    title: "时无瑕",
+    description: "群青之翼",
+  },
+  {
+    name: "724upd__l2d_386.u",
+    position: [0, 70],
+    scale: 0.2,
+    stageStyle: { height: 400, width: 350 },
+    title: "时无忧",
+    description: "群青之翼",
+  },
+  {
+    name: "724upd__l2d_388.u",
+    position: [0, 70],
+    scale: 0.2,
+    stageStyle: { height: 400, width: 350 },
+    title: "苏小真",
+    description: "少女星辰",
+  },
+  {
+    name: "724upd__l2d_389.u",
+    position: [0, 70],
+    scale: 0.2,
+    stageStyle: { height: 400, width: 350 },
+    title: "伊珂丝",
+    description: "少女星辰",
+  },
+  {
+    name: "724upd__l2d_390.u",
+    position: [0, 70],
+    scale: 0.2,
+    stageStyle: { height: 400, width: 350 },
+    title: "阿尼娅",
+    description: "少女星辰",
+  },
+  {
+    name: "728upd__l2d_392.u",
+    position: [0, 100],
+    scale: 0.2,
+    stageStyle: { height: 400, width: 350 },
+    title: "丽达",
+    description: "公式服",
+  },
+  {
+    name: "8qpt01__l2d_322.u",
+    position: [0, 60],
+    scale: 0.2,
+    stageStyle: { height: 400, width: 350 },
+    title: "艾琳",
+    description: "事务官",
+  },
+  {
+    name: "8qpt01__l2d_323.u",
+    position: [0, 60],
+    scale: 0.2,
+    stageStyle: { height: 400, width: 350 },
+    title: "洛可可",
+    description: "事务官",
+  },
+  {
+    name: "8qpt01__l2d_324.u",
+    position: [0, 60],
+    scale: 0.2,
+    stageStyle: { height: 400, width: 350 },
+    title: "时无瑕",
+    description: "事务官",
+  },
+  {
+    name: "8qpt01__l2d_325.u",
+    position: [0, 60],
+    scale: 0.2,
+    stageStyle: { height: 400, width: 350 },
+    title: "丽达",
+    description: "事务官",
+  },
+  {
+    name: "9qpt01__l2d_327.u",
+    position: [0, 60],
+    scale: 0.2,
+    stageStyle: { height: 400, width: 350 },
+    title: "格兰妮",
+    description: "水着",
+  },
+  {
+    name: "9qpt01__l2d_328.u",
+    position: [0, 60],
+    scale: 0.2,
+    stageStyle: { height: 400, width: 350 },
+    title: "聂诗柔",
+    description: "水着",
+  },
+  {
+    name: "l2d1__l2d_75.u",
+    position: [0, 60],
+    scale: 0.2,
+    stageStyle: { height: 400, width: 350 },
+    title: "洛可可",
+    description: "战术装备",
+  },
+  {
+    name: "l2d2__l2d_77.u",
+    position: [0, 60],
+    scale: 0.2,
+    stageStyle: { height: 400, width: 350 },
+    title: "格兰妮",
+    description: "战术装备",
+  },
+  {
+    name: "l2d3__l2d_78.u",
+    position: [0, 60],
+    scale: 0.2,
+    stageStyle: { height: 400, width: 350 },
+    title: "时无忧",
+    description: "战术装备",
+  },
+  {
+    name: "l2d4__l2d_182.u",
+    position: [0, 60],
+    scale: 0.2,
+    stageStyle: { height: 400, width: 350 },
+    title: "千姬",
+    description: "水着",
+  },
+  {
+    name: "l2d5__l2d_139.u",
+    position: [0, 60],
+    scale: 0.2,
+    stageStyle: { height: 400, width: 350 },
+    title: "时无忧",
+    description: "水着",
+  },
+  {
+    name: "l2d5__l2d_94.u",
+    position: [0, 60],
+    scale: 0.2,
+    stageStyle: { height: 400, width: 350 },
+    title: "时无忧",
+    description: "水着?",
+  },
+  {
+    name: "l2d6__l2d_184.u",
+    position: [0, 60],
+    scale: 0.2,
+    stageStyle: { height: 400, width: 350 },
+    title: "时无瑕",
+    description: "污染者",
+  },
+  {
+    name: "l2d7__l2d_76.u",
+    position: [0, 60],
+    scale: 0.2,
+    stageStyle: { height: 400, width: 350 },
+    title: "高奈利亚",
+    description: "战术装备",
+  },
 ];
 const publicModel = [
-  // "724upd__l2d_383.u",
-  // "724upd__l2d_384.u",
-  // "724upd__l2d_385.u",
-  // "724upd__l2d_386.u",
-  // "724upd__l2d_388.u",
-  // "724upd__l2d_389.u",
-  // "724upd__l2d_390.u",
-  // "728upd__l2d_392.u",
-  // "8qpt01__l2d_322.u",
-  // "8qpt01__l2d_323.u",
-  // "8qpt01__l2d_324.u",
-  // "8qpt01__l2d_325.u",
-  // "9qpt01__l2d_327.u",
-  // "9qpt01__l2d_328.u",
-  // "l2d1__l2d_75.u",
-  // "l2d2__l2d_77.u",
-  // "l2d3__l2d_78.u",
-  // "l2d4__l2d_182.u",
-  // "l2d5__l2d_139.u",
-  // "l2d5__l2d_94.u",
-  // "l2d6__l2d_184.u",
-  // "l2d7__l2d_76.u",
   // "newg01__l2d_364.u",
   // "newg02__l2d_297.u",
   // "newg03__l2d_298.u",
@@ -414,36 +568,36 @@ const Live2d = memo(() => {
                 duration: 0,
               },
             },
-            // models: Object.keys(models)
-            //   .map((key) => {
-            //     return models[key].map((item) => item.configuration);
-            //   })
-            //   .flat(1),
-            models: publicModel.map((item) => {
-              return {
-                path: `/model/test/少女咖啡枪 girls cafe gun/${item}/${item}.model3.json`,
-                name: item,
-                position: [0, 70],
-                scale: 0.2,
-                stageStyle: { height: 400, width: 350 },
-              };
-            }),
+            models: Object.keys(models)
+              .map((key) => {
+                return models[key].map((item) => item.configuration);
+              })
+              .flat(1),
+            // models: publicModel.map((item) => {
+            //   return {
+            //     path: `/model/test/少女咖啡枪 girls cafe gun/${item}/${item}.model3.json`,
+            //     name: item,
+            //     position: [0, 60],
+            //     scale: 0.2,
+            //     stageStyle: { height: 400, width: 350 },
+            //   };
+            // }),
           });
 
-          oml2d.onLoad((status) => {
-            switch (status) {
-              case "success":
-                console.log("模型: " + oml2d.model.name + "加载成功");
-                oml2d.showModelHitAreaFrames();
-                return;
-              case "fail":
-                // console.log('模型: ' + oml2d.model.name + '加载失败');
-                return;
-              case "loading":
-                // console.log('模型: ' + oml2d.model.name + '正在加载中');
-                return;
-            }
-          });
+          // oml2d.onLoad((status) => {
+          //   switch (status) {
+          //     case "success":
+          //       console.log("模型: " + oml2d.model.name + "加载成功");
+          //       oml2d.showModelHitAreaFrames();
+          //       return;
+          //     case "fail":
+          //       // console.log('模型: ' + oml2d.model.name + '加载失败');
+          //       return;
+          //     case "loading":
+          //       // console.log('模型: ' + oml2d.model.name + '正在加载中');
+          //       return;
+          //   }
+          // });
         } catch (error) {
           window.live2d_mounted = false;
           console.error(error);

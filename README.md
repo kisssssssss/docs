@@ -16,6 +16,7 @@
 - [x] 自动生成笔记目录结构
 - [x] 文章内容请求简单缓存
 - [x] 添加 Live2D 动态模型
+- [x] 暗黑模式
 
 # 本地调试
 
@@ -24,30 +25,19 @@
 1. 将项目克隆到本地
 
 2. 安装项目依赖
-  ```sh
-  npm i
-  ```
+
+```sh
+npm i
+```
 
 3. 运行
 
-  ```sh
-  npm run dev
-  ```
-
-  
-
-# 部署
-
-1. Fork 此项目到你的Github上 (不一定非得 fork，只是与其它方法相比，fork 可能更方便一点)
-2. 将 Fork 后的项目从远程仓库克隆到本地计算机
-3. 在本地项目中，将 docs 文件夹中的笔记替换为你自己的笔记内容，同时确保将笔记内引用的所有图片保存于 public 文件夹内。
-4. 修改完成后，将更改提交至你个人仓库
-5. 最后在 vercel 中导入部署即可
-
-
+```sh
+npm run dev
+```
 
 # 预览
 
-![](https://github.com/kisssssssss/docs/blob/main/public/1.png)
+![](https://github.com/kisssssssss/docs/blob/main/public/img/1.png)
 
-![](https://github.com/kisssssssss/docs/blob/main/public/2.png)
+![](https://github.com/kisssssssss/docs/blob/main/public/img/2.png)

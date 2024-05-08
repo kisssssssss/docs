@@ -16,7 +16,7 @@ export default async function APP() {
       <div className="w-full lg:w-fit flex flex-col justify-center lg:justify-start items-center mt-10 lg:mt-0">
         <img
           className="w-16 h-16 min-w-16 min-h-16 xl:w-24 xl:min-w-24 xl:h-24 xl:min-h-24 2xl:w-32 2xl:min-w-32 2xl:h-32 2xl:min-h-32 rounded-full shadow-lg"
-          src="/icon.png"
+          src="/img/icon.png"
           alt=""
         />
         <div className="mx-auto mt-6 mb-3 flex lg:flex-col items-center">
@@ -24,7 +24,6 @@ export default async function APP() {
         </div>
       </div>
       <div className="w-full px-16 mx-auto mt-8 ">
-        <HomeTodo darkMode={darkMode} />
         <div className="my-10">
           <p className="dark:text-gray-200/90 text-2xl mb-4">DOCS:</p>
           <HomeDocs docs={docs} darkMode={darkMode} />
