@@ -573,31 +573,23 @@ const Live2d = memo(() => {
                 return models[key].map((item) => item.configuration);
               })
               .flat(1),
-            // models: publicModel.map((item) => {
-            //   return {
-            //     path: `/model/test/少女咖啡枪 girls cafe gun/${item}/${item}.model3.json`,
-            //     name: item,
-            //     position: [0, 60],
-            //     scale: 0.2,
-            //     stageStyle: { height: 400, width: 350 },
-            //   };
-            // }),
           });
 
-          // oml2d.onLoad((status) => {
-          //   switch (status) {
-          //     case "success":
-          //       console.log("模型: " + oml2d.model.name + "加载成功");
-          //       oml2d.showModelHitAreaFrames();
-          //       return;
-          //     case "fail":
-          //       // console.log('模型: ' + oml2d.model.name + '加载失败');
-          //       return;
-          //     case "loading":
-          //       // console.log('模型: ' + oml2d.model.name + '正在加载中');
-          //       return;
-          //   }
-          // });
+          oml2d.onLoad((status) => {
+            console.log(status);
+            switch (status) {
+              case "success":
+                console.log("模型: " + oml2d.model.name + "加载成功");
+                oml2d.showModelHitAreaFrames();
+                return;
+              case "fail":
+                console.log("模型: " + oml2d.model + "加载失败");
+                return;
+              case "loading":
+                // console.log('模型: ' + oml2d.model.name + '正在加载中');
+                return;
+            }
+          });
         } catch (error) {
           window.live2d_mounted = false;
           console.error(error);
