@@ -33,6 +33,7 @@ const keyMap = {
   Sin: "sin 七大罪～魔王崇拜～",
   VenusScramble: "女神大乱战",
   StarRail: "崩坏: 星穷铁道",
+  shuangshengshijie: "双生视界 少女咖啡枪",
 };
 
 const changeModel = (modelIndex) => {
