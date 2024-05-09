@@ -13,7 +13,7 @@ export default async function getModelsList() {
   try {
     let res = localStorage.getItem("modelsList");
     if (res) {
-      return res;
+      return JSON.parse(res);
     } else {
       return await fetchModelList();
     }

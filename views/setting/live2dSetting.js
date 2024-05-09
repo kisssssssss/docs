@@ -2,14 +2,7 @@
 import Cookies from "js-cookie";
 import { useRouter } from "next/navigation";
 import { SwapLeftOutlined, ArrowUpOutlined } from "@ant-design/icons";
-import {
-  memo,
-  useCallback,
-  useEffect,
-  useRef,
-  useState,
-  Suspense,
-} from "react";
+import { memo, useCallback, useEffect, useState } from "react";
 import {
   Switch,
   Card,
@@ -36,10 +29,11 @@ const keyMap = {
   shuangshengshijie: "双生视界 少女咖啡枪",
 };
 
-const changeModel = (modelIndex) => {
-  if (window.oml2d.modelIndex != modelIndex) {
-    window.oml2d?.loadSpecificModel(modelIndex);
-  }
+const changeModel = (modelName) => {
+  const targetIndex = window.oml2d.options.models.findIndex(
+    (item) => item.name === modelName
+  );
+  window.oml2d.loadModelByIndex(targetIndex);
 };
 
 const getModelsListNode = (list) => {
@@ -57,17 +51,16 @@ const getModelsListNode = (list) => {
             数量：{list[key].length}
           </span>
         </p>
-        <Space wrap size="large" id={key}>
+        <Space wrap size="large" id={key} key={`${key}_space`}>
           {list[key].map((item, index) => {
-            const currentCount = count + index;
             return (
               <Card
                 hoverable
-                key={item.name}
                 style={{ width: 160 }}
+                key={item.configuration.name}
                 cover={
                   <img
-                    className="my-0 object-cover  w-[160px] h-[160px]"
+                    className="my-0 object-cover w-[160px] h-[160px]"
                     alt=""
                     src={item.cover}
                     loading="lazy"
@@ -81,7 +74,7 @@ const getModelsListNode = (list) => {
                   },
                   body: { padding: "12px 16px" },
                 }}
-                onClick={() => changeModel(currentCount)}
+                onClick={() => changeModel(item.configuration.name)}
               >
                 <Meta title={item.title} description={item.description} />
               </Card>
@@ -97,12 +90,7 @@ const getModelsListNode = (list) => {
 
   const summaryNode = (
     <div key={"count"}>
-      <p
-        className="text-xl font-bold dark:text-gray-200/90"
-        onClick={() => {
-          a(1);
-        }}
-      >
+      <p className="text-xl font-bold dark:text-gray-200/90">
         当前 Live2D 数量：{count}
       </p>
       <p className="text-base text-[#00000073] dark:text-gray-400/60 font-semibold">
@@ -191,9 +179,7 @@ const Live2dSetting = memo(() => {
       <Divider />
 
       {/* 展示 Live2D 模型列表 */}
-      <Suspense fallback={<div>加载中...</div>}>
-        <ModelList enable={live2d_enable} darkMode={darkMode} />
-      </Suspense>
+      <ModelList enable={live2d_enable} darkMode={darkMode} />
 
       {/* 回到顶部 */}
       <FloatButton
