@@ -136,6 +136,16 @@ blockquote>p::after {
   margin-left: 5px;
 }
 
+/* 文章背景 */
+article {
+  backdrop-filter: blur(1px);
+}
+
+.dark article {
+  background-color: rgba(45, 45, 45, .2);
+  backdrop-filter: blur(30px);
+}
+
 /* 隐藏文章页的抽屉目录滚动条 */
 .ant-drawer-body::-webkit-scrollbar {
   display: none;

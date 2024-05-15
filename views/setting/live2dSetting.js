@@ -138,11 +138,8 @@ const ModelList = memo(({ enable, darkMode }) => {
   return <>{renderer}</>;
 });
 
-const Live2dSetting = memo(() => {
+const Live2dSetting = memo(({darkMode}) => {
   const router = useRouter();
-
-  // 获取当前页面是否为暗色模式
-  const darkMode = Cookies.get("darkMode") == "true";
 
   //	live2d 是否启用
   const live2d_enable = Cookies.get("live2d_enable") == "true";
