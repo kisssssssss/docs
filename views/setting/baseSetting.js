@@ -14,7 +14,7 @@ const changeIsCatalogClose = (checked) => {
   Cookies.set("isCatalogClose", String(checked), { expires: 365 });
 };
 
-const baseSetting = memo(({darkMode}) => {
+const baseSetting = memo(({ darkMode }) => {
   const router = useRouter();
 
   const isCatalogClose = !(Cookies.get("isCatalogClose") === "false");
@@ -86,6 +86,32 @@ const baseSetting = memo(({darkMode}) => {
               }}
             >
               <p className="my-0 text-lg font-medium">plum</p>
+            </Card>
+            <Card
+              cover={
+                <img
+                  alt="example"
+                  src="/img/vortex.png"
+                  className="my-[2px] mx-auto max-w-[98%]"
+                />
+              }
+              styles={{
+                cover: {
+                  width: "160px",
+                  height: "79.75px",
+                  overflow: "hidden",
+                  cursor: "pointer",
+                },
+                body: { padding: "12px 16px", cursor: "pointer" },
+              }}
+              classNames={{
+                body: "hover:text-violet-500 dark:hover:text-violet-500/80",
+              }}
+              onClick={() => {
+                changeTheme("vortex");
+              }}
+            >
+              <p className="my-0 text-lg font-medium">vortex</p>
             </Card>
             <Card
               cover={

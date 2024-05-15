@@ -1,8 +1,9 @@
 import dynamic from "next/dynamic";
 import { AntdRegistry } from "@ant-design/nextjs-registry";
 
-import Sky from "@/views/Sky";
-import Plum from "@/views/Plum";
+import Sky from "@/views/background/Sky";
+import Plum from "@/views/background/Plum";
+import WebGL from "@/views/background/WebGL";
 const Live2d = dynamic(() => import("../views/Live2d"), {
   ssr: false,
 });
@@ -38,6 +39,7 @@ export default function RootLayout({ children }) {
           {
             sky: <Sky />,
             plum: <Plum />,
+            vortex: <WebGL />,
             null: <></>,
           }[theme]
         }

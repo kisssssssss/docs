@@ -38,6 +38,8 @@ npm run dev
 
 # 预览
 
-![](https://github.com/kisssssssss/docs/blob/main/public/img/1.png)
+![](https://github.com/kisssssssss/docs/blob/main/public/img/plum.png)
 
-![](https://github.com/kisssssssss/docs/blob/main/public/img/2.png)
+![](https://github.com/kisssssssss/docs/blob/main/public/img/sky.png)
+
+![](https://github.com/kisssssssss/docs/blob/main/public/img/vortex.png)
