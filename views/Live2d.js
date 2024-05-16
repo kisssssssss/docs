@@ -366,17 +366,52 @@ const b = [
     position: [-80, -190],
     stageStyle: { height: 400, width: 400 },
   },
+  {
+    name: "lafei",
+    scale: 0.3,
+    position: [10, 60],
+    stageStyle: { height: 400, width: 400 },
+  },
+  {
+    name: "lingbo",
+    scale: 0.3,
+    position: [10, 15],
+    stageStyle: { height: 400, width: 400 },
+  },
+  {
+    name: "lingbo_10",
+    scale: 0.095,
+    position: [-200, -150],
+    stageStyle: { height: 400, width: 400 },
+  },
+  {
+    name: "linuo_3",
+    scale: 0.06,
+    position: [40, 10],
+    stageStyle: { height: 400, width: 400 },
+  },
+  {
+    name: "lisailiu_2",
+    scale: 0.08,
+    position: [-240, -210],
+    stageStyle: { height: 400, width: 400 },
+  },
+  {
+    name: "lisailiu_3",
+    scale: 0.08,
+    position: [0, -90],
+    stageStyle: { height: 400, width: 400 },
+  },
+  {
+    name: "luoen_4",
+    scale: 0.08,
+    position: [-150, -40],
+    stageStyle: { height: 400, width: 400 },
+  },
 ];
 
 const publicModel = [
-  "lafei",
-  "lingbo",
-  "lingbo_10",
-  "linuo_3",
-  "lisailiu_2",
-  "lisailiu_3",
-  "longfeng_2",
-  "luoen_4",
+  // "longfeng_2",
   "luoma_2",
   "lupuleixite_2",
   "lvzuofu_2",
@@ -431,20 +466,20 @@ const Live2d = memo(() => {
                 duration: 0,
               },
             },
-            models: Object.keys(models)
-              .map((key) => {
-                return models[key].map((item) => item.configuration);
-              })
-              .flat(1),
-            // models: publicModel.map((key) => {
-            //   return {
-            //     path: `/model/test/b/${key}/${key}.model3.json`,
-            //     name: "west",
-            //     scale: 0.07,
-            //     // position: [-80, -190],
-            //     // stageStyle: { height: 400, width: 400 },
-            //   };
-            // }),
+            // models: Object.keys(models)
+            //   .map((key) => {
+            //     return models[key].map((item) => item.configuration);
+            //   })
+            //   .flat(1),
+            models: publicModel.map((key) => {
+              return {
+                path: `/model/test/b/${key}/${key}.model3.json`,
+                name: "west",
+                scale: 0.08,
+                position: [-150, -40],
+                stageStyle: { height: 400, width: 400 },
+              };
+            }),
           });
 
           oml2d.onLoad((status) => {

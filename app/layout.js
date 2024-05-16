@@ -4,6 +4,10 @@ import { AntdRegistry } from "@ant-design/nextjs-registry";
 import Sky from "@/views/background/Sky";
 import Plum from "@/views/background/Plum";
 import WebGL from "@/views/background/WebGL";
+import Wave from "@/views/background/Wave";
+import BlackGrid from "@/views/background/BlackGrid";
+import BlackGridLarge from "@/views/background/BlackGrid.large";
+import WhiteGrid from "@/views/background/WhiteGrid";
 const Live2d = dynamic(() => import("../views/Live2d"), {
   ssr: false,
 });
@@ -40,6 +44,10 @@ export default function RootLayout({ children }) {
             sky: <Sky />,
             plum: <Plum />,
             vortex: <WebGL />,
+            whiteGrid: <WhiteGrid />,
+            blackGrid: <BlackGrid />,
+            blackGridLarge: <BlackGridLarge />,
+            wave: <Wave />,
             null: <></>,
           }[theme]
         }

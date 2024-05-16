@@ -33,112 +33,50 @@ const baseSetting = memo(({ darkMode }) => {
         }}
       >
         <div>
-          <p className="block text-xl font-bold dark:text-gray-200/90">Theme</p>
-          <Space>
-            <Card
-              cover={
-                <img
-                  alt="example"
-                  src="/img/sky.png"
-                  className="my-[2px] mx-auto max-w-[98%]"
-                />
-              }
-              styles={{
-                cover: {
-                  width: "160px",
-                  height: "79.75px",
-                  overflow: "hidden",
-                  cursor: "pointer",
-                },
-                body: { padding: "12px 16px", cursor: "pointer" },
-              }}
-              classNames={{
-                body: "hover:text-violet-500 dark:hover:text-violet-500/80",
-              }}
-              onClick={() => {
-                changeTheme("sky");
-              }}
-            >
-              <p className="my-0 text-lg font-medium">sky</p>
-            </Card>
-            <Card
-              cover={
-                <img
-                  alt="example"
-                  src="/img/plum.png"
-                  className="my-[2px] mx-auto max-w-[98%]"
-                />
-              }
-              styles={{
-                cover: {
-                  width: "160px",
-                  height: "79.75px",
-                  overflow: "hidden",
-                  cursor: "pointer",
-                },
-                body: { padding: "12px 16px", cursor: "pointer" },
-              }}
-              classNames={{
-                body: "hover:text-violet-500 dark:hover:text-violet-500/80",
-              }}
-              onClick={() => {
-                changeTheme("plum");
-              }}
-            >
-              <p className="my-0 text-lg font-medium">plum</p>
-            </Card>
-            <Card
-              cover={
-                <img
-                  alt="example"
-                  src="/img/vortex.png"
-                  className="my-[2px] mx-auto max-w-[98%]"
-                />
-              }
-              styles={{
-                cover: {
-                  width: "160px",
-                  height: "79.75px",
-                  overflow: "hidden",
-                  cursor: "pointer",
-                },
-                body: { padding: "12px 16px", cursor: "pointer" },
-              }}
-              classNames={{
-                body: "hover:text-violet-500 dark:hover:text-violet-500/80",
-              }}
-              onClick={() => {
-                changeTheme("vortex");
-              }}
-            >
-              <p className="my-0 text-lg font-medium">vortex</p>
-            </Card>
-            <Card
-              cover={
-                <img
-                  alt="example"
-                  src="/img/null.png"
-                  className="my-[2px] mx-auto max-w-[98%]"
-                />
-              }
-              styles={{
-                cover: {
-                  width: "160px",
-                  height: "79.75px",
-                  overflow: "hidden",
-                  cursor: "pointer",
-                },
-                body: { padding: "12px 16px", cursor: "pointer" },
-              }}
-              classNames={{
-                body: "hover:text-violet-500 dark:hover:text-violet-500/80",
-              }}
-              onClick={() => {
-                changeTheme("null");
-              }}
-            >
-              <p className="my-0 text-lg font-medium">null</p>
-            </Card>
+          <p className="block text-xl font-bold dark:text-gray-200/90">
+            Background
+          </p>
+          <Space wrap>
+            {[
+              "null",
+              "plum",
+              "vortex",
+              "whiteGrid",
+              "sky",
+              "blackGrid",
+              "blackGridLarge",
+              "wave",
+            ].map((item) => {
+              return (
+                <Card
+                  key={item}
+                  cover={
+                    <img
+                      alt="example"
+                      src={`/img/${item}.png`}
+                      className="my-[2px] mx-auto max-w-[98%]"
+                    />
+                  }
+                  styles={{
+                    cover: {
+                      width: "160px",
+                      height: "79.75px",
+                      overflow: "hidden",
+                      cursor: "pointer",
+                    },
+                    body: { padding: "12px 16px", cursor: "pointer" },
+                  }}
+                  classNames={{
+                    body: "hover:text-violet-500 dark:hover:text-violet-500/80",
+                  }}
+                  onClick={() => {
+                    changeTheme(item);
+                  }}
+                >
+                  <p className="my-0 text-lg font-medium">{item}</p>
+                </Card>
+              );
+            })}
           </Space>
         </div>
         <Divider />

@@ -1,7 +1,7 @@
 'use client';
 import React, { memo } from 'react';
 
-import '@/style/sky.css';
+import '@/style/background/sky.css';
 
 const Sky = memo(() => {
 	return (
