@@ -36,7 +36,7 @@ export default function RootLayout({ children }) {
       </head>
       <body
         className="h-full w-full"
-        style={{ height: "100%", position: "relative", overflow: "hidden" }}
+        style={{ height: "100%", position: "relative"}}
       >
         <AntdRegistry>{children}</AntdRegistry>
         {

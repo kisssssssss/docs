@@ -2,7 +2,7 @@
 async function fetchModelList(newTime) {
   const result = await (
     await fetch(
-      "https://cdn.jsdelivr.net/gh/kisssssssss/model/ModelList_Live2d.json"
+      "https://cdn.jsdelivr.net/gh/kisssssssss/model/live2d.All.json"
     )
   ).json();
   localStorage.setItem("modelsList", JSON.stringify(result));

@@ -39,5 +39,10 @@
   ],
   "path-intellisense.mappings": {
     "@": "${workspaceFolder}"
+  },
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.expand": false,
+  "explorer.fileNesting.patterns": {
+    "*.All.json": "$(capture).*.json"
   }
 }

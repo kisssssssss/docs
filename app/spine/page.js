@@ -6,8 +6,7 @@ const Spine = dynamic(() => import('@/views/spine/spine'), { ssr: false });
 export default async function () {
 	return (
 		<>
-			<Script src='/spine/spine-player40.min.js' />
-
+			<Script src='/spine/spine-player38.js' />
 			<Spine />
 		</>
 	);

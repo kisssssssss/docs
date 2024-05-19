@@ -23,10 +23,14 @@ const keyMap = {
   Azur: "碧蓝航线",
   BengHuai2: "崩坏学园2",
   GirlsFrontline: "少女前线",
-  Sin: "sin 七大罪～魔王崇拜～",
+  Sin: "sin七大罪～魔王崇拜～",
   VenusScramble: "女神大乱战",
-  StarRail: "崩坏: 星穹铁道",
-  shuangshengshijie: "双生视界 少女咖啡枪",
+  StarRail: "崩坏:星穷铁道",
+  shuangshengshijie: "双生视界少女咖啡枪",
+  sansehuilian: "三色绘恋",
+  baoshi: "宝石研物语",
+  baoshi2: "宝石研物语2",
+  hqxy: "魂器学院",
 };
 
 const changeModel = (modelName) => {
@@ -57,7 +61,7 @@ const getModelsListNode = (list) => {
               <Card
                 hoverable
                 style={{ width: 160 }}
-                key={item.configuration.name}
+                key={item.configuration.name+index}
                 cover={
                   <img
                     className="my-0 object-cover w-[160px] h-[160px]"
@@ -93,20 +97,22 @@ const getModelsListNode = (list) => {
       <p className="text-xl font-bold dark:text-gray-200/90">
         当前 Live2D 数量：{count}
       </p>
-      <p className="text-base text-[#00000073] dark:text-gray-400/60 font-semibold">
+      <div className="text-base text-[#00000073] dark:text-gray-400/60 font-semibold">
         类型：
-        {Object.keys(list).map((key) => (
-          <span
-            key={`type_${key}`}
-            className="mx-2 hover:text-violet-500 dark:hover:text-violet-500/80 hover:underline underline-offset-4 cursor-pointer"
-            onClick={() => {
-              document.getElementById(key).scrollIntoView();
-            }}
-          >
-            {keyMap[key]}
-          </span>
-        ))}
-      </p>
+        <ul>
+          {Object.keys(list).map((key) => (
+            <li
+              key={`type_${key}`}
+              className="mx-2 hover:text-violet-500 dark:hover:text-violet-500/80 hover:underline underline-offset-4 cursor-pointer my-1"
+              onClick={() => {
+                document.getElementById(key).scrollIntoView();
+              }}
+            >
+              {keyMap[key]}
+            </li>
+          ))}
+        </ul>
+      </div>
       <Divider />
     </div>
   );
@@ -138,7 +144,7 @@ const ModelList = memo(({ enable, darkMode }) => {
   return <>{renderer}</>;
 });
 
-const Live2dSetting = memo(({darkMode}) => {
+const Live2dSetting = memo(({ darkMode }) => {
   const router = useRouter();
 
   //	live2d 是否启用
