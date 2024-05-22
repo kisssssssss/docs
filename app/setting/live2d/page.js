@@ -2,7 +2,7 @@ import dynamic from 'next/dynamic';
 
 import getTheme from "@/utils/getTheme";
 
-const Live2dSetting = dynamic(() => import('@/views/setting/live2dSetting'), {
+const Live2dSetting = dynamic(() => import('@/views/setting/live2dList'), {
 	ssr: false
 });
 

@@ -71,6 +71,18 @@ const containerOption = {
       // return `<div class="custom-container error">\n<p class="custom-container-title error">${info || 'Error'}</p>\n`;
     },
   },
+  detailsContainer: {
+    name: "details",
+    openRender: (tokens, index, _options) => {
+      const info = tokens[index].info.replace("details", "").trim();
+      return `<details>
+        <summary><p>${info || "详情"}</p></summary><div class="details-content">
+      `;
+    },
+    closeRender: (tokens, index, _options) => {
+      return `</div></details>`;
+    },
+  },
 };
 
 export default new MarkdownIt(markdownOptions)
@@ -84,4 +96,5 @@ export default new MarkdownIt(markdownOptions)
   .use(container, containerOption.tipContainer)
   .use(container, containerOption.infoContainer)
   .use(container, containerOption.errorContainer)
+  .use(container, containerOption.detailsContainer)
   .use(container, containerOption.warningContainer);

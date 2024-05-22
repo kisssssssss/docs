@@ -8,10 +8,6 @@ const links = [
     link: "https://github.com/kisssssssss/docs",
   },
   {
-    title: "Live2D",
-    link: "/setting/live2d",
-  },
-  {
     title: "Setting",
     link: "/setting/base",
   },

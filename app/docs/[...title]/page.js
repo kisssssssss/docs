@@ -36,9 +36,9 @@ export default async function Page(props) {
   // 渲染结果
   let mdHtml;
 
-  if (renderResult.has(title)) {
-    mdHtml = renderResult.get(title);
-  } else {
+  // if (renderResult.has(title)) {
+  //   mdHtml = renderResult.get(title);
+  // } else {
     // 获取文件路径
     const mdPath = path.join(process.cwd(), "docs", `${title}.md`);
     // 判断文件是否存在
@@ -49,7 +49,7 @@ export default async function Page(props) {
     mdHtml = markdownToHtml(mdFile).content;
     // 缓存
     renderResult.set(title, mdHtml);
-  }
+  // }
 
   return <Article content={mdHtml} darkMode={darkMode} />;
 }

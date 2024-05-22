@@ -40,10 +40,10 @@ const Live2d = memo(() => {
                 return models[key].map((item) => item.configuration);
               })
               .flat(1),
-            // models: Azur.map((item) => {
+            // models: Sin.map((item) => {
             //   return {
             //     ...item.configuration,
-            //     path: `/model/model/live2d/Azur/${item.configuration.name}/${item.configuration.name}.model3.json`,
+            //     path: `/model/model/live2d/Sin/${item.configuration.name}/${item.configuration.name}.model3.json`,
             //   };
             // }),
           });

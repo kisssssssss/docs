@@ -7,6 +7,7 @@ import {
   HomeOutlined,
   ProfileOutlined,
   ArrowUpOutlined,
+  SettingOutlined
 } from "@ant-design/icons";
 
 const Catalogs = dynamic(() => import("./Catalogs"), {
@@ -84,12 +85,36 @@ export default function Article({ content, darkMode }) {
 
   const [open, setOpen] = useState(false);
 
+  const button = [
+    {
+      icon: <ArrowUpOutlined />,
+      onClick: () => scrollTo(0, 0),
+    },
+    {
+      icon: <ProfileOutlined />,
+      onClick: () => setOpen(true),
+    },
+    {
+      icon: <HomeOutlined />,
+      onClick: () => {
+        router.push("/#docs");
+        sessionStorage.setItem("hashPath", "#docs");
+      },
+    },
+    {
+      icon: <SettingOutlined />,
+      onClick: () => {
+        router.push("/setting/base");
+      },
+    },
+  ];
+
   return (
     <>
       <Catalogs
+        open={open}
         catalogs={catalogs}
         darkMode={darkMode}
-        open={open}
         setOpen={setOpen}
       />
 
@@ -99,24 +124,13 @@ export default function Article({ content, darkMode }) {
       ></article>
 
       <FloatButton.Group shape="circle" style={{ right: 24 }}>
-        <FloatButton
-          type="primary"
-          icon={<ProfileOutlined />}
-          onClick={() => setOpen(true)}
-        />
-        <FloatButton
-          type="primary"
-          icon={<ArrowUpOutlined />}
-          onClick={() => scrollTo(0, 0)}
-        />
-        <FloatButton
-          type="primary"
-          icon={<HomeOutlined />}
-          onClick={() => {
-            router.push("/#docs");
-            sessionStorage.setItem("hashPath", "#docs");
-          }}
-        />
+        {button.map((item, index) => (
+          <FloatButton
+            type="primary"
+            icon={item.icon}
+            onClick={() => item.onClick()}
+          />
+        ))}
       </FloatButton.Group>
     </>
   );

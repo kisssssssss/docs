@@ -2,9 +2,8 @@
 import Cookies from "js-cookie";
 import { useRouter } from "next/navigation";
 import { SwapLeftOutlined, ArrowUpOutlined } from "@ant-design/icons";
-import { memo, useCallback, useEffect, useState } from "react";
+import { memo, useEffect, useState } from "react";
 import {
-  Switch,
   Card,
   Divider,
   Space,
@@ -35,7 +34,7 @@ const keyMap = {
 
 const changeModel = (modelName) => {
   const targetIndex = window.oml2d.options.models.findIndex(
-    (item) => item.name === modelName
+    (item) => item.name === modelName,
   );
   window.oml2d.loadModelByIndex(targetIndex);
 };
@@ -51,7 +50,7 @@ const getModelsListNode = (list) => {
       <div key={key} id={key}>
         <p className="text-lg font-bold dark:text-gray-200/85">
           {keyMap[key]}
-          <span className="mx-2 text-base text-[#00000073] dark:text-gray-300/30 font-semibold">
+          <span className="mx-2 text-base font-semibold text-[#00000073] dark:text-gray-300/30">
             数量：{list[key].length}
           </span>
         </p>
@@ -61,10 +60,10 @@ const getModelsListNode = (list) => {
               <Card
                 hoverable
                 style={{ width: 160 }}
-                key={item.configuration.name+index}
+                key={item.configuration.name + index}
                 cover={
                   <img
-                    className="my-0 object-cover w-[160px] h-[160px]"
+                    className="my-0 h-[160px] w-[160px] object-cover"
                     alt=""
                     src={item.cover}
                     loading="lazy"
@@ -97,13 +96,13 @@ const getModelsListNode = (list) => {
       <p className="text-xl font-bold dark:text-gray-200/90">
         当前 Live2D 数量：{count}
       </p>
-      <div className="text-base text-[#00000073] dark:text-gray-400/60 font-semibold">
+      <div className="text-base font-semibold text-[#00000073] dark:text-gray-400/60">
         类型：
         <ul>
           {Object.keys(list).map((key) => (
             <li
               key={`type_${key}`}
-              className="mx-2 hover:text-violet-500 dark:hover:text-violet-500/80 hover:underline underline-offset-4 cursor-pointer my-1"
+              className="mx-2 my-1 cursor-pointer underline-offset-4 hover:text-violet-500 hover:underline dark:hover:text-violet-500/80"
               onClick={() => {
                 document.getElementById(key).scrollIntoView();
               }}
@@ -121,11 +120,9 @@ const getModelsListNode = (list) => {
   return res;
 };
 
-const ModelList = memo(({ enable, darkMode }) => {
-  if (!enable) return <></>;
-
+const ModelList = memo(({ darkMode }) => {
   const [renderer, setRenderer] = useState(
-    <ModelListSkeleton darkMode={darkMode} />
+    <ModelListSkeleton darkMode={darkMode} />,
   );
 
   useEffect(() => {
@@ -150,13 +147,6 @@ const Live2dSetting = memo(({ darkMode }) => {
   //	live2d 是否启用
   const live2d_enable = Cookies.get("live2d_enable") == "true";
 
-  // 启用/禁用 Live2d
-  const enableLive2d = useCallback((checked) => {
-    Cookies.set("live2d_enable", checked, { expires: 365 });
-    // 通过 setTimeout 防止 Switch组件动画 卡顿
-    setTimeout(() => window.location.reload(), 100);
-  }, []);
-
   return (
     <ConfigProvider
       theme={{
@@ -165,24 +155,26 @@ const Live2dSetting = memo(({ darkMode }) => {
     >
       {/* 回到主页 */}
       <SwapLeftOutlined
-        className="hover:text-violet-500 dark:hover:text-violet-500 cursor-pointer text-[25px] dark:text-gray-200/90"
+        className="cursor-pointer text-[25px] hover:text-violet-500 dark:text-gray-200/90 dark:hover:text-violet-500"
         style={{ fontSize: "20px" }}
-        onClick={() => router.push("/")}
+        onClick={() => router.push("/setting/base")}
       />
-
-      {/* 显示/禁用 Live2D */}
-      <div className="flex items-center justify-between">
-        <p className="inline-block text-xl font-bold dark:text-gray-200/90">
-          显示 Live2D
-        </p>
-        <Switch defaultChecked={live2d_enable} onChange={enableLive2d} />
-      </div>
-
-      {/* 分割线 */}
       <Divider />
 
+      {!live2d_enable && (
+        <div className="mb-6 rounded-md border-2 border-gray-100 px-6 py-4 text-lg font-bold shadow-md dark:text-gray-200/90">
+          <p>当前未开启 Live2D 模型，因此无法预览模型。若需要预览，请先 </p>{" "}
+          <span
+            className="cursor-pointer select-none text-violet-400/75 hover:text-violet-400/95 "
+            onClick={() => router.push("/setting/base")}
+          >
+            开启 Live2D {"->"}
+          </span>
+        </div>
+      )}
+
       {/* 展示 Live2D 模型列表 */}
-      <ModelList enable={live2d_enable} darkMode={darkMode} />
+      <ModelList darkMode={darkMode} />
 
       {/* 回到顶部 */}
       <FloatButton

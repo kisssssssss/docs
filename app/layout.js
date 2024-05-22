@@ -1,13 +1,7 @@
 import dynamic from "next/dynamic";
 import { AntdRegistry } from "@ant-design/nextjs-registry";
 
-import Sky from "@/views/background/Sky";
-import Plum from "@/views/background/Plum";
-import WebGL from "@/views/background/WebGL";
-import Wave from "@/views/background/Wave";
-import BlackGrid from "@/views/background/BlackGrid";
-import BlackGridLarge from "@/views/background/BlackGrid.large";
-import WhiteGrid from "@/views/background/WhiteGrid";
+import Background from "@/views/background";
 const Live2d = dynamic(() => import("../views/Live2d"), {
   ssr: false,
 });
@@ -26,31 +20,13 @@ export default function RootLayout({ children }) {
   const [darkMode, theme] = getTheme();
 
   return (
-    <html
-      lang="en"
-      className={`${darkMode ? "dark" : "light"}`}
-      style={{ height: "100%" }}
-    >
+    <html lang="en" className={`${darkMode ? "dark" : "light"} h-full`}>
       <head>
         <link rel="dns-prefetch" href="//cdn.jsdelivr.net" />
       </head>
-      <body
-        className="h-full w-full"
-        style={{ height: "100%", position: "relative"}}
-      >
+      <body className="relative h-full w-full">
         <AntdRegistry>{children}</AntdRegistry>
-        {
-          {
-            sky: <Sky />,
-            plum: <Plum />,
-            vortex: <WebGL />,
-            whiteGrid: <WhiteGrid />,
-            blackGrid: <BlackGrid />,
-            blackGridLarge: <BlackGridLarge />,
-            wave: <Wave />,
-            null: <></>,
-          }[theme]
-        }
+        <Background theme={theme} />
         <Live2d />
       </body>
     </html>

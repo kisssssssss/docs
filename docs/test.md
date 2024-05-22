@@ -3,26 +3,31 @@ title: "test"
 ---
 
 ::: info
-哈哈哈
 
-**哈哈哈**
 
 ==ass==
 :::
 
 ::: warning
-哈哈哈
 
-**哈哈哈**
 
 == ass ==
 :::
 
 ::: error
-哈哈哈
 
-**哈哈哈**
-
-== ass ==
 :::
 
+::: details 测试
+
+哈哈哈
+
+阿萨
+
+1. 阿斯顿a
+2. asdas
+3. asd
+4. ```javascript
+    const a = 1;
+   ````
+:::

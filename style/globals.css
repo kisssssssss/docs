@@ -98,6 +98,79 @@ a:hover {
   margin-bottom: 0px !important;
 }
 
+details {
+  border-radius: 8px;
+  padding: 16px;
+  line-height: 24px;
+  font-size: 16px;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  @apply shadow-[0_0px_6px_-1px_rgb(0,0,0,0.1)] border-gray-600/80 dark:text-gray-300/80 border-2 border-solid;
+}
+
+details>summary {
+  position: relative;
+  margin: -1.5rem;
+  padding-block: 1.5rem;
+  padding-inline: 4rem 1.5rem;
+  list-style: none;
+  cursor: pointer;
+  font-weight: bolder;
+}
+
+details>summary>p {
+  margin: 0 auto !important;
+}
+
+details>summary::marker {
+  content: '';
+  color: transparent;
+  font-size: 0;
+}
+
+details>summary::before {
+  content: " ";
+  position: absolute;
+  top: calc(50% - .75rem);
+  inset-inline-start: 1.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  transition: background .3s ease, transform .3s ease;
+  @apply bg-gray-400;
+}
+
+.dark details>summary::before {
+  @apply bg-gray-600;
+}
+
+details>summary::after {
+  content: " ";
+  position: absolute;
+  top: calc(50% - .75rem);
+  inset-inline-start: 1.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  line-height: normal;
+  transform: rotate(90deg);
+  transition: transform .3s ease;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='rgb(75 85 99)' viewBox='0 0 24 24'%3E%3Cpath d='M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z'/%3E%3C/svg%3E");
+}
+
+.dark details>summary::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='rgb(156 163 175)' viewBox='0 0 24 24'%3E%3Cpath d='M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z'/%3E%3C/svg%3E");
+}
+
+.details-content {
+  margin-top: 20px;
+  border-top: 1px solid rgb(0 0 0 / 30%);
+}
+
+.dark .details-content {
+  border-top: 1px solid rgb(255 255 255 / 30%);
+  margin-top: 20px;
+}
+
 /* 优化数学公式显示 */
 .MathJax>svg {
   display: inline;
@@ -142,8 +215,8 @@ article {
 }
 
 .dark article {
-  background-color: rgba(45, 45, 45, .2);
-  backdrop-filter: blur(30px);
+  background-color: rgba(45, 45, 45, .1);
+  backdrop-filter: blur(1px);
 }
 
 /* 隐藏文章页的抽屉目录滚动条 */
