@@ -1,0 +1,219 @@
+/* 文章标题 */
+article>h1.page-title {
+  font-size: 3em;
+  margin-top: 0.6em;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid #a3a3a3;
+}
+
+/* 隐藏文章页的抽屉目录滚动条 */
+.ant-drawer-body::-webkit-scrollbar {
+  display: none;
+}
+
+.ant-drawer-body {
+  -ms-overflow-style: none;
+}
+
+/* 行内代码块优化 */
+li>code,
+p>code {
+  padding: .25rem .5rem;
+  margin: 0;
+  font-size: .9em;
+  color: #7c3aed !important;
+  background-color: #ebeaeacc;
+  border-radius: 4px;
+}
+
+/* 引用块优化 */
+blockquote>p::before {
+  content: open-quote;
+  margin-right: 5px;
+}
+
+blockquote>p::after {
+  content: close-quote;
+  margin-left: 5px;
+}
+
+/* 优化数学公式显示 */
+.MathJax>svg {
+  display: inline;
+}
+
+/* markdown高亮样式修改 */
+mark {
+  margin: 0 1px;
+  color: #be0014;
+  background-color: transparent;
+  font-weight: 550;
+}
+
+/* 强调快优化显示 */
+strong {
+  font-weight: 650;
+  margin: 0px 2px;
+}
+
+strong>mark {
+  color: #ff0019;
+}
+
+/* 自定义容器 */
+
+.custom-container {
+  --text-color: #030712;
+  --text-dark-color: #f9fafb;
+  --filter: brightness(0.9);
+  --bg-info-color: #94a3b8;
+  --bg-info-dark-color: #64748b;
+  --bg-tip-color: #a5b4fc;
+  --bg-tip-dark-color: #6366f1;
+  --bg-warning-color: #facc15;
+  --bg-warning-dark-color: #f59e0b;
+  --bg-error-color: #f87171;
+  --bg-error-dark-color: #ef4444;
+
+  border: 1px solid transparent;
+  border-radius: 8px;
+  padding: 16px 16px 8px;
+  line-height: 24px;
+  font-size: 16px;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.custom-container>p {
+  margin-top: 0.75em;
+  margin-bottom: 0.75em;
+}
+
+.custom-container.info {
+  color: var(--text-color);
+  background-color: var(--bg-info-color);
+}
+
+.dark .custom-container.info {
+  color: var(--text-dark-color);
+  background-color: var(--bg-info-dark-color);
+  filter: var(--filter);
+}
+
+.custom-container.tip {
+  color: var(--text-color);
+  background-color: var(--bg-tip-color);
+}
+
+.dark .custom-container.tip {
+  color: var(--text-dark-color);
+  background-color: var(--bg-tip-dark-color);
+  filter: var(--filter);
+}
+
+.custom-container.warning {
+  color: var(--text-color);
+  background-color: var(--bg-warning-color);
+}
+
+.dark .custom-container.warning {
+  color: var(--text-dark-color);
+  background-color: var(--bg-warning-dark-color);
+  filter: var(--filter);
+}
+
+.custom-container.error {
+  color: var(--text-color);
+  background-color: var(--bg-error-color);
+}
+
+.dark .custom-container.error {
+  color: var(--text-dark-color);
+  background-color: var(--bg-error-dark-color);
+  filter: var(--filter);
+}
+
+.custom-container-title {
+  font-size: 18px;
+  font-weight: bolder;
+  margin-top: 10px !important;
+  margin-bottom: 20px !important;
+}
+
+details {
+  color: #030712;
+  border-radius: 8px;
+  padding: 16px;
+  line-height: 24px;
+  font-size: 16px;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  border: 2px solid rgb(75 85 99 / 0.8);
+}
+
+.dark details {
+  color: #f9fafb;
+}
+
+details>summary {
+  position: relative;
+  margin: -1.5rem;
+  padding-block: 1.5rem;
+  padding-inline: 4rem 1.5rem;
+  list-style: none;
+  cursor: pointer;
+  font-weight: bolder;
+}
+
+details>summary>p {
+  margin: 0 auto !important;
+}
+
+details>summary::marker {
+  content: '';
+  color: transparent;
+  font-size: 0;
+}
+
+details>summary::before {
+  content: " ";
+  position: absolute;
+  top: calc(50% - .75rem);
+  inset-inline-start: 1.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  transition: background .3s ease, transform .3s ease;
+  background-color: #9ca3af;
+}
+
+.dark details>summary::before {
+  background-color: #4b5563;
+}
+
+details>summary::after {
+  content: " ";
+  position: absolute;
+  top: calc(50% - .75rem);
+  inset-inline-start: 1.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  line-height: normal;
+  transform: rotate(90deg);
+  transition: transform .3s ease;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='rgb(75 85 99)' viewBox='0 0 24 24'%3E%3Cpath d='M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z'/%3E%3C/svg%3E");
+}
+
+.dark details>summary::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='rgb(156 163 175)' viewBox='0 0 24 24'%3E%3Cpath d='M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z'/%3E%3C/svg%3E");
+}
+
+.details-content {
+  margin-top: 20px;
+  border-top: 1px solid rgb(0 0 0 / 30%);
+}
+
+.dark .details-content {
+  border-top: 1px solid rgb(255 255 255 / 30%);
+  margin-top: 20px;
+}
