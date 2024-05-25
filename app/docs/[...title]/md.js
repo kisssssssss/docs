@@ -50,9 +50,12 @@ const containerOption = {
   tipContainer: {
     name: "tip",
     openRender: (tokens, index, _options) => {
-      const info = tokens[index].info.trim().trim();
-      return `<div class="custom-container tip">`;
-      // return `<div class="custom-container tip">\n<p class="custom-container-title tip">${info || 'Tip'}</p>\n`;
+      const tip = tokens[index].info.replace("tip", "").trim();
+      if (tip) {
+        return `<div class="custom-container tip">\n<p class="custom-container-title tip">${tip || "Tip"}</p>\n`;
+      } else {
+        return `<div class="custom-container tip">`;
+      }
     },
   },
   warningContainer: {

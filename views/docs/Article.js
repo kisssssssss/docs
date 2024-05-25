@@ -1,87 +1,19 @@
 "use client";
-import dynamic from "next/dynamic";
-import { FloatButton } from "antd";
-import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import { memo, useState, useCallback } from "react";
+import { FloatButton, Divider, ConfigProvider, theme } from "antd";
 import {
   HomeOutlined,
   ProfileOutlined,
   ArrowUpOutlined,
-  SettingOutlined
+  SettingOutlined,
 } from "@ant-design/icons";
+import dynamic from "next/dynamic";
 
-const Catalogs = dynamic(() => import("./Catalogs"), {
-  ssr: false,
-});
+const Toc = dynamic(() => import("./Toc"), { ssr: false });
 
-const getCatalogs = () => {
-  // 获取h1-h6节点
-  let headers = [];
-  let temp = document.querySelectorAll("h1, h2, h3, h4, h5, h6");
-  for (let i = 0; i < temp.length; i++) {
-    headers.push({
-      text: temp[i].innerHTML,
-      level: Number(temp[i].tagName[1]),
-      children: [],
-    });
-  }
-  let res = [];
-  // 生成目录树
-  if (headers.length >= 1) {
-    res.push(headers[0]);
-    for (let i = 1; i < headers.length; i++) {
-      const lastIndex1 = res.length - 1;
-
-      if (headers[i].level > res[lastIndex1].level) {
-        const lastIndex2 = res[lastIndex1]?.children.length - 1;
-        const lastIndex3 =
-          res[lastIndex1]?.children[lastIndex2]?.children.length - 1;
-        const lastIndex4 =
-          res[lastIndex1]?.children[lastIndex2]?.children[lastIndex3]?.children
-            .length - 1;
-        const lastIndex5 =
-          res[lastIndex1]?.children[lastIndex2]?.children[lastIndex3]?.children[
-            lastIndex4
-          ]?.children.length - 1;
-
-        switch (headers[i].level - res[lastIndex1].level) {
-          case 1:
-            res[lastIndex1].children.push(headers[i]);
-            break;
-          case 2:
-            res[lastIndex1].children[lastIndex2].children.push(headers[i]);
-            break;
-          case 3:
-            res[lastIndex1].children[lastIndex2].children[
-              lastIndex3
-            ].children.push(headers[i]);
-            break;
-          case 4:
-            res[lastIndex1].children[lastIndex2].children[lastIndex3].children[
-              lastIndex4
-            ].children.push(headers[i]);
-            break;
-          case 5:
-            res[lastIndex1].children[lastIndex2].children[lastIndex3].children[
-              lastIndex4
-            ].children[lastIndex5].children.push(headers[i]);
-        }
-      } else {
-        res.push(headers[i]);
-      }
-    }
-  }
-  return res;
-};
-
-export default function Article({ content, darkMode }) {
+const Article = memo(({ content, darkMode, title, nearPage }) => {
   const router = useRouter();
-
-  // 目录
-  const [catalogs, setCatalogs] = useState([]);
-  useEffect(() => {
-    setCatalogs(getCatalogs());
-  }, [content]);
 
   const [open, setOpen] = useState(false);
 
@@ -109,23 +41,69 @@ export default function Article({ content, darkMode }) {
     },
   ];
 
+  const pre = useCallback(() => {
+    if (nearPage.pre?.path) {
+      router.push(`/docs/${nearPage.pre.path}`);
+    }
+  }, [nearPage]);
+
+  const next = useCallback(() => {
+    if (nearPage.next?.path) {
+      router.push(`/docs/${nearPage.next.path}`);
+    }
+  }, [nearPage]);
+
   return (
     <>
-      <Catalogs
-        open={open}
-        catalogs={catalogs}
-        darkMode={darkMode}
-        setOpen={setOpen}
-      />
+      <div className="lg:max-w-screen-[896px] xl:max-w-screen-[1120px] prose mx-auto px-6 py-20 dark:prose-invert prose-a:underline-offset-[6px] prose-blockquote:border-[#c4b5fd] prose-code:font-[CaskaydiaCoveNerdFontMono] prose-code:font-medium prose-code:before:content-[''] prose-code:after:content-[''] prose-pre:font-[CaskaydiaCoveNerdFontMono] dark:prose-code:bg-zinc-800 dark:prose-pre:bg-zinc-600 sm:max-w-screen-sm md:max-w-screen-md ">
+        <article
+          dangerouslySetInnerHTML={{
+            __html: `<h1 class="page-title">${title}</h1>` + content,
+          }}
+        ></article>
 
-      <article
-        className={`prose dark:prose-invert prose-pre:font-[CaskaydiaCoveNerdFontMono] prose-code:font-medium prose-code:before:content-[''] prose-code:after:content-[''] prose-code:font-[CaskaydiaCoveNerdFontMono] prose-a:underline-offset-[6px] mx-auto px-6 sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-[896px] xl:max-w-screen-[1120px] py-20 `}
-        dangerouslySetInnerHTML={{ __html: content }}
-      ></article>
+        <ConfigProvider
+          theme={{
+            algorithm: darkMode ? theme.darkAlgorithm : theme.defaultAlgorithm,
+          }}
+        >
+          <Divider />
+        </ConfigProvider>
+
+        <div className="flex w-full items-center justify-between">
+          <div className="ml-4 w-[35%] border-l-[3px] border-violet-500 py-3 pl-6">
+            <span
+              className="block w-fit cursor-pointer text-2xl hover:text-violet-500"
+              onClick={pre}
+            >
+              pre
+            </span>
+            <span>{nearPage.pre?.title || "没有上一章了"}</span>
+          </div>
+          <div className="mr-4 w-[35%] border-r-[3px] border-violet-500 py-3 pr-6">
+            <div className="flex flex-row-reverse">
+              <span
+                className="block w-fit cursor-pointer text-2xl hover:text-violet-500"
+                onClick={next}
+              >
+                next
+              </span>
+            </div>
+            <div className="flex flex-row-reverse">
+              <span className="block w-fit">
+                {nearPage.next?.title || "没有下一章了"}
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <Toc open={open} setOpen={setOpen} darkMode={darkMode} />
 
       <FloatButton.Group shape="circle" style={{ right: 24 }}>
         {button.map((item, index) => (
           <FloatButton
+            key={index}
             type="primary"
             icon={item.icon}
             onClick={() => item.onClick()}
@@ -134,4 +112,6 @@ export default function Article({ content, darkMode }) {
       </FloatButton.Group>
     </>
   );
-}
+});
+
+export default Article;
