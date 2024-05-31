@@ -23,6 +23,7 @@ const getTocTreeData = () => {
 
       const newItem = {
         text: header.innerHTML,
+        level,
         children: [],
       };
 
@@ -60,8 +61,9 @@ const getTocTreeData = () => {
     return array.map((item) => {
       return {
         title: item.text,
-        key: item.text,
-        children: item.children.length == 0 ? null : generateTreeData(item.children),
+        key: item.text + item.level,
+        children:
+          item.children.length == 0 ? null : generateTreeData(item.children),
       };
     });
   }
@@ -72,7 +74,8 @@ const getTocTreeData = () => {
 const Toc = memo(({ open, setOpen, darkMode }) => {
   // 点击目录标题
   const onSelect = useCallback((key) => {
-    const h = document.getElementById(encodeURI(key[0].toLowerCase()));
+    const HId = key[0].toLowerCase().substring(0,key[0].length-1);
+    const h = document.getElementById(encodeURI(HId));
     if (h) {
       h.scrollIntoView();
     }
