@@ -27,14 +27,24 @@ p>code {
 }
 
 /* 引用块优化 */
+blockquote{
+  padding: 1px 0;
+}
 blockquote>p::before {
-  content: open-quote;
+  display: none !important;
+  content: "" !important;
   margin-right: 5px;
 }
 
 blockquote>p::after {
-  content: close-quote;
+  display: none !important;
+  content: "" !important;
   margin-left: 5px;
+}
+
+blockquote>p>img {
+  display: block;
+  margin: 24px auto;
 }
 
 /* 优化数学公式显示 */
