@@ -2,7 +2,7 @@ import React, { memo, useCallback } from "react";
 import { ConfigProvider, theme, Tree, Drawer } from "antd";
 import { DownOutlined } from "@ant-design/icons";
 
-const getTocTreeData = () => {
+const getData = () => {
   // 获取所有的 h1 到 h6 元素
   const headers = document.querySelectorAll("h1, h2, h3, h4, h5, h6");
 
@@ -68,14 +68,23 @@ const getTocTreeData = () => {
     });
   }
 
-  return generateTreeData(generateHeaders(headerArray));
+  const headersRes = generateHeaders(headerArray);
+
+  return {
+    title: headersRes[0].text,
+    TocTree: generateTreeData(headersRes).slice(1),
+  };
 };
 
 const Toc = memo(({ open, setOpen, darkMode }) => {
+  const { title, TocTree } = getData();
+
   // 点击目录标题
   const onSelect = useCallback((key) => {
-    const HId = key[0].toLowerCase().substring(0,key[0].length-1);
-    const h = document.getElementById(encodeURI(HId));
+    const HId = encodeURIComponent(
+      key[0].toLowerCase().substring(0, key[0].length - 1),
+    ).replace(/%20/g, "-");
+    const h = document.getElementById(HId);
     if (h) {
       h.scrollIntoView();
     }
@@ -95,13 +104,14 @@ const Toc = memo(({ open, setOpen, darkMode }) => {
         onClose={() => setOpen(false)}
         placement={window.innerWidth < 768 ? "bottom" : "right"}
       >
+        <p className="truncate">{title}</p>
         <ConfigProvider theme={{ token: { colorBgContainer: "transparent" } }}>
           <Tree
             showLine
             defaultExpandAll
             switcherIcon={<DownOutlined />}
             onSelect={onSelect}
-            treeData={getTocTreeData()}
+            treeData={TocTree}
           />
         </ConfigProvider>
       </Drawer>
