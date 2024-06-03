@@ -12,7 +12,7 @@ Web是基于客户/服务器（C/S）的一种体系结构。主要由三部分�
 - 通信协议：客户端和服务器之间采用HTTP协议进行通信。
 
 HTTP：超文本传输协议（Hypertext Transfer Protocol）是Web使用的协议，一个基于请求-响应的无状态的协议，详细规定了Web客户与服务器之间如何通信。 
-![](https://cdn.jsdelivr.net/gh/kisssssssss/IMG/docs/Java/JavaWeb/1.png)
+![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/Java/JavaWeb/1.png)
 
 ## URL、URI、URN
 
@@ -73,7 +73,7 @@ Web文档是一种重要的Web资源，通常也称为Web页面，可分为静�
 
 - CGI技术
 
-  ![](https://cdn.jsdelivr.net/gh/kisssssssss/IMG/docs/Java/JavaWeb/2.png)
+  ![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/Java/JavaWeb/2.png)
 
 - 服务器扩展技术（Servlet技术）
 
@@ -124,7 +124,7 @@ void service(HttpServletRequest request, HttpServletResponse response)
 
 Servlet**生命周期**：Servlet 从创建到销毁的整个过程。
 
-![](https://cdn.jsdelivr.net/gh/kisssssssss/IMG/docs/Java/JavaWeb/3.png)
+![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/Java/JavaWeb/3.png)
 
 1. 加载到内存：使用`Class.forName()`方法
 2. 实例化：调用`HelloServlet()`构造方法
@@ -233,7 +233,7 @@ Servlet**生命周期**：Servlet 从创建到销毁的整个过程。
 - 使用**响应重定向**，浏览器的地址栏**会显示**转发后的地址。
 - **请求转发**可以共享**请求作用域**中的数据；**响应重定向**可以共享**会话作用域**中的数据。
 
-![](https://cdn.jsdelivr.net/gh/kisssssssss/IMG/docs/Java/JavaWeb/4.png)
+![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/Java/JavaWeb/4.png)
 
 ---
 
@@ -478,7 +478,7 @@ public class LoginServlet extends HttpServlet {
 
 **JSP页面生命周期**
 
-![](https://cdn.jsdelivr.net/gh/kisssssssss/IMG/docs/Java/JavaWeb/5.png)
+![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/Java/JavaWeb/5.png)
 
 1. 转换阶段：Web容器读取JSP页面对其解析，并将其转换成Java源代码。
 2. 编译阶段：在Web容器调用Java编译器javac编译该文件。
@@ -716,7 +716,7 @@ public class Customer {
 
 MVC（Model-View-Controller）设计模式，在这种结构中，将Web组件分为模型（Model）、视图（View）和控制器（Controller），每种组件完成各自的任务。
 
- ![](https://cdn.jsdelivr.net/gh/kisssssssss/IMG/docs/Java/JavaWeb/6.png)
+ ![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/Java/JavaWeb/6.png)
 
 所有请求的目标都是Servlet，它充当应用程序的控制器，Servlet分析请求并将响应所需要的数据收集到JavaBeans对象，该对象作为应用程序的模型，最后Servlet控制器将请求转发到JSP页面。这些页面使用存储在JavaBeans中的数据产生响应，该对象作为应用程序的视图。
 
@@ -858,7 +858,7 @@ JDBC的基本功能包括：
 
 目前有多种类型的数据库，每种数据库都定义了一套API，因此需要有**在程序收到JDBC请求后，将其转换成适合于数据库系统的方法调用**。把完成这类转换工作的程序叫做**数据库驱动程序**。
 
-![](https://cdn.jsdelivr.net/gh/kisssssssss/IMG/docs/Java/JavaWeb/7.png)
+![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/Java/JavaWeb/7.png)
 
 
 

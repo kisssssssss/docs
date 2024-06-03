@@ -53,19 +53,19 @@ JSX 用于描述我们的 UI 界面，并且其可以和 JavaScript 融合在一
 
 1. 情况一：当变量是 Number、String、Array 类型时，可以直接显示；
 
-   ![](https://cdn.jsdelivr.net/gh/kisssssssss/IMG/docs/WEB/react/Snipaste_10.png)
+   ![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/WEB/react/Snipaste_10.png)
 
 2. 当变量是 null、undefined、Boolean 类型时，内容为空；
 
    如果希望可以显示 null、undefined、Boolean，那么需要转成字符串；可以使用 toString 方法、和空字符串拼接，String()等方式；
 
-   ![](https://cdn.jsdelivr.net/gh/kisssssssss/IMG/docs/WEB/react/Snipaste_11.png)
+   ![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/WEB/react/Snipaste_11.png)
 
-   ![](https://cdn.jsdelivr.net/gh/kisssssssss/IMG/docs/WEB/react/Snipaste_12.png)
+   ![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/WEB/react/Snipaste_12.png)
 
 3. 情况三：Object 对象类型不能作为子元素
 
-   ![](https://cdn.jsdelivr.net/gh/kisssssssss/IMG/docs/WEB/react/Snipaste_13.png)
+   ![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/WEB/react/Snipaste_13.png)
 
 ### 嵌入表达式
 
@@ -73,7 +73,7 @@ JSX 用于描述我们的 UI 界面，并且其可以和 JavaScript 融合在一
 - 三元运算符
 - 执行一个函数
 
-![](https://cdn.jsdelivr.net/gh/kisssssssss/IMG/docs/WEB/react/Snipaste_14.png)
+![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/WEB/react/Snipaste_14.png)
 
 ### 绑定属性
 
@@ -83,7 +83,7 @@ JSX 用于描述我们的 UI 界面，并且其可以和 JavaScript 融合在一
 <h2 title={this.state.title}></h2>
 ```
 
-![](https://cdn.jsdelivr.net/gh/kisssssssss/IMG/docs/WEB/react/Snipaste_15.png)
+![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/WEB/react/Snipaste_15.png)
 
 #### src
 
@@ -91,7 +91,7 @@ JSX 用于描述我们的 UI 界面，并且其可以和 JavaScript 融合在一
 <img title={this.state.src} />
 ```
 
-![](https://cdn.jsdelivr.net/gh/kisssssssss/IMG/docs/WEB/react/Snipaste_16.png)
+![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/WEB/react/Snipaste_16.png)
 
 #### href
 
@@ -99,15 +99,15 @@ JSX 用于描述我们的 UI 界面，并且其可以和 JavaScript 融合在一
 <a href={this.state.href}></a>
 ```
 
-![](https://cdn.jsdelivr.net/gh/kisssssssss/IMG/docs/WEB/react/Snipaste_17.png)
+![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/WEB/react/Snipaste_17.png)
 
 #### class
 
 React 绑定 class 的时候，属性名是 className 而不是 class。虽然 babel 在解析的时候能正常解析但容易造成误解，而且控制台也会警告
 
-![](https://cdn.jsdelivr.net/gh/kisssssssss/IMG/docs/WEB/react/Snipaste_18.png)
+![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/WEB/react/Snipaste_18.png)
 
-![](https://cdn.jsdelivr.net/gh/kisssssssss/IMG/docs/WEB/react/19.png)
+![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/WEB/react/19.png)
 
 正确写法：
 
@@ -123,14 +123,14 @@ React 绑定 class 的时候，属性名是 className 而不是 class。虽然 b
 
    可以，但是阅读性差
 
-   ![](https://cdn.jsdelivr.net/gh/kisssssssss/IMG/docs/WEB/react/20.png)
+   ![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/WEB/react/20.png)
 
    可以将 className 抽离出来
 
-   ![](https://cdn.jsdelivr.net/gh/kisssssssss/IMG/docs/WEB/react/21.png)
+   ![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/WEB/react/21.png)
 
 2. 通过数组进行管理
-   ![](https://cdn.jsdelivr.net/gh/kisssssssss/IMG/docs/WEB/react/22.png)
+   ![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/WEB/react/22.png)
 
 3. 通过第三方库：[classnames](https://github.com/JedWatson/classnames)
 
@@ -176,11 +176,11 @@ js 不支持-写法，有些 css 属性需要转换成驼峰标识
 
 以下面代码为例，在类中直接定义一个函数，并且将这个函数绑定到元素的 onClick 事件上，当前这个函数的 this 指向的是谁呢？
 
-![](https://cdn.jsdelivr.net/gh/kisssssssss/IMG/docs/WEB/react/Snipaste_5.png)
+![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/WEB/react/Snipaste_5.png)
 
 显然，默认情况下是 undefined
 
-![](https://cdn.jsdelivr.net/gh/kisssssssss/IMG/docs/WEB/react/Snipaste_6.png)
+![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/WEB/react/Snipaste_6.png)
 
 ---
 
@@ -229,11 +229,11 @@ click();
 <button onClick={this.click.bind(this)}></button>
 ```
 
-![](https://cdn.jsdelivr.net/gh/kisssssssss/IMG/docs/WEB/react/Snipaste_7.png)
+![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/WEB/react/Snipaste_7.png)
 
 2. 公有类字段(Public class fields)
 
-![](https://cdn.jsdelivr.net/gh/kisssssssss/IMG/docs/WEB/react/Snipaste_8.png)
+![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/WEB/react/Snipaste_8.png)
 
 3. 传入一个箭头函数(常用)
 
@@ -241,13 +241,13 @@ click();
 <button onClick={() => this.click()}>按钮</button>
 ```
 
-![](https://cdn.jsdelivr.net/gh/kisssssssss/IMG/docs/WEB/react/Snipaste_9.png)
+![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/WEB/react/Snipaste_9.png)
 
 ## 电影展示案例
 
 效果演示
 
-![](https://cdn.jsdelivr.net/gh/kisssssssss/IMG/docs/WEB/react/23.gif)
+![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/WEB/react/23.gif)
 
 以下内容只是关键 js 代码，其它的如依赖引入、css 等省略不写
 
@@ -389,7 +389,7 @@ render() {
 
 效果
 
-![](https://cdn.jsdelivr.net/gh/kisssssssss/IMG/docs/WEB/react/24.gif)
+![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/WEB/react/24.gif)
 
 ::: details 实现代码
 
@@ -554,7 +554,7 @@ class APP extends React.Component {
 
 如果不添加 key 属性的话，浏览器会报一个警告。
 
-![](https://cdn.jsdelivr.net/gh/kisssssssss/IMG/docs/WEB/react/25.png)
+![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/WEB/react/25.png)
 
 ## jsx 转换的本质
 
@@ -586,7 +586,7 @@ createElement 需要传递三个参数：
 
 [Babel 官网查看转换结果](https://babeljs.io/repl/#?presets=react)
 
-![](https://cdn.jsdelivr.net/gh/kisssssssss/IMG/docs/WEB/react/26.png)
+![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/WEB/react/26.png)
 
 源代码：
 
@@ -659,7 +659,7 @@ const root = ReactDOM.createRoot(document.querySelector("#root"));
 root.render(React.createElement(APP, null));
 ```
 
-![](https://cdn.jsdelivr.net/gh/kisssssssss/IMG/docs/WEB/react/27.png)
+![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/WEB/react/27.png)
 
 如图，我们没有通过 jsx 书写的代码界面仍然可以正常渲染，但是缺点也很明显，代码阅读性十分差。
 
@@ -672,7 +672,7 @@ root.render(React.createElement(APP, null));
 
 我们通过 React.createElement 最终创建出来一个 ReactElement 对象：
 
-![](https://cdn.jsdelivr.net/gh/kisssssssss/IMG/docs/WEB/react/28.png)
+![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/WEB/react/28.png)
 
 这个 ReactElement 对象是什么作用呢？React 为什么要创建它呢？
 
@@ -682,7 +682,7 @@ root.render(React.createElement(APP, null));
 
 ## jsx – 虚拟 DOM – 真实 DOM
 
-![](https://cdn.jsdelivr.net/gh/kisssssssss/IMG/docs/WEB/react/29.png)
+![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/WEB/react/29.png)
 
 ## 声明式编程
 
@@ -703,7 +703,7 @@ React 官方的说法：Virtual DOM 是一种编程理念。
 
 效果
 
-![](https://cdn.jsdelivr.net/gh/kisssssssss/IMG/docs/WEB/react/30.gif)
+![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/WEB/react/30.gif)
 
 代码：
 
