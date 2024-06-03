@@ -12,11 +12,13 @@
 
 # 功能
 
-- [x] 存储并展示个人笔记与文档
+> 笔记仅支持 Markdown
+
+- [x] 存储并展示个人笔记
 - [x] 自动生成笔记目录结构
 - [x] 文章内容请求简单缓存
-- [x] 添加 Live2D 动态模型，模型来源于[https://github.com/kisssssssss/model](https://github.com/kisssssssss/model)
-- [x] 暗黑模式
+- [x] 添加 [Live2D 动态模型](https://github.com/kisssssssss/model)
+- [x] 多种背景模式
 
 # 本地调试
 
