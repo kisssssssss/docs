@@ -61,7 +61,7 @@ const home = memo(({ darkMode, docs }) => {
       >
         <img
           className="mx-auto w-16 h-16 min-w-16 min-h-16 xl:w-24 xl:min-w-24 xl:h-24 xl:min-h-24 2xl:w-32 2xl:min-w-32 2xl:h-32 2xl:min-h-32 rounded-full shadow-lg"
-          src="/img/icon.png"
+          src="https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/docs/main/public/img/icon.png"
           alt=""
         />
         <HomeLinks darkMode={darkMode} />
