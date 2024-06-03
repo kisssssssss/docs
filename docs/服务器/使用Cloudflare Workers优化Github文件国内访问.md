@@ -2,13 +2,15 @@
 title: 使用 Cloudflare Workers 优化 Github 文件国内访问速度
 ---
 
-为了能通过链接访问我放在 Github 上的[模型文件](https://github.com/kisssssssss/model)，刚开始我是使用 [jsdelivr](https://www.jsdelivr.com/) 。但 jsdelivr 最大问题是在国内访问十分不稳定，甚至会无法访问，必须使用代理才能正常访问。
+为了能通过链接访问我放在 Github 上的[模型文件](https://github.com/kisssssssss/model)，刚开始我是使用 [jsdelivr](https://www.jsdelivr.com/) 。但 jsdelivr 的问题是在基本上国内访问不了，必须使用代理才能正常访问。
 
 > 当然如果有国内服务器的话，可以不用考虑这些问题。
 
 为了国内不使用代理就能正常访问，决定使用 [Cloudflare Workers](https://workers.cloudflare.com) 和 [hunshcn/gh-proxy](https://github.com/hunshcn/gh-proxy)
 
 # 创建一个 Cloudflare Workers
+
+打开 Cloudflare 仪表盘
 
 在侧边栏选择 [Workers 和 Pages]，在创建使选择 [常见 Worker 示例] 即可。
 
