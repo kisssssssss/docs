@@ -29,7 +29,7 @@ const Live2d = memo(() => {
                     return defaultItem;
                   } else {
                     return defaultItem.filter(
-                      (item) => item.id != "SwitchModelClothes"
+                      (item) => item.id != "SwitchModelClothes",
                     );
                   }
                 },
@@ -40,10 +40,13 @@ const Live2d = memo(() => {
                 return models[key].map((item) => item.configuration);
               })
               .flat(1),
-            // models: Sin.map((item) => {
+            // models: ["知更鸟"].map((item) => {
             //   return {
-            //     ...item.configuration,
-            //     path: `/model/model/live2d/Sin/${item.configuration.name}/${item.configuration.name}.model3.json`,
+            //     path: `/model/model/live2d/StarRail/${item}/${item}.model3.json`,
+            //     name: item,
+            //     scale: 0.045,
+            //     position: [0, -10],
+            //     stageStyle: { height: 400, width: 350 },
             //   };
             // }),
           });
