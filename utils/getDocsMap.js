@@ -45,7 +45,7 @@ function getUrlPath(fileRealPath) {
 function readDir(dirPath) {
   const entries = fs.readdirSync(dirPath);
 
-  let res = entries.map((entry) => {
+  let res = entries.map((entry, index) => {
     const fullPath = path.join(dirPath, entry);
 
     const isDirectory = fs.statSync(fullPath).isDirectory();
@@ -53,7 +53,7 @@ function readDir(dirPath) {
     if (isDirectory) {
       return {
         title: entry,
-        key: entry,
+        key: `${entry}-dir-${index}`,
         children: readDir(fullPath),
       };
     } else {
@@ -74,7 +74,7 @@ function readDir(dirPath) {
 
         // 渲染时使用的字段
         title: temple,
-        key: temple,
+        key: `${temple}-file-${index}`,
         isLeaf: true,
         path: getUrlPath(fullPath),
       };

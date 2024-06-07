@@ -17,6 +17,10 @@ const Article = memo(({ content, darkMode, title, nearPage }) => {
 
   const [open, setOpen] = useState(false);
 
+  useCallback(() => {
+    console.log(123)
+  },[])
+
   const button = [
     {
       icon: <ArrowUpOutlined />,

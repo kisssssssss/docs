@@ -1,4 +1,4 @@
-import React, { memo, useCallback } from "react";
+import React, { memo, useCallback, useEffect, useState } from "react";
 import { ConfigProvider, theme, Tree, Drawer } from "antd";
 import { DownOutlined } from "@ant-design/icons";
 
@@ -77,7 +77,10 @@ const getData = () => {
 };
 
 const Toc = memo(({ open, setOpen, darkMode }) => {
-  const { title, TocTree } = getData();
+  const [data, setData] = useState({TocTree:[]});
+  useEffect(() => {
+    setData(getData());
+  }, []);
 
   // 点击目录标题
   const onSelect = useCallback((key) => {
@@ -104,14 +107,14 @@ const Toc = memo(({ open, setOpen, darkMode }) => {
         onClose={() => setOpen(false)}
         placement={window.innerWidth < 768 ? "bottom" : "right"}
       >
-        <p className="truncate">{title}</p>
+        <p className="truncate">{data.title}</p>
         <ConfigProvider theme={{ token: { colorBgContainer: "transparent" } }}>
           <Tree
             showLine
             defaultExpandAll
             switcherIcon={<DownOutlined />}
             onSelect={onSelect}
-            treeData={TocTree}
+            treeData={data.TocTree}
           />
         </ConfigProvider>
       </Drawer>
