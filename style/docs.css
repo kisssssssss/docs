@@ -227,3 +227,8 @@ details>summary::after {
   border-top: 1px solid rgb(255 255 255 / 30%);
   margin-top: 20px;
 }
+
+/* 图片标题 */
+figcaption{
+  text-align: center;
+}

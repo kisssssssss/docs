@@ -15,6 +15,7 @@
     "@fortawesome/free-solid-svg-icons": "^6.5.2",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@mdit/plugin-container": "^0.8.0",
+    "@mdit/plugin-figure": "^0.12.0",
     "@mdit/plugin-mark": "^0.8.0",
     "@mdit/plugin-sub": "^0.8.0",
     "@mdit/plugin-sup": "^0.8.0",

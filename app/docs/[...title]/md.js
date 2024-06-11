@@ -7,6 +7,7 @@ import { sub } from "@mdit/plugin-sub";
 import anchor from "markdown-it-anchor";
 import { mark } from "@mdit/plugin-mark";
 import mathjax from "markdown-it-mathjax3";
+import { figure } from "@mdit/plugin-figure";
 import { tasklist } from "@mdit/plugin-tasklist";
 import { container } from "@mdit/plugin-container";
 import multimdTable from "markdown-it-multimd-table";
@@ -94,6 +95,7 @@ export default new MarkdownIt(markdownOptions)
   .use(sub)
   .use(mark)
   .use(anchor)
+  .use(figure, {})
   .use(multimdTable)
   .use(tasklist, { disabled: false })
   .use(container, containerOption.tipContainer)
