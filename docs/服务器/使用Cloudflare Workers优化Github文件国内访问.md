@@ -1,5 +1,6 @@
 ---
 title: 使用 Cloudflare Workers 优化 Github 文件国内访问速度
+time: 2024-6
 ---
 
 为了能通过链接访问我放在 Github 上的[模型文件](https://github.com/kisssssssss/model)，刚开始我是使用 [jsdelivr](https://www.jsdelivr.com/) 。但 jsdelivr 的问题是在基本上国内访问不了，必须使用代理才能正常访问。
