@@ -2,7 +2,7 @@
 import React, { memo, useEffect } from "react";
 import { loadOml2d } from "oh-my-live2d";
 import Cookies from "js-cookie";
-import getModelsList from "../utils/getModelsList";
+import { getModelsList } from "../utils/getModelsList";
 
 const Live2d = memo(() => {
   useEffect(() => {
@@ -40,15 +40,6 @@ const Live2d = memo(() => {
                 return models[key].map((item) => item.configuration);
               })
               .flat(1),
-            // models: ["知更鸟"].map((item) => {
-            //   return {
-            //     path: `/model/model/live2d/StarRail/${item}/${item}.model3.json`,
-            //     name: item,
-            //     scale: 0.045,
-            //     position: [0, -10],
-            //     stageStyle: { height: 400, width: 350 },
-            //   };
-            // }),
           });
 
           oml2d.onLoad((status) => {

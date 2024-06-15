@@ -2,35 +2,14 @@
 import Cookies from "js-cookie";
 import { useRouter } from "next/navigation";
 import { SwapLeftOutlined, ArrowUpOutlined } from "@ant-design/icons";
-import { memo, useEffect, useState } from "react";
-import {
-  Card,
-  Divider,
-  Space,
-  FloatButton,
-  ConfigProvider,
-  theme,
-} from "antd";
+import { memo, useEffect, useState, Suspense } from "react";
+import { Card, Divider, Space, FloatButton, ConfigProvider, theme } from "antd";
 
 import ModelListSkeleton from "@/components/ModelListSkeleton";
 
-import getModelsList from "@/utils/getModelsList";
+import { getModelsList, getModelsTranslation } from "@/utils/getModelsList";
 
 const { Meta } = Card;
-
-const keyMap = {
-  Azur: "碧蓝航线",
-  BengHuai2: "崩坏学园2",
-  GirlsFrontline: "少女前线",
-  Sin: "sin七大罪～魔王崇拜～",
-  VenusScramble: "女神大乱战",
-  StarRail: "崩坏:星穷铁道",
-  shuangshengshijie: "双生视界少女咖啡枪",
-  sansehuilian: "三色绘恋",
-  baoshi: "宝石研物语",
-  baoshi2: "宝石研物语2",
-  hqxy: "魂器学院",
-};
 
 const changeModel = (modelName) => {
   const targetIndex = window.oml2d.options.models.findIndex(
@@ -39,8 +18,9 @@ const changeModel = (modelName) => {
   window.oml2d.loadModelByIndex(targetIndex);
 };
 
-const getModelsListNode = (list) => {
-  if (!list) return null;
+const getModelsListNode = async () => {
+  const list = await getModelsList();
+  const keyMap = await getModelsTranslation();
 
   let res = [null];
 
@@ -121,24 +101,15 @@ const getModelsListNode = (list) => {
 };
 
 const ModelList = memo(({ darkMode }) => {
-  const [renderer, setRenderer] = useState(
-    <ModelListSkeleton darkMode={darkMode} />,
-  );
+  const [renderer, setRenderer] = useState(null);
 
   useEffect(() => {
     (async function () {
-      let time1 = Date.now();
-      let list = await getModelsList();
-
-      if (Date.now() - time1 < 600) {
-        setTimeout(() => setRenderer(getModelsListNode(list)), 600);
-      } else {
-        setRenderer(getModelsListNode(list));
-      }
+      setRenderer(await getModelsListNode());
     })();
   }, []);
 
-  return <>{renderer}</>;
+  return <>{renderer ? renderer : <ModelListSkeleton darkMode={darkMode} />}</>;
 });
 
 const Live2dSetting = memo(({ darkMode }) => {
