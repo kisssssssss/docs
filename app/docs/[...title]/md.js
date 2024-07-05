@@ -9,6 +9,7 @@ import { mark } from "@mdit/plugin-mark";
 import mathjax from "markdown-it-mathjax3";
 import { figure } from "@mdit/plugin-figure";
 import { tasklist } from "@mdit/plugin-tasklist";
+import frontMatter from "markdown-it-front-matter";
 import { container } from "@mdit/plugin-container";
 import multimdTable from "markdown-it-multimd-table";
 
@@ -89,7 +90,44 @@ const containerOption = {
   },
 };
 
+// 存储 front matter 数据的变量
+let frontMatterData = {};
+function saveFrontMatter(fm) {
+  frontMatterData = fm;
+}
+
+// 修改图片URL
+function modifyImageURLs(md) {
+  md.renderer.rules.image = (tokens, idx, options, env, self) => {
+    const token = tokens[idx];
+    const originalUrl = token.attrGet("src");
+    const modifiedUrl = modifyURL(originalUrl, frontMatterData);
+    token.attrSet("src", modifiedUrl);
+    return self.renderToken(tokens, idx, options);
+  };
+}
+// 根据 front matter 的 typoraRootUrl 修改 URL
+function modifyURL(url, frontMatter) {
+  // 使用 front matter 中的 typora-root-url
+  const typoraRootUrl = frontMatter["typora-root-url"];
+  if (!typoraRootUrl) {
+    return url; // 如果没有 typora-root-url，就返回原始 URL
+  }
+
+  // 提取路径中关键部分
+  const match = typoraRootUrl.match(/docs[\\/].+/);
+  const relativePath = match ? match[0].replace(/\\/g, "/") : "";
+
+  // 拼接完整的 URL
+  const baseURL =
+    "https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/";
+  const fullUrl = `${baseURL}${relativePath}/${url}`;
+
+  return fullUrl;
+}
+
 export default new MarkdownIt(markdownOptions)
+  .use(frontMatter, saveFrontMatter)
   .use(mathjax)
   .use(sup)
   .use(sub)
@@ -97,6 +135,7 @@ export default new MarkdownIt(markdownOptions)
   .use(anchor)
   .use(figure, {})
   .use(multimdTable)
+  .use(modifyImageURLs)
   .use(tasklist, { disabled: false })
   .use(container, containerOption.tipContainer)
   .use(container, containerOption.infoContainer)

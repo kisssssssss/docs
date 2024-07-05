@@ -28,6 +28,7 @@
     "js-yaml": "^4.1.0",
     "markdown-it": "^14.1.0",
     "markdown-it-anchor": "^8.6.7",
+    "markdown-it-front-matter": "^0.2.4",
     "markdown-it-mathjax3": "^4.3.2",
     "markdown-it-multimd-table": "^4.2.3",
     "next": "14.1.4",

@@ -16,7 +16,7 @@ function markdownToHtml(markdown) {
   const fmRegex = /---(.*?)---/gs;
   return {
     meta: yaml.load(fmRegex.exec(markdown)[1]),
-    content: md.render(markdown.replace(fmRegex, "")),
+    content: md.render(markdown),
   };
 }
 
