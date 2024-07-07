@@ -108,6 +108,7 @@ function modifyImageURLs(md) {
 }
 // 根据 front matter 的 typoraRootUrl 修改 URL
 function modifyURL(url, frontMatter) {
+  if (url.length > 7) return url;
   // 使用 front matter 中的 typora-root-url
   const typoraRootUrl = frontMatter["typora-root-url"];
   if (!typoraRootUrl) {
