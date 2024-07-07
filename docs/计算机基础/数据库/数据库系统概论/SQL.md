@@ -1,6 +1,7 @@
 ---
 title: SQL
 index: 3
+typora-root-url: ./..\..\..\..\..\IMG\docs\计算机\数据库系统概论
 ---
 
 ## SQL概述
@@ -9,7 +10,7 @@ index: 3
 
 结构化查询语言（Structured Query Language，SQL）是关系数据库的标准语言。
 
-![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/计算机/数据库系统概论/33.png)
+![](33.png)
 
 目前，没有一个数据库系统能够支持SQL标准的所有概念和特性。
 
@@ -45,13 +46,13 @@ index: 3
 
    SQL功能极强，完成核心功能只用了9个动词。
 
-   ![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/计算机/数据库系统概论/34.png)
+   ![](34.png)
 
 ### 基本概念
 
 SQL支持关系数据库三级模式结构。
 
-![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/计算机/数据库系统概论/35.png)
+![](35.png)
 
 **基本表**：基本表是本身独立存在的表，一个关系就对应一个基本表，一个或多个基本表对应一个存储文件，一个表可以带若干索引。
 
@@ -67,17 +68,17 @@ SQL支持关系数据库三级模式结构。
 
 学生选课表：SC(Sno,Cno,Grade)
 
-![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/计算机/数据库系统概论/36.png)
+![](36.png)
 
-![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/计算机/数据库系统概论/37.png)
+![](37.png)
 
-![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/计算机/数据库系统概论/38.png)
+![](38.png)
 
 ## 数据定义
 
 SQL的数据定义功能：模式定义、表定义、视图和索引的定义。
 
-![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/计算机/数据库系统概论/39.png)
+![](39.png)
 
 现代关系数据库管理系统提供了一个层次化的数据库对象命名机制。
 
@@ -94,7 +95,7 @@ SQL中域的概念用数据类型来实现。定义表的属性时需要指明�
 1. 取值范围
 2. 要做哪些运算
 
-![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/计算机/数据库系统概论/42.png)
+![](42.png)
 
 ### 模式的定义与删除
 
@@ -162,9 +163,9 @@ CREATE TABLE <表名> ( <列名> <数据类型> [<列级完整性约束条件>]
 - <列级完整性约束条件>：涉及相应属性列的完整性约束条件；
 - <表级完整性约束条件>：涉及一个或多个属性列的完整性约束条件；
 
-![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/计算机/数据库系统概论/40.png)
+![](40.png)
 
-![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/计算机/数据库系统概论/41.png)
+![](41.png)
 
 ---
 
@@ -184,7 +185,7 @@ DROP TABLE <表名> [RESTRICT| CASCADE];
 
 默认是RESTRICT。
 
-![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/计算机/数据库系统概论/43.png)
+![](43.png)
 
 ---
 
@@ -213,7 +214,7 @@ ALTER TABLE <表名>
 
 - ALTER COLUMN子句：用于修改原有的列定义，包括修改列名和数据类型；
 
-![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/计算机/数据库系统概论/44.png)
+![](44.png)
 
 ::: tip 
 
@@ -293,7 +294,7 @@ CREATE [UNIQUE] [CLUSTERED] INDEX <索引名> ON <表名> (<列名>[<次序>][,<
 
 :::
 
-![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/计算机/数据库系统概论/45.png)
+![](45.png)
 
 ::: info 聚簇索引
 
@@ -333,13 +334,13 @@ CREATE [UNIQUE] [FULLTEXT|SPATIAL] INDEX <索引名> ON <表名> (<列名> [(len
 ALTER INDEX <旧索引名> RENAME TO <新索引名>
 ```
 
-![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/计算机/数据库系统概论/46.png)
+![](46.png)
 
 ---
 
 删除索引，格式：
 
-![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/计算机/数据库系统概论/47.png)
+![](47.png)
 
 ### 数据字典
 
@@ -383,19 +384,19 @@ FROM <表名或视图名>[,<表名或视图名> ]...| (SELECT 语句) [AS]<别�
 
   在SELECT子句的<目标列表达式>中指定要查询的属性列。
 
-  ![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/计算机/数据库系统概论/48.png)
+  ![](48.png)
 
 - 查询全部列
 
   可以在SELECT关键字后面列出所有列名，或者将<目标列表达式>指定为`*`。
 
-  ![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/计算机/数据库系统概论/49.png)
+  ![](49.png)
 
 - 查询经过计算的值
 
   SELECT子句的<目标列表达式>不仅可以为表中的属性列，也可以是算术表达式，字符串常量，函数。
 
-  ![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/计算机/数据库系统概论/50.png)
+  ![](50.png)
 
 #### 选择表中的若干元组
 
@@ -403,23 +404,23 @@ FROM <表名或视图名>[,<表名或视图名> ]...| (SELECT 语句) [AS]<别�
 
   如果想去掉结果表中的重复行，必须指定`DISTINCT`，如果没有指定`DISTINCT`关键词，则默认为`ALL`。
 
-  ![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/计算机/数据库系统概论/51.png)
+  ![](51.png)
 
 - 查询满足条件的元组
 
-  ![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/计算机/数据库系统概论/52.png)
+  ![](52.png)
 
   1. 比较大小
 
-     ![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/计算机/数据库系统概论/53.png)
+     ![](53.png)
 
   2. 确定范围
 
-     ![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/计算机/数据库系统概论/54.png)
+     ![](54.png)
 
   3. 确定集合
 
-     ![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/计算机/数据库系统概论/55.png)
+     ![](55.png)
 
   4. 字符匹配
 
@@ -429,29 +430,29 @@ FROM <表名或视图名>[,<表名或视图名> ]...| (SELECT 语句) [AS]<别�
 
      _ （下横线）：代表任意单个字符。例如a_b表示以a开头，以b结尾的长度为3的任意字符串。
 
-     ![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/计算机/数据库系统概论/56.png)
+     ![](56.png)
 
      如果要查询的字符串本身就含有`%`或者`_`，这时就需要使用`ESCAPE ‘<换码字符>’`短语对通配符进行转义。ESCAPE '＼' 表示'＼'为换码字符。
 
-     ![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/计算机/数据库系统概论/57.png)
+     ![](57.png)
 
   5. 涉及空值的查询
 
      “IS”不能用“=”代替
 
-     ![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/计算机/数据库系统概论/58.png)
+     ![](58.png)
 
   6. 多重条件查询
 
      AND和OR来连接多个查询条件，AND的优先级高于OR，但可以用括号改变优先级。
 
-     ![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/计算机/数据库系统概论/59.png)
+     ![](59.png)
 
 #### ORDER BY子句
 
 ORDER BY子句可以对查询结果按一个或多个属性列进行排序。
 
-![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/计算机/数据库系统概论/60.png)
+![](60.png)
 
 ::: tip
 
@@ -470,7 +471,7 @@ ORDER BY子句可以对查询结果按一个或多个属性列进行排序。
 - `MAX( [DISTINCT|ALL] <列名>)`：求一列中的最大值
 - `MIN( [DISTINCT|ALL] <列名>)`：求一列中的最小值
 
-![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/计算机/数据库系统概论/61.png)
+![](61.png)
 
 当聚焦函数遇到空值时，除`COUNT(*)`外，都跳过空值，只处理非空值。
 
@@ -486,9 +487,9 @@ GROUP BY子句将查询结果按某一列或多列的值分组，值相等的为
 
 对查询结果分组的目的是为了**细化聚集函数的作用对象**。如果未对查询结果分组，聚集函数将作用于整个查询结果；对查询结果分组后，聚集函数将分别作用于每个组。
 
-![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/计算机/数据库系统概论/62.png)
+![](62.png)
 
-![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/计算机/数据库系统概论/63.png)
+![](63.png)
 
 ::: tip HAVING短语与WHERE子句的区别
 
@@ -515,7 +516,7 @@ GROUP BY子句将查询结果按某一列或多列的值分组，值相等的为
 
 连接运算符为`=`时，称为**等值连接**；不为`=`则称为**非等值连接**。
 
-![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/计算机/数据库系统概论/65.png)
+![](65.png)
 
 ::: tip
 
@@ -555,11 +556,11 @@ GROUP BY子句将查询结果按某一列或多列的值分组，值相等的为
 
 若在等值连接中把目标中重复的属性列去掉则为**自然连接**。（例如上面例子的查询结果中学号重复了）
 
-![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/计算机/数据库系统概论/66.png)
+![](66.png)
 
 一条SQL语句可以同时完成选择和连接查询，这时WHERE子句是由连接谓词和选择谓词组成的复合条件。
 
-![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/计算机/数据库系统概论/67.png)
+![](67.png)
 
 #### 自身连接
 
@@ -569,7 +570,7 @@ GROUP BY子句将查询结果按某一列或多列的值分组，值相等的为
 
 由于所有属性名都是同名属性，因此必须使用别名前缀。
 
-![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/计算机/数据库系统概论/68.png)
+![](68.png)
 
 #### 外连接
 
@@ -586,7 +587,7 @@ GROUP BY子句将查询结果按某一列或多列的值分组，值相等的为
 
 **两个以上的表**进行连接称为多表连接。
 
-![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/计算机/数据库系统概论/69.png)
+![](69.png)
 
 ### 嵌套查询
 
@@ -594,7 +595,7 @@ GROUP BY子句将查询结果按某一列或多列的值分组，值相等的为
 
 将一个查询块嵌套在另一个查询块的WHERE子句或HAVING短语的条件中的查询称为**嵌套查询**。
 
-![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/计算机/数据库系统概论/70.png)
+![](70.png)
 
 SQL语言允许多层嵌套查询，即一个子查询中还可以嵌套其他子查询。
 
@@ -612,7 +613,7 @@ SQL语言允许多层嵌套查询，即一个子查询中还可以嵌套其他�
 
 #### 带有IN谓词的子查询
 
-![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/计算机/数据库系统概论/71.png)
+![](71.png)
 
 #### 带有比较运算符的子查询
 
@@ -620,9 +621,9 @@ SQL语言允许多层嵌套查询，即一个子查询中还可以嵌套其他�
 
 当能确切知道内层查询返回单值时，可用比较运算符。
 
-![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/计算机/数据库系统概论/72.png)
+![](72.png)
 
-![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/计算机/数据库系统概论/73.png)
+![](73.png)
 
 #### 带有ANY（SOME）或ALL谓词的子查询
 
@@ -641,7 +642,7 @@ SQL语言允许多层嵌套查询，即一个子查询中还可以嵌套其他�
 - !=（或<>）ANY：不等于子查询结果中的某个值
 - !=（或<>）ALL：不等于子查询结果中的任何一个值
 
-![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/计算机/数据库系统概论/74.png)
+![](74.png)
 
 #### 带有EXISTS谓词的子查询
 
@@ -663,7 +664,7 @@ NOT EXISTS
 
 :::
 
-![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/计算机/数据库系统概论/75.png)
+![](75.png)
 
 不同形式的查询间的替换
 
@@ -676,7 +677,7 @@ NOT EXISTS
 
 SQL语言中没有全称量词 $\forall$，可以把带有全称量词的谓词转换为等价的带有存在量词的谓词，$(\forall x)P\equiv \neg (\exists x(\neg P))$
 
-![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/计算机/数据库系统概论/76.png)
+![](76.png)
 
 ---
 
@@ -684,9 +685,9 @@ SQL语言中没有全称量词 $\forall$，可以把带有全称量词的谓词�
 
 SQL语言中没有蕴涵逻辑运算，可以利用谓词演算将逻辑蕴涵谓词等价转换为 $p\to q\equiv \neg p \vee q$
 
-![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/计算机/数据库系统概论/77.png)
+![](77.png)
 
-![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/计算机/数据库系统概论/78.png)
+![](78.png)
 
 ### 集合查询
 
@@ -702,7 +703,7 @@ SQL语言中没有蕴涵逻辑运算，可以利用谓词演算将逻辑蕴涵�
 
 :::
 
-![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/计算机/数据库系统概论/79.png)
+![](79.png)
 
 
 
@@ -725,15 +726,15 @@ INTERSECT和EXCEPT在PostgreSQL和Oracle等数据库系统中支持。
 
 子查询不仅可以出现在WHERE子句中，还可以出现在FROM子句中，这时子查询生成的临时**派生表**(derived table)成为主查询的查询对象。
 
-![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/计算机/数据库系统概论/80.png)
+![](80.png)
 
 如果子查询中没有聚集函数，派生表可以不指定属性列，子查询SELECT子句后面的列名为其默认属性。
 
-![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/计算机/数据库系统概论/81.png)
+![](81.png)
 
 通过FORM生成派生表的时候，**AS关键字可以省略，但别名不能省略**。
 
-![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/计算机/数据库系统概论/82.png)
+![](82.png)
 
 ## 数据更新
 
@@ -757,7 +758,7 @@ INTERSECT和EXCEPT在PostgreSQL和Oracle等数据库系统中支持。
 
     提供的值必须与INTO子句匹配，如值的个数和值的类型。
 
-  ![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/计算机/数据库系统概论/83.png)
+  ![](83.png)
 
 - 插入子查询结果
 
@@ -767,7 +768,7 @@ INTERSECT和EXCEPT在PostgreSQL和Oracle等数据库系统中支持。
   INSERT INTO <表名>  [(<属性列1> [,<属性列2>...)] 子查询;
   ```
 
-  ![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/计算机/数据库系统概论/84.png)
+  ![](84.png)
 
 ### 修改数据
 
@@ -791,7 +792,7 @@ UPDATE <表名> SET <列名>=<表达式>[,<列名>=<表达式>]... [WHERE <条�
 2. 修改多个元组的值
 3. 带子查询的修改语句
 
-![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/计算机/数据库系统概论/85.png)
+![](85.png)
 
 ### 删除数据
 
@@ -815,7 +816,7 @@ DELETE FROM只是删除表中数据并不是删除表，如果要删除表则是
 2. 删除多个元组的值
 3. 带子查询的删除语句
 
-![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/计算机/数据库系统概论/86.png)
+![](86.png)
 
 ## 空值的处理
 
@@ -823,11 +824,11 @@ DELETE FROM只是删除表中数据并不是删除表，如果要删除表则是
 
 空值的产生
 
-![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/计算机/数据库系统概论/87.png)
+![](87.png)
 
 判断一个属性的值是否为空值，用IS NULL或IS NOT NULL来表示。
 
-![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/计算机/数据库系统概论/88.png)
+![](88.png)
 
 空值的约束条件：
 
@@ -841,9 +842,9 @@ DELETE FROM只是删除表中数据并不是删除表，如果要删除表则是
 
 - 空值与另一个值（包括另一个空值）的比较运算的结果为UNKNOWN。有了UNKNOWN后，传统二值（TRUE，FALSE）逻辑就扩展成了三值逻辑。
 
-  ![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/计算机/数据库系统概论/89.png)
+  ![](89.png)
 
-![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/计算机/数据库系统概论/90.png)
+![](90.png)
 
 ## 视图
 
@@ -877,7 +878,7 @@ CREATE VIEW <视图名>  [(<列名>  [,<列名>]...)] AS <子查询> [WITH CHECK
 
 在对视图查询时，按视图的定义从基本表中将数据查出。
 
-![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/计算机/数据库系统概论/91.png)
+![](91.png)
 
 定义IS_Student视图时加上了WITH CHECK OPTION子句，表示对该视图进行插入、修改和删除操作时，关系数据库管理系统会自动加上`Sdept='IS'`的条件。
 
@@ -885,19 +886,19 @@ CREATE VIEW <视图名>  [(<列名>  [,<列名>]...)] AS <子查询> [WITH CHECK
 
 - 基于多个基表的视图
 
-  ![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/计算机/数据库系统概论/92.png)
+  ![](92.png)
 
 - 基于视图的视图
 
-  ![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/计算机/数据库系统概论/93.png)
+  ![](93.png)
 
 - 带表达式的视图
 
-  ![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/计算机/数据库系统概论/94.png)
+  ![](94.png)
 
 - 分组视图
 
-  ![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/计算机/数据库系统概论/95.png)
+  ![](95.png)
 
 #### 删除视图
 
@@ -921,13 +922,13 @@ DROP VIEW <视图名>[CASCADE];
 - 转换成等价的对基本表的查询
 - 执行修正后的查询
 
-![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/计算机/数据库系统概论/96.png)
+![](96.png)
 
 有些情况下，视图消解法不能生成正确的查询。
 
 ### 更新视图
 
-![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/计算机/数据库系统概论/97.png)
+![](97.png)
 
 更新视图的限制：一些视图是不可更新的，因为对这些视图的更新不能唯一地有意义地转换成对相应基本表的更新。
 
