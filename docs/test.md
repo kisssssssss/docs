@@ -1,31 +1,7 @@
 ---
-title: "test"
-isolated: true
+title: test
+typora-root-url: ./..\..\..\..\IMG\docs\计算机\计算机组成原理
 ---
+艾斯芬尼安排收到 aa 安抚跑 faf 安抚
 
-
-::: tip
-
-**测试**容器，==许多人==asfcsfAsf**测试**容器，==许多人==不知道阿萨的 阿斯匹及欧派是欸经阿松大覅哦i
-
-:::
-
-::: tip 测试时是阿萨
-
-**测试**容器，==许多人==asfcsfAsf**测试**容器，==许多人==不知道阿萨的 阿斯匹及欧派是欸经阿松大覅哦i
-
-:::
-
-::: details 测试
-
-哈哈哈
-
-阿萨
-
-1. 阿斯顿a
-2. asdas
-3. asd
-4. ```javascript
-    const a = 1;
-   ````
-:::
+![](122.png)
