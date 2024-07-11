@@ -93,7 +93,12 @@ const containerOption = {
 // 存储 front matter 数据的变量
 let frontMatterData = {};
 function saveFrontMatter(fm) {
-  frontMatterData = fm;
+  fm.split("\n").forEach((item) => {
+    if (item) {
+      const [key, value] = item.split(":");
+      frontMatterData[key.trim()] = value.trim();
+    }
+  });
 }
 
 // 修改图片URL
