@@ -31,8 +31,8 @@ a:hover {
 }
 
 /* 图片样式优化 */
-p>img {
-  @apply shadow-lg rounded-lg hover:shadow-xl transition-all dark:brightness-[.6];
+figure>img ,p>img {
+  @apply rounded-lg transition-all dark:brightness-[.6];
 }
 
 /* Antd 树形菜单选中样式优化 */
