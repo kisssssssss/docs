@@ -34,23 +34,25 @@ const renderResult = new Map();
 export default async function Page(props) {
   const [darkMode] = getTheme();
 
+  // 获取文章标题
   const title = decodeURI(props.params.title[props.params.title.length - 1]);
 
-  const urlPath = props.params.title.map((item) => decodeURI(item));
-
-  const filePath = path.join(...urlPath);
-
+  // 获取文章url
+  let url = path.join(...props.params.title.map((item) => decodeURI(item)));
   // 找到相邻文章
-  const nearPage = await store.getNearPage(urlPath);
+  const nearPage = await store.getNearPage(url);
+
+  // 获取文章目录
+  const toc =  await store.getToc(path.join("docs", url+".md"),title);
 
   // 渲染结果
   let mdHtml;
 
-  if (renderResult.has(filePath)) {
-    mdHtml = renderResult.get(filePath);
+  if (renderResult.has(url)) {
+    mdHtml = renderResult.get(url);
   } else {
     // 获取文件路径
-    const mdPath = path.join(process.cwd(), "docs", `${filePath}.md`);
+    const mdPath = path.join(process.cwd(), "docs", `${url}.md`);
     // 判断文件是否存在
     if (!fs.existsSync(mdPath)) return notFound();
     // 读取文件
@@ -58,7 +60,7 @@ export default async function Page(props) {
     // 获取渲染结果
     mdHtml = markdownToHtml(mdFile).content;
     // 缓存
-    renderResult.set(filePath, mdHtml);
+    renderResult.set(url, mdHtml);
   }
 
   return (
@@ -67,6 +69,7 @@ export default async function Page(props) {
       content={mdHtml}
       darkMode={darkMode}
       nearPage={nearPage}
+      toc={toc}
     />
   );
 }
