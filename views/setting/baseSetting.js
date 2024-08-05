@@ -121,21 +121,6 @@ const baseSetting = memo(({ darkMode }) => {
           <Switch defaultChecked={live2d_enable} onChange={enableLive2d} />
         </div>
         <Divider />
-        <div className="flex items-center justify-between">
-          <p className="inline-block text-xl font-bold dark:text-gray-200/90">
-            Spine
-            <Tag
-              color="processing"
-              style={{ marginLeft: "15px", borderRadius: "50px" }}
-            >
-              Alpha
-            </Tag>
-          </p>
-          <Switch
-            defaultChecked={false}
-            onChange={() => router.push("/spine")}
-          />
-        </div>
       </ConfigProvider>
     </div>
   );
