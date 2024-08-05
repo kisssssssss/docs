@@ -3,7 +3,7 @@ title: react脚手架解析
 index: 3
 ---
 
-## 前端工程的复杂化
+# 前端工程的复杂化
 
 如果我们只是开发几个小的 demo 程序，那么永远不需要考虑一些复杂的问题：
 
@@ -25,7 +25,7 @@ index: 3
 - 比如 babel、webpack、gulp，配置它们转换规则、打包依赖、热更新等等一些的内容；
 - 脚手架的出现，就是帮助我们解决这一系列问题的；
 
-## 脚手架是什么呢？
+# 脚手架是什么呢？
 
 传统的脚手架指的是建筑学的一种结构：在搭建楼房、建筑物时，临时搭建出来的一个框架；
 
@@ -42,7 +42,7 @@ index: 3
 
 总结：脚手架让项目从搭建到开发，再到部署，整个流程变得快速和便捷；
 
-## 前端脚手架
+# 前端脚手架
 
 对于现在比较流行的三大框架都有属于自己的脚手架：
 
@@ -62,7 +62,7 @@ index: 3
 
 - 所以我们必须在自己的电脑上安装 node 环境；
 
-## 创建 React 项目
+# 创建 React 项目
 
 创建 React 项目的命令如下：
 
@@ -74,11 +74,11 @@ create-react-app 项目名称
 项目名称不能包含大写字母
 :::
 
-## 目录结构分析
+# 目录结构分析
 
 ![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/WEB/react/31.png)
 
-## 了解 PWA
+# 了解 PWA
 
 比如 chrome 浏览器，在一些网站的地址栏右边有个图标
 
@@ -120,7 +120,7 @@ PWA 解决了哪些问题呢？
 
 https://developer.mozilla.org/zh-CN/docs/Web/Progressive_web_apps
 
-## 编写 react 代码
+# 编写 react 代码
 
 删除目录下无用文件后，目录结构如下：
 
@@ -143,7 +143,7 @@ import ReactDOM from "react-dom/client"; // success
 
 ---
 
-## 封装组件
+# 封装组件
 
 将 APP 组件的内容抽离到 APP.jsx 的文件内容中，需要在 APP.jsx 导入 react 以及导出 APP 组件。
 
@@ -159,7 +159,7 @@ import ReactDOM from "react-dom/client"; // success
 
 ![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/WEB/react/37.png)
 
-## 脚手架中的 webpack
+# 脚手架中的 webpack
 
 React 脚手架默认是基于 Webpack 来开发的；但是，我们并没有在目录结构中看到任何 webpack 相关的内容？
 

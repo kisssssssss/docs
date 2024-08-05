@@ -3,7 +3,7 @@ title: jsx基本语法
 index: 2
 ---
 
-## JSX 简介
+# JSX 简介
 
 ```tsx
 const element = <h1>Hello, world!</h1>;
@@ -22,7 +22,7 @@ const element = <h1>Hello, world!</h1>;
 
 JSX 用于描述我们的 UI 界面，并且其可以和 JavaScript 融合在一起使用；它不同于 Vue 中的模块语法，不需要专门学习模块语法中的一些指令（比如 v-for、v-if、v-else、v-bind）；
 
-## 为什么 React 选择了 JSX
+# 为什么 React 选择了 JSX
 
 - React 认为渲染逻辑本质上与其他 UI 逻辑存在内在耦合
   - 比如 UI 需要绑定事件（button、a 原生等等）；
@@ -31,15 +31,15 @@ JSX 用于描述我们的 UI 界面，并且其可以和 JavaScript 融合在一
 
 他们之间是密不可分，所以 React 没有将标记分离到不同的文件中，而是将它们组合到了一起，这个地方就是组件（Component）；在这里，我们只需要知道，JSX 其实是嵌入到 JavaScript 中的一种结构语法；
 
-## JSX 的书写规范
+# JSX 的书写规范
 
 - JSX 的顶层只能有一个根元素，所以我们很多时候会在外层包裹一个 div 元素（或者使用后面学习的 Fragment）；
 - 为了方便阅读，我们通常在 jsx 的外层包裹一个小括号()，这样可以方便阅读，并且 jsx 可以进行换行书写；
 - JSX 中的标签可以是单标签，也可以是双标签；如果是单标签，必须以/>结尾；
 
-## JSX 的使用
+# JSX 的使用
 
-### 注释
+## 注释
 
 在大括号内进行注释
 
@@ -49,7 +49,7 @@ JSX 用于描述我们的 UI 界面，并且其可以和 JavaScript 融合在一
 }
 ```
 
-### 嵌入变量作为子元素
+## 嵌入变量作为子元素
 
 1. 情况一：当变量是 Number、String、Array 类型时，可以直接显示；
 
@@ -67,7 +67,7 @@ JSX 用于描述我们的 UI 界面，并且其可以和 JavaScript 融合在一
 
    ![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/WEB/react/Snipaste_13.png)
 
-### 嵌入表达式
+## 嵌入表达式
 
 - 运算表达式
 - 三元运算符
@@ -75,9 +75,9 @@ JSX 用于描述我们的 UI 界面，并且其可以和 JavaScript 融合在一
 
 ![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/WEB/react/Snipaste_14.png)
 
-### 绑定属性
+## 绑定属性
 
-#### title
+### title
 
 ```tsx
 <h2 title={this.state.title}></h2>
@@ -85,7 +85,7 @@ JSX 用于描述我们的 UI 界面，并且其可以和 JavaScript 融合在一
 
 ![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/WEB/react/Snipaste_15.png)
 
-#### src
+### src
 
 ```tsx
 <img title={this.state.src} />
@@ -93,7 +93,7 @@ JSX 用于描述我们的 UI 界面，并且其可以和 JavaScript 融合在一
 
 ![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/WEB/react/Snipaste_16.png)
 
-#### href
+### href
 
 ```tsx
 <a href={this.state.href}></a>
@@ -101,7 +101,7 @@ JSX 用于描述我们的 UI 界面，并且其可以和 JavaScript 融合在一
 
 ![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/WEB/react/Snipaste_17.png)
 
-#### class
+### class
 
 React 绑定 class 的时候，属性名是 className 而不是 class。虽然 babel 在解析的时候能正常解析但容易造成误解，而且控制台也会警告
 
@@ -136,7 +136,7 @@ React 绑定 class 的时候，属性名是 className 而不是 class。虽然 b
 
    后面学习框架的时候再学习
 
-#### style
+### style
 
 第一个大括号表示里面的是 js，第二个括号表示里面的是对象。
 
@@ -152,7 +152,7 @@ js 不支持-写法，有些 css 属性需要转换成驼峰标识
 <h2 style={{ fontSize: "30px" }}>Hello,World</h2>
 ```
 
-## 数据依赖
+# 数据依赖
 
 - 在组件中的数据，我们可以分成两类：
 
@@ -170,9 +170,9 @@ js 不支持-写法，有些 css 属性需要转换成驼峰标识
 
 > 如果我们不使用 this.setState 更新数据，页面是不会发生变化的，需要我们手动调用 render 函数页面才会重新渲染。
 
-## 事件绑定
+# 事件绑定
 
-### 为什么 this == undefined
+## 为什么 this == undefined
 
 以下面代码为例，在类中直接定义一个函数，并且将这个函数绑定到元素的 onClick 事件上，当前这个函数的 this 指向的是谁呢？
 
@@ -215,13 +215,13 @@ click();
 
 ---
 
-### 后果
+## 后果
 
 按照原来的写法`onClick={this.click}`,在方法中是 this 值是`undefined`，自然也就无法调用`this.setState()`来重新渲染页面。
 
 ---
 
-### 解决方法
+## 解决方法
 
 1. `bind()`绑定
 
@@ -243,7 +243,7 @@ click();
 
 ![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/WEB/react/Snipaste_9.png)
 
-## 电影展示案例
+# 电影展示案例
 
 效果演示
 
@@ -343,7 +343,7 @@ root.render(<APP />);
 
 :::
 
-## JSX 条件渲染
+# JSX 条件渲染
 
 1. if 语句
 
@@ -385,7 +385,7 @@ render() {
 }
 ```
 
-## JSX 条件渲染案例
+# JSX 条件渲染案例
 
 效果
 
@@ -425,7 +425,7 @@ class APP extends React.Component {
 
 :::
 
-## JSX 列表渲染
+# JSX 列表渲染
 
 真实开发中我们会从服务器请求到大量的数据，数据会以列表的形式存储：
 
@@ -544,7 +544,7 @@ class APP extends React.Component {
   }
   ```
 
-### 列表中的 key
+## 列表中的 key
 
 我们可以发现上述代码的返回值里面都有一个 key 属性，这个 key 属性主要就是用来提高 diff 算法的效率。
 
@@ -556,13 +556,13 @@ class APP extends React.Component {
 
 ![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/WEB/react/25.png)
 
-## jsx 转换的本质
+# jsx 转换的本质
 
 实际上，jsx 仅仅只是 `React.createElement(component, props, ...children)` 函数的语法糖。所有的 jsx 最终都会被转换成 `React.createElement` 的函数调用。
 
 ---
 
-## createElement
+# createElement
 
 createElement 需要传递三个参数：
 
@@ -582,7 +582,7 @@ createElement 需要传递三个参数：
 - 存放在标签中的内容，以 children 数组的方式进行存储；
 - 当然，如果是多个元素呢？React 内部有对它们进行处理，处理的源码在下方
 
-## 经过 babel 转换后的代码
+# 经过 babel 转换后的代码
 
 [Babel 官网查看转换结果](https://babeljs.io/repl/#?presets=react)
 
@@ -628,7 +628,7 @@ createElement 需要传递三个参数：
 
 :::
 
-## 直接编写 jsx 代码
+# 直接编写 jsx 代码
 
 下面是不使用 jsx 的情况下的代码：
 
@@ -668,7 +668,7 @@ root.render(React.createElement(APP, null));
 - `type="text/babel"`可以被我们删除掉了；
 - `<script src="../react/babel.min.js"></script>`可以被我们删除掉了；
 
-## 虚拟 DOM 的创建过程
+# 虚拟 DOM 的创建过程
 
 我们通过 React.createElement 最终创建出来一个 ReactElement 对象：
 
@@ -680,11 +680,11 @@ root.render(React.createElement(APP, null));
 
 - 原因是 React 利用 ReactElement 对象组成了一个 **JavaScript 的对象树**；JavaScript 的对象树就是虚拟 **DOM（Virtual DOM）**；ReactElement 最终形成的树结构就是 Virtual DOM；
 
-## jsx – 虚拟 DOM – 真实 DOM
+# jsx – 虚拟 DOM – 真实 DOM
 
 ![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/WEB/react/29.png)
 
-## 声明式编程
+# 声明式编程
 
 虚拟 DOM 帮助我们从命令式编程转到了声明式编程的模式
 
@@ -699,7 +699,7 @@ React 官方的说法：Virtual DOM 是一种编程理念。
 - React 来确保 DOM 和这些状态是匹配的；
 - 你不需要直接进行 DOM 操作，就可以从手动更改 DOM、属性操作、事件处理中解放出来；
 
-## 购物车小案例
+# 购物车小案例
 
 效果
 

@@ -3,7 +3,7 @@ title: react性能优化
 index: 4
 ---
 
-## React 的更新流程
+# React 的更新流程
 
 React 在 props 或 state 发生改变时，会调用 React 的 render 方法，会创建一颗不同的树。
 
@@ -17,7 +17,7 @@ React 是如何优化的
 2. 不同类型的节点，产生不同的树结构；
 3. 开发中，可以通过 key 来指定哪些节点在不同的渲染下保持稳定；
 
-## key 的优化
+# key 的优化
 
 我们在前面遍历列表时，总是会提示一个警告，让我们加入一个 key 属性
 
@@ -45,7 +45,7 @@ key 的注意事项：
 - key 不要使用随机数（随机数在下一次 render 时，会重新生成一个数字）；
 - 使用 index 作为 key，对性能是没有影响的；
 
-## shouldComponentUpdate (SCU)
+# shouldComponentUpdate (SCU)
 
 默认情况下，我们只要是修改了 App 中的数据，所有的组件都需要重新 render，进行 diff 算法，很容易浪费性能。
 
@@ -92,7 +92,7 @@ shouldComponentUpdate(nextProps,nextState){
 }
 ```
 
-## PureComponent
+# PureComponent
 
 如果所有的类，我们都需要手动来实现 shouldComponentUpdate，那么会给我们开发者增加非常多的工作量。
 
@@ -117,7 +117,7 @@ export default class APP extends PureComponent {
 PureComponent 的本质是进行浅层比较，不会比较深层
 :::
 
-## memo
+# memo
 
 `PureComponent`是针对类组件的 ，那么函数式组件呢？
 

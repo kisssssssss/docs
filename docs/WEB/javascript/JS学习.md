@@ -2,7 +2,7 @@
 title: JS学习
 index: 1
 ---
-## 简洁判断
+# 简洁判断
 
 ```javascript
 let loginStatus = false
@@ -20,7 +20,7 @@ if (loginStatus) {
 
 少量判断条件时很方便，而且阅读性也不差，但一旦判断条件多或者执行语句多就不太合适了。
 
-## 交换数组元素位置
+# 交换数组元素位置
 
 ```javascript
 let a = [1, 2, 3, 4, 5]
@@ -30,7 +30,7 @@ let a = [1, 2, 3, 4, 5]
 console.log(a) // [ 1, 4, 3, 2, 5 ]
 ```
 
-## ES6标签模板字符串
+# ES6标签模板字符串
 
 在JavaScript中，我们一般是通过 函数名() 方式来调用函数，其实函数还有另外一种调用方式：
 
@@ -53,7 +53,7 @@ const result = myTag`Hello, ${name}!`;
 
 这允许你执行各种高级字符串操作，如字符串插值、HTML 转义、国际化处理等。
 
-## JS标记
+# JS标记
 
 > https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/label
 

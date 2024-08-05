@@ -3,7 +3,7 @@ title: react组件化开发
 index: 5
 ---
 
-## 什么是组件化开发
+# 什么是组件化开发
 
 组件化是一种分而治之的思想：
 
@@ -24,7 +24,7 @@ index: 5
 
 ![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/WEB/react/43.png)
 
-## React 的组件化
+# React 的组件化
 
 组件化是 React 的核心思想，也是我们后续的重点，前面我们封装的 App 本身就是一个组件：
 
@@ -49,7 +49,7 @@ index: 5
 - 类组件、有状态组件、容器型组件主要关注数据逻辑；
 - 当然还有很多组件的其他概念：比如异步组件、高阶组件等，我们后续再学习。
 
-## 类组件
+# 类组件
 
 类组件的定义有如下要求：
 
@@ -115,7 +115,7 @@ index: 5
     }
     ```
 
-## render 函数的返回值
+# render 函数的返回值
 
 当  render  被调用时，它会检查  this.props  和  this.state  的变化并返回以下类型之一：
 
@@ -188,7 +188,7 @@ index: 5
     }
     ```
 
-## 函数组件
+# 函数组件
 
 函数组件是使用 function 来进行定义的函数，只是这个函数会返回和类组件中 render 函数返回一样的内容。
 
@@ -212,7 +212,7 @@ export default function App() {
 
 > 前面的学习中主要讲解类组件，后面学习 Hooks 时，会针对函数式组件进行更多的学习。
 
-## 生命周期
+# 生命周期
 
 从创建到销毁的整个过程被称为生命周期；
 
@@ -240,13 +240,13 @@ React 组件也有自己的生命周期，了解组件的生命周期可以让�
 我们谈 React 生命周期时，主要谈的是类的生命周期，因为函数式组件是没有生命周期函数的；（后面我们可以通过 hooks 来模拟一些生命周期的回调）
 :::
 
-### 生命周期函数
+## 生命周期函数
 
 ![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/WEB/react/47.png)
 
 ---
 
-#### [Constructor](https://zh-hans.react.dev/reference/react/Component#constructor)
+### [Constructor](https://zh-hans.react.dev/reference/react/Component#constructor)
 
 如果不初始化 state 或不进行方法绑定，则不需要为 React 组件实现构造函数。
 
@@ -257,7 +257,7 @@ constructor 中通常只做两件事情：
 
 ---
 
-#### [componentDidMount](https://zh-hans.react.dev/reference/react/Component#componentdidmount)
+### [componentDidMount](https://zh-hans.react.dev/reference/react/Component#componentdidmount)
 
 `componentDidMount`  在组件被渲染到 DOM（被挂载到 DOM）的时候立即调用。
 
@@ -269,7 +269,7 @@ componentDidMount 中通常进行哪里操作呢？
 
 ---
 
-#### [componentDidUpdate](https://zh-hans.react.dev/reference/react/Component#componentdidupdate)
+### [componentDidUpdate](https://zh-hans.react.dev/reference/react/Component#componentdidupdate)
 
 `componentDidUpdate`  会在更新后会被立即调用，首次渲染不会执行此方法。
 
@@ -279,7 +279,7 @@ componentDidMount 中通常进行哪里操作呢？
 
 ---
 
-#### [componentWillUnmount](https://zh-hans.react.dev/reference/react/Component#componentwillunmount)
+### [componentWillUnmount](https://zh-hans.react.dev/reference/react/Component#componentwillunmount)
 
 `componentWillUnmount`  会在组件卸载及销毁之前直接调用。
 
@@ -290,23 +290,23 @@ componentDidMount 中通常进行哪里操作呢？
   每个组件都是一个实例，因此每个组件都有自己的生命周期
   :::
 
-### 不常用生命周期函数
+## 不常用生命周期函数
 
 ![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/WEB/react/48.jpg)
 
-#### [getDerivedStateFromProps](https://zh-hans.react.dev/reference/react/Component#static-getderivedstatefromprops)
+### [getDerivedStateFromProps](https://zh-hans.react.dev/reference/react/Component#static-getderivedstatefromprops)
 
 state 的值在任何时候都依赖于 props 时使用；该方法返回一个对象来更新 state；
 
 <br/>
 
-#### [getSnapshotBeforeUpdate](https://zh-hans.react.dev/reference/react/Component#getsnapshotbeforeupdate)
+### [getSnapshotBeforeUpdate](https://zh-hans.react.dev/reference/react/Component#getsnapshotbeforeupdate)
 
 在 React 更新 DOM 之前回调的一个函数，可以获取 DOM 更新前的一些信息（比如说滚动位置），用来保存一些数据或者快照。该函数的返回值会做为`componentDidUpdate`的参数
 
 <br/>
 
-#### [shouldComponentUpdate](https://zh-hans.react.dev/reference/react/Component#shouldcomponentupdate)
+### [shouldComponentUpdate](https://zh-hans.react.dev/reference/react/Component#shouldcomponentupdate)
 
 该函数返回 `true` 的时候界面会重新渲染，返回 `false` 则不会重新渲染
 
@@ -322,7 +322,7 @@ state 的值在任何时候都依赖于 props 时使用；该方法返回一个�
 更详细的生命周期内容：https://zh-hans.react.dev/reference/react/Component
 :::
 
-## 组件嵌套
+# 组件嵌套
 
 组件之间存在嵌套关系：
 
@@ -344,7 +344,7 @@ Main 组件是 Banner、ProductList 组件的父组件；
 
 ![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/WEB/react/49.png)
 
-## 组件间的通信
+# 组件间的通信
 
 在开发过程中，我们会经常遇到需要组件之间相互进行通信：
 
@@ -354,7 +354,7 @@ Main 组件是 Banner、ProductList 组件的父组件；
 
 <br/>
 
-### 父传子
+## 父传子
 
 - 父组件通过   属性=值   的形式来传递给子组件数据；
 - 子组件通过  props  参数获取父组件传递过来的数据；
@@ -376,7 +376,7 @@ Main 组件是 Banner、ProductList 组件的父组件；
 如果子组件没有需要维护的数据即只是展示父组件传过来的数据，那么就不用写`constructor`函数，可以直接在`render`函数获取到 props。因为组件内部会自动保存。
 :::
 
-### 参数 propTypes
+## 参数 propTypes
 
 - 对于传递给子组件的数据，有时候我们可能希望进行验证，特别是对于大型项目来说：
 
@@ -402,7 +402,7 @@ npm install --save prop-types
 
 > [prop-types 详细介绍](https://zh-hans.legacy.reactjs.org/docs/typechecking-with-proptypes.html)
 
-### 子传父
+## 子传父
 
 某些情况，我们需要子组件向父组件传递消息：
 
@@ -487,7 +487,7 @@ export default Child;
 
 :::
 
-## 组件通信案例
+# 组件通信案例
 
 效果
 
@@ -593,7 +593,7 @@ export default TabControl;
 
 :::
 
-## 插槽(slot)
+# 插槽(slot)
 
 在开发中，我们抽取了一个组件，但是为了让这个组件具备更强的通用性，我们不能将组件中的内容限制为固定的 div、span 等等这些元素。
 
@@ -610,7 +610,7 @@ React 对于这种需要插槽的情况非常灵活，有两种方案可以实�
 - 组件的 children 子元素；
 - props 属性传递 React 元素；
 
-### children 实现
+## children 实现
 
 每个组件都可以获取到 props.children：它包含组件的开始标签和结束标签之间的内容。
 
@@ -661,7 +661,7 @@ export default NavBar;
 通过 children 实现的方案虽然可行，但是有一个弊端：通过索引值获取传入的元素很容易出错，不能精准的获取传入的原生
 :::
 
-### props 实现
+## props 实现
 
 通过具体的属性名，可以让我们在传入和获取时更加的精准；
 
@@ -703,7 +703,7 @@ export class NavBar extends Component {
 export default NavBar;
 ```
 
-### 作用域插槽
+## 作用域插槽
 
 有这么一种情况，子组件要显示一个按钮，而这个按钮的标签是由父组件决定的，按钮的内容是由子组件决定的
 
@@ -747,7 +747,7 @@ export default class NavBar extends Component {
 }
 ```
 
-## 非父子组件通信 - Context
+# 非父子组件通信 - Context
 
 非父子组件数据的共享：
 
@@ -786,9 +786,9 @@ Context 设计目的是为了**共享那些对于一个组件树而言是“全�
 
 ---
 
-### Context 相关 API
+## Context 相关 API
 
-#### `React.createContext`
+### `React.createContext`
 
 ```tsx
 const Context = React.createContext();
@@ -798,7 +798,7 @@ const Context = React.createContext();
 - 如果一个组件订阅了 Context，那么这个组件会从离自身最近的那个匹配的  Provider  中读取到当前的 context 值；
 - defaultValue 是组件在顶层查找过程中没有找到对应的 Provider，那么就使用默认值
 
-#### `Context.Provider`
+### `Context.Provider`
 
 ```tsx
 <ThemeContext.Provider value={/* 需要共享的值 */}>
@@ -811,13 +811,13 @@ const Context = React.createContext();
 - 多个 Provider 也可以嵌套使用，里层的会覆盖外层的数据；
 - 当 Provider 的  value  值发生变化时，它内部的所有消费组件都会重新渲染；
 
-#### `Class.contextType`
+### `Class.contextType`
 
 将 class 上的 `contextType ` 属性赋值为一个由  React.createContext()  创建的 Context 对象；
 
 这能让你使用  `this.context`  来消费最近 Context 上的那个值；你可以在任何生命周期中访问到它，包括 render 函数中；
 
-#### `Context.Consumer`
+### `Context.Consumer`
 
 由于在函数式组件是没有 `contextType `的，因此想要在函数式组件中使用 Context 就要通过`Context.Consumer`（并不是说类组件不能使用`Context.Consumer`）。
 
@@ -829,13 +829,13 @@ const Context = React.createContext();
 
 ---
 
-### 如何实现一个 Context
+## 如何实现一个 Context
 
 ::: info 代码目录结构
 ![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/WEB/react/58.png)
 :::
 
-#### 创建 Context
+### 创建 Context
 
 通过`React.createContext`创建 Context；比如说创建一个主题上下文：
 
@@ -843,7 +843,7 @@ const Context = React.createContext();
 const ThemeContext = React.createContext();
 ```
 
-#### 通过 Context 中 Provider 属性的 value 属性为后代提供数据
+### 通过 Context 中 Provider 属性的 value 属性为后代提供数据
 
 ```tsx
 <ThemeContext.Provider value={{ color: "red" }}>
@@ -851,13 +851,13 @@ const ThemeContext = React.createContext();
 </ThemeContext.Provider>
 ```
 
-#### 设置组件的 ContextType 为某一个 Context
+### 设置组件的 ContextType 为某一个 Context
 
 ```tsx
 HomeInfo.contextType = ThemeContext;
 ```
 
-#### 获取 Context
+### 获取 Context
 
 ---
 
@@ -932,7 +932,7 @@ export default HomeInfo;
 
 :::
 
-### 函数式组件如何使用 Context
+## 函数式组件如何使用 Context
 
 将 HomeInfo.jsx 修改为函数式组件，APP.jsx 和 Home.jsx 不用修改。
 
@@ -955,7 +955,7 @@ export default function HomeInfo() {
 
 ![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/WEB/react/57.png)
 
-### 如何使用多个 Context 的数据
+## 如何使用多个 Context 的数据
 
 在 APP.jsx 中，我们有两个 Context
 
@@ -1011,7 +1011,7 @@ export default Home;
 函数式组件也一样，都是通过`Context.Consumer`来获取多个 Context 的
 :::
 
-## 非父子组件通信 - EventBus
+# 非父子组件通信 - EventBus
 
 需要安装一个第三方库 [hy-event-store](https://github.com/coderwhy/hy-event-store)
 
@@ -1021,9 +1021,9 @@ npm  i hy-event-store
 
 > 具体用法还是看 github 上的介绍吧
 
-## setState 介绍
+# setState 介绍
 
-### 为什么使用 setState
+## 为什么使用 setState
 
 开发中我们并不能直接通过修改 state 的值来让界面发生更新：
 
@@ -1034,7 +1034,7 @@ npm  i hy-event-store
 > 组件中的 setState 方法是从 Component 中继承过来的。
 > ![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/WEB/react/57.png)
 
-### setState 的三种不同用法
+## setState 的三种不同用法
 
 1. 直接传入一个对象
 
@@ -1080,7 +1080,7 @@ npm  i hy-event-store
 
 <br/>
 
-### setState 异步更新
+## setState 异步更新
 
 设置 state 的初始值
 
@@ -1099,7 +1099,7 @@ console.log(this.state.message); // Hello,world
 
 ---
 
-#### 为什么 setState 设计为异步
+### 为什么 setState 设计为异步
 
 > setState 设计为异步其实之前在 GitHub 上也有很多的讨论；React 核心成员（Redux 的作者）Dan Abramov 也有对应的回复，有兴趣的可以参考一下；https://github.com/facebook/react/issues/11527#issuecomment-360199710；
 
@@ -1113,7 +1113,7 @@ console.log(this.state.message); // Hello,world
 
 ---
 
-#### 如何获取到更新后的值
+### 如何获取到更新后的值
 
 1. setState 的回调
 
@@ -1127,7 +1127,7 @@ console.log(this.state.message); // Hello,world
 
 ---
 
-#### 在 React 18 前，setState 不一定都是异步的
+### 在 React 18 前，setState 不一定都是异步的
 
 ::: tip
 现在 React 18 的 setState 都是异步的
@@ -1152,7 +1152,7 @@ console.log(this.state.message); // Hello,world
   }
   ```
 
-#### React 18 中 setState 如何同步
+### React 18 中 setState 如何同步
 
 ```tsx
 import { flushSync } from "react-dom";
@@ -1164,9 +1164,9 @@ flushSync(() => {
 });
 ```
 
-## ref
+# ref
 
-### 获取原生 DOM
+## 获取原生 DOM
 
 在 React 的开发模式中，通常情况下不需要、也不建议直接操作 DOM 原生，但是某些特殊的情况，确实需要获取到 DOM 进行某些操作：
 
@@ -1263,7 +1263,7 @@ flushSync(() => {
     export default APP;
     ```
 
-### 获取类组件实例
+## 获取类组件实例
 
 跟获取原生 DOM 一样，在组件上绑定一个 ref 就行
 
@@ -1307,7 +1307,7 @@ export class APP extends PureComponent {
 export default APP;
 ```
 
-### 获取函数式组件的 DOM
+## 获取函数式组件的 DOM
 
 函数式组件是没有实例的，所以无法通过 ref 获取他们的实例：但是某些时候，我们可能想要获取函数式组件中的某个 DOM 元素；这个时候我们可以通过 React.forwardRef ，后面我们也会学习 hooks 中如何使用 ref；
 
@@ -1345,7 +1345,7 @@ export class APP extends PureComponent {
 export default APP;
 ```
 
-## 受控组件和非受控组件
+# 受控组件和非受控组件
 
 在 HTML 中，表单元素如`<input>`、`<textarea>`、`<select>`等通常自己（浏览器）维护 state，并根据用户输入进行更新。
 
@@ -1357,7 +1357,7 @@ export default APP;
 
 ---
 
-### input
+## input
 
 现在需要再页面上显示一个输入框，输入框有默认值 Hello，下面是实现代码：
 
@@ -1414,7 +1414,7 @@ export class APP extends PureComponent {
 }
 ```
 
-### checkbox
+## checkbox
 
 ```tsx
 export default class APP extends PureComponent {
@@ -1440,7 +1440,7 @@ export default class APP extends PureComponent {
 }
 ```
 
-### select
+## select
 
 单选
 
@@ -1501,7 +1501,7 @@ export default class APP extends PureComponent {
 }
 ```
 
-## 高阶组件
+# 高阶组件
 
 ::: info 高阶函数
 
@@ -1514,7 +1514,7 @@ JS中的filter、map、reduce都是高阶函数。
 
 :::
 
-### 定义
+## 定义
 
 高阶组件(Higher-Order Components)，简称为 HOC；
 
@@ -1540,7 +1540,7 @@ function hoc(Component) {
 
 高阶组件在一些React第三方库中非常常见：如redux中的connect和react-router中的withRouter。
 
-### props的增强
+## props的增强
 
 添加新的props
 
@@ -1576,7 +1576,7 @@ export default class APP extends PureComponent {
 }
 ```
 
-### 共享Context
+## 共享Context
 
 ```tsx
 import { PureComponent, createContext } from "react";
@@ -1624,7 +1624,7 @@ const Info2 = withTheme(function (props) {
 
 
 
-### 渲染判断鉴权
+## 渲染判断鉴权
 
 ```tsx
 import { PureComponent } from "react";
@@ -1656,7 +1656,7 @@ export default class APP extends PureComponent {
 }
 ```
 
-### 生命周期劫持
+## 生命周期劫持
 
 ```tsx
 import { PureComponent } from "react";
@@ -1688,7 +1688,7 @@ export default class APP extends PureComponent {
 }
 ```
 
-## Portals
+# Portals
 
 某些情况下，我们希望渲染的内容独立于父组件，甚至是独立于当前挂载到的DOM元素中（默认都是挂载到id为root的DOM元素上的）。
 
@@ -1717,7 +1717,7 @@ export default class APP extends PureComponent {
 
 
 
-## fragment
+# fragment
 
 在之前的开发中，一个组件中返回内容时总是包裹一个div元素，而这个div又没有实际意义。我们可以使用Fragment代替这个div，根vue的template相似。 
 
@@ -1755,7 +1755,7 @@ export default class APP extends PureComponent {
 
 但是，如果我们需要在Fragment中添加key，那么就不能使用短语法
 
-## StrictMode
+# StrictMode
 
 StrictMode 是一个用来突出显示应用程序中潜在问题的工具：
 

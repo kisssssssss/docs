@@ -3,9 +3,9 @@ title: react动画
 index: 6
 ---
 
-## React的过渡动画
+# React的过渡动画
 
-### 介绍
+## 介绍
 
 在开发中，我们想要给一个组件的显示和消失添加某种过渡动画时，可以通过原生的CSS来实现这些过渡动画，但是React社区为我们提供了react-transition-group用来完成过渡动画。
 
@@ -19,13 +19,13 @@ npm install react-transition-group --save
 
 > react-transition-group本身非常小，不会为我们应用程序增加过多的负担。
 
-### 主要组件
+## 主要组件
 
-#### Transition
+### Transition
 
 该组件是一个和平台无关的组件（不一定要结合CSS），在前端开发中比较常用的是CSSTransition；
 
-#### CSSTransition
+### CSSTransition
 
 在前端开发中，通常使用CSSTransition来完成过渡动画效果；
 
@@ -129,7 +129,7 @@ export default class APP extends PureComponent {
 
 :::
 
-#### SwitchTransition
+### SwitchTransition
 
 SwitchTransition可以完成两个组件之间切换的炫酷动画：
 
@@ -195,7 +195,7 @@ export default class APP extends PureComponent {
 }
 ```
 
-#### TransitionGroup
+### TransitionGroup
 
 当我们有一组动画时，需要将这些CSSTransition放入到一个TransitionGroup中来完成动画。
 
@@ -278,7 +278,7 @@ export default class APP extends PureComponent {
 
 
 
-## React如何编写CSS
+# React如何编写CSS
 
 在组件化中选择合适的CSS解决方案应该符合以下条件：
 
@@ -290,7 +290,7 @@ export default class APP extends PureComponent {
 
 React官方并没有给出在React中统一的样式风格
 
-### 内联样式
+## 内联样式
 
 style 接受一个采用小驼峰命名属性的 JavaScript 对象，而不是 CSS 字符串；并且可以引用state中的状态来设置相关的样式；
 
@@ -317,7 +317,7 @@ export default class APP extends PureComponent {
 }
 ```
 
-### 普通的css
+## 普通的css
 
 编写css到一个单独的文件，之后再进行引入。
 
@@ -345,7 +345,7 @@ export default class APP extends PureComponent {
 }
 ```
 
-### css modules
+## css modules
 
 css modules并不是React特有的解决方案，而是所有使用了类似于webpack配置的环境下都可以使用的。
 
@@ -379,7 +379,7 @@ export default class APP extends PureComponent {
 }
 ```
 
-### CSS in JS
+## CSS in JS
 
 “CSS-in-JS” 是指一种模式，其中 CSS 由 JavaScript 生成而不是在外部文件中定义；
 
@@ -538,7 +538,7 @@ export const AppWrapper = styled.div`
 
    
 
-## React如何编写less
+# React如何编写less
 
 - 修改webpack配置：
 
@@ -550,7 +550,7 @@ export const AppWrapper = styled.div`
 
 
 
-## 动态添加class
+# 动态添加class
 
 可以像编写JavaScript代码一样，通过一些逻辑来决定是否添加某些class：
 

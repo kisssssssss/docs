@@ -3,7 +3,7 @@ title: Router的使用
 index: 8
 ---
 
-## 认识react-router
+# 认识react-router
 
 目前前端流行的三大框架, 都有自己的路由实现: 
 
@@ -15,7 +15,7 @@ index: 8
 
 目前使用的是 React Router6.x 版本；
 
-## 安装React Router 
+# 安装React Router 
 
 ```sh
 npm install react-router-dom
@@ -25,7 +25,7 @@ npm install react-router-dom
 
 
 
-## 导入组件并使用
+# 导入组件并使用
 
 ```sh
 import { BrowserRouter,HashRouter } from "react-router-dom";
@@ -45,7 +45,7 @@ root.render(
 
 
 
-## 路由映射配置
+# 路由映射配置
 
 1. Routes：包裹所有的Route，在其中匹配一个路由
 
@@ -87,7 +87,7 @@ export class APP extends PureComponent {
 }
 ```
 
-## 路由配置和跳转
+# 路由配置和跳转
 
 使用Link和NavLink组件。
 
@@ -159,7 +159,7 @@ export class APP extends PureComponent {
 <NavLink to="/About" className={({ isActive }) => (isActive ? "active" : "")}>关于</NavLink>
 ```
 
-## Navigate导航
+# Navigate导航
 
 Navigate用于路由的重定向，当这个组件出现时，就会执行跳转到对应的to路径中。
 
@@ -177,13 +177,13 @@ Navigate用于路由的重定向，当这个组件出现时，就会执行跳转
 
   
 
-## Not Found页面配置
+# Not Found页面配置
 
 ```tsx
 <Route path="*" element={<NotFound />} />
 ```
 
-## 路由的嵌套
+# 路由的嵌套
 
 假设Home1和Home2是Home的子页面
 
@@ -243,7 +243,7 @@ export class Home extends PureComponent {
 export default Home;
 ```
 
-## 手动路由的跳转
+# 手动路由的跳转
 
 目前我们实现的跳转主要是通过Link或者NavLink进行跳转的，实际上我们也可以通过JavaScript代码进行跳转。
 
@@ -289,7 +289,7 @@ export class Home1 extends PureComponent {
 export default withRouter(Home1);
 ```
 
-## 路由参数传递
+# 路由参数传递
 
 传递参数有二种方式：
 
@@ -413,7 +413,7 @@ export default withRouter(Home1);
 
      
 
-## 路由的配置方式使用
+# 路由的配置方式使用
 
 目前我们所有的路由定义都是直接使用Route组件，并且添加属性来完成的，但是这样的方式会让路由变得非常混乱，我们希望将所有的路由配置放到一个地方进行集中管理。
 
@@ -473,7 +473,7 @@ const routes = [
 export default routes;
 ```
 
-## 懒加载
+# 懒加载
 
 不直接导入，使用`React.lazy`导入，routes数组保持不变
 

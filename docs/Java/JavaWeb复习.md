@@ -14,7 +14,7 @@ Web是基于客户/服务器（C/S）的一种体系结构。主要由三部分�
 HTTP：超文本传输协议（Hypertext Transfer Protocol）是Web使用的协议，一个基于请求-响应的无状态的协议，详细规定了Web客户与服务器之间如何通信。 
 ![](https://model.kisssssssss.space/https://raw.githubusercontent.com/kisssssssss/IMG/main/docs/Java/JavaWeb/1.png)
 
-## URL、URI、URN
+# URL、URI、URN
 
 Web服务器上的资源是通过URL标识的。
 
@@ -39,7 +39,7 @@ URL通常由4部分组成：
 
  一般形式为：`urn：命名空间：资源名`，例如：`urn:ISBN:1-930110-59-6`，它唯一地标识某一本书，但它不是URL，因为它没有指定如何检索该书。
 
-## HTML常用标签
+# HTML常用标签
 
 HTML，超文本标记语言（HyperText Markup Language）是一种用来制作超文本文档的简单标记语言。
 
@@ -63,7 +63,7 @@ XML称为可扩展标记语言，相对HTML，XML具有如下一些特点：
 - 对数据的描述和数据本身都包含在文档中，数据具有很大的灵活性。
 - 数据与显示分离。
 
-## 动态文档技术
+# 动态文档技术
 
 Web文档是一种重要的Web资源，通常也称为Web页面，可分为静态文档和动态文档。
 
@@ -94,11 +94,11 @@ Web文档是一种重要的Web资源，通常也称为Web页面，可分为静�
 - 服务器端动态文档技术的页面，是在服务器端执行的。 
 - 客户端动态文档技术的页面，是在客户端执行的。
 
-## Tomcat
+# Tomcat
 
  Tomcat安装目录的**webapps**目录是**所有Web应用程序的根目录**。
 
-## Servlet
+# Servlet
 
 Servlet接口是Servlet API中的基本接口，每个Servlet必须直接或间接实现该接口。
 
@@ -458,7 +458,7 @@ public class LoginServlet extends HttpServlet {
 }
 ```
 
-## JSP
+# JSP
 
 | JSP页面元素         | 简要说明                    | 标签语法                    |
 | :------------------ | --------------------------- | --------------------------- |
@@ -626,7 +626,7 @@ JSP声明中定义的变量和小脚本中定义的变量的不同：
   <%= pageContext.getAttribute("foo" ) %>
   ```
 
-## Java Beans
+# Java Beans
 
 JavaBeans是Java平台的组件技术，在Java Web开发中常用JavaBeans来存放数据、封装业务逻辑等，从而很好地实现业务逻辑和表示逻辑的分离，使系统具有更好的健壮性和灵活性。
 
@@ -712,7 +712,7 @@ public class Customer {
 }
 ```
 
-## MVC设计模型
+# MVC设计模型
 
 MVC（Model-View-Controller）设计模式，在这种结构中，将Web组件分为模型（Model）、视图（View）和控制器（Controller），每种组件完成各自的任务。
 
@@ -734,7 +734,7 @@ MVC（Model-View-Controller）设计模式，在这种结构中，将Web组件�
 
 
 
-## 会话
+# 会话
 
 会话（session）是客户与服务器之间的不间断的请求—响应序列。
 
@@ -842,7 +842,7 @@ private String getFilename(Part part){
 
 
 
-## JDBC 
+# JDBC 
 
 **JDBC**是Java程序访问数据库的标准，由一组Java语言编写的**类和接口**组成，这些类和接口称为JDBC API。
 
@@ -1243,7 +1243,7 @@ public class AddCustomerServlet extends HttpServlet {
 }
 ```
 
-## 表达式语言
+# 表达式语言
 
 表达式语言（Expression Language, EL）是一种可以在JSP页面中使用的数据访问语言。
 

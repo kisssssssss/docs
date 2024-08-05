@@ -3,7 +3,7 @@ title: Redux的使用
 index: 7
 ---
 
-## 纯函数
+# 纯函数
 
 在程序设计中，若一个函数符合以下条件，那么这个函数被称为纯函数：
 
@@ -29,9 +29,9 @@ slice截取数组时不会对原数组进行任何操作，而是生成一个新
 
 
 
-## Redux基本使用
+# Redux基本使用
 
-### 原则
+## 原则
 
 - **单一数据源**
 
@@ -53,7 +53,7 @@ slice截取数组时不会对原数组进行任何操作，而是生成一个新
 
   所有的reducer都应该是纯函数，不能产生任何的副作用；
 
-### 定义一个store
+## 定义一个store
 
 创建Store来存储state；
 
@@ -75,7 +75,7 @@ const store = createStore(reducer);
 module.exports = store;
 ```
 
-### 获取state
+## 获取state
 
 可以通过 store.getState 来获取当前的state；
 
@@ -83,7 +83,7 @@ module.exports = store;
 store.getState()
 ```
 
-### 修改store中的数据
+## 修改store中的数据
 
 通过action来修改state；
 
@@ -116,7 +116,7 @@ store.dispatch(nameAction);
 
 > reducer是一个纯函数，不要直接修改state；
 
-### 订阅store中的数据
+## 订阅store中的数据
 
 ```javascript
 // 订阅
@@ -127,7 +127,7 @@ const unSubscribe = store.subscribe(()=>{
 unSubscribe();
 ```
 
-### 动态生产action
+## 动态生产action
 
 ```javascript
 store.dispatch({ type: "change_name", name: "HHH" });
@@ -153,7 +153,7 @@ store.dispatch(changeNameAction("CCC"));
 
 
 
-## Redux结构划分
+# Redux结构划分
 
 如果我们将所有的逻辑代码写到一起，那么当redux变得复杂时代码就难以维护。
 
@@ -164,13 +164,13 @@ store.dispatch(changeNameAction("CCC"));
 - store/actionCreators.js
 - store/constants.js
 
-## Redux使用流程
+# Redux使用流程
 
 ![](../../public../../../images/WEB/react/66.png)
 
 ![](../../public../../../images/WEB/react/67.png)
 
-## 在React中使用Redux
+# 在React中使用Redux
 
 ```tsx
 import { PureComponent } from "react";
@@ -202,7 +202,7 @@ export default class APP extends PureComponent {
 }
 ```
 
-### react-redux
+## react-redux
 
 redux和react没有直接的关系，你完全可以在React, Angular, Ember, jQuery, or vanilla  JavaScript中使用Redux。
 
@@ -260,7 +260,7 @@ const mapDispatchToProps = (dispatch) => ({
 export default Connect(mapStateToProps, mapDispatchToProps)(APP);
 ```
 
-### redux-thunk
+## redux-thunk
 
 在之前的代码中，redux中保存的counter是一个本地定义的数据，我们可以直接通过同步的操作来dispatch action，state就会被立即更新。 但在真实开发中，redux中保存的很多数据可能来自服务器，我们需要进行异步的请求，再将数据保存到redux中。
 
@@ -321,7 +321,7 @@ redux中使用中间件进行异步的操作，通常使用redux-thunk插件。
 
 
 
-## redux-devtools
+# redux-devtools
 
 浏览器安装完redux-devtools插件后，默认情况下，我们是无法查看redux里面的数据的。
 
@@ -340,7 +340,7 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(reducer, composeEnhancers(applyMiddleware(thunk)));
 ```
 
-## Redux模块
+# Redux模块
 
 ![](../../public../../../images/WEB/react/68.png)
 
@@ -373,7 +373,7 @@ function reducer(state, action) {
 }
 ```
 
-## Redux Toolkit
+# Redux Toolkit
 
 在前面我们学习Redux的时候应该已经发现，redux的编写逻辑过于的繁琐和麻烦。 并且代码通常分拆在多个文件中（虽然也可以放到一个文件管理，但是代码量过多，不利于管理）；
 
@@ -405,7 +405,7 @@ npm install @reduxjs/toolkit
 
   接受一个动作类型字符串和一个返回承诺的函数，并生成一个pending / fulfilled / rejected 基于该承诺分派动作类型的 thunk
 
-### 重构reducer
+## 重构reducer
 
 先对counter的reducer进行重构：
 
@@ -435,7 +435,7 @@ const counterSlice = createSlice({
 export default counterSlice.reducer;
 ```
 
-### 重构store
+## 重构store
 
 configureStore用于创建store对象。
 
@@ -459,7 +459,7 @@ const store = configureStore({
 export default store
 ```
 
-### 将RTK的store和react联系起来
+## 将RTK的store和react联系起来
 
 导出counter的action，导出的名字与reducers对象里面的函数名一样。
 
@@ -509,7 +509,7 @@ export default connect(mapStateToProps, mapDispatchToProps)(APP);
 
 ```
 
-### RTK的异步操作
+## RTK的异步操作
 
 在之前的开发中，我们通过redux-thunk中间件让dispatch中可以进行异步操作。Redux Toolkit默认已经给我们继承了Thunk相关的功能。
 
@@ -565,7 +565,7 @@ export const fetchDataAction = createAsyncThunk("Data", async (extraInfo, { disp
 });
 ```
 
-## 实现react-redux的connect
+# 实现react-redux的connect
 
 定义一个上下文，用来传递store
 
@@ -624,7 +624,7 @@ root.render(
 
 ```
 
-## 打印dispatch日志
+# 打印dispatch日志
 
 比如我们现在有一个需求：在dispatch之前，打印一下本次的action对象，dispatch完成之后可以打印一下最新的store state；
 
@@ -659,7 +659,7 @@ log(store)
 
 在调用dispatch的过程中，真正调用的函数其实是dispatchAndLog；
 
-## 实现redux-thunk
+# 实现redux-thunk
 
 redux中利用一个中间件redux-thunk可以让我们的dispatch不再只是处理对象，还可以处理函数
 
@@ -678,7 +678,7 @@ function thunk() {
 thunk(store)
 ```
 
-## 实现applyMiddleware
+# 实现applyMiddleware
 
 ```javascript
 import log from "./middleware/log";
