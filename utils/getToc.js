@@ -84,9 +84,14 @@ const getMarkdownHeaders = (markdown) => {
 };
 
 export async function getAllToc() {
-  // 如果不存在 Toc.json 文件，则直接返回
-  if (fs.existsSync(path.join(process.cwd(), "assets",'Toc.json'))) {
-    const Toc = await fs.promises.readFile(path.join(process.cwd(), "assets",'Toc.json'), "utf-8");
+  const startTime = Date.now();
+
+  const savePath = path.join(process.cwd(), "assets", "Toc.json");
+
+  // 如果存在 Toc.json 文件，则直接返回
+  if (fs.existsSync(savePath)) {
+    const Toc = await fs.promises.readFile(savePath, "utf-8");
+    console.log(`执行 getAllToc 耗时：${Date.now() - startTime}ms`);
     return JSON.parse(Toc);
   }
 
@@ -102,9 +107,12 @@ export async function getAllToc() {
 
       if (isDirectory) {
         read(fullPath);
-      } else {
-        //FIXME 没有考虑文非md文件的情况
-        const key = entry.replace(".md", "");
+      } else if (entry.includes(".md")) {
+        let key = fullPath.split(path.sep);
+        key = key
+          .slice(key.lastIndexOf("docs") + 1)
+          .join(path.sep)
+          .replace(".md", "");
         Toc[key] = getMarkdownHeaders(fs.readFileSync(fullPath, "utf-8"));
       }
     });
@@ -112,17 +120,19 @@ export async function getAllToc() {
 
   read(path.join(process.cwd(), "docs"));
 
-  let t = Date.now();
-  const savePath = path.join(process.cwd(), "assets", "Toc.json");
-  fs.writeFile(savePath, JSON.stringify(Toc, null, 2));
-  console.log(`Toc.json 已生成，耗时：${t}ms`);
+  /**
+   * 存储Toc.json的目的是为了减少每次启动时的解析时间
+   * **/
+
+  await fs.promises.writeFile(savePath, JSON.stringify(Toc, null, 2));
+  console.log(`执行 getAllToc 耗时：${Date.now() - startTime}ms`);
 
   return Toc;
 }
 
 //FIXME 没有考虑文件同名的情况
 export async function getToc(filePath) {
-  let res = fs.readFileSync(path.join(process.cwd(), filePath), "utf-8");
+  let res = await fs.promises.readFile(filePath, "utf-8");
 
   return getMarkdownHeaders(res);
 }

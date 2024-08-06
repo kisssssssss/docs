@@ -1,3 +1,4 @@
+import fs from "fs";
 import MarkdownIt from "markdown-it";
 import hljs from "highlight.js/lib/core";
 
@@ -113,6 +114,10 @@ function modifyImageURLs(md) {
 }
 // 根据 front matter 的 typoraRootUrl 修改 URL
 function modifyURL(url, frontMatter) {
+  /**
+   * 因为本地在typora使用相对路径，如![](123.png)
+   * 因此 URL 长度大于 7，说明我使用的不是相对路径，大概率是网络图片，直接返回即可
+   * **/
   if (url.length > 7) return url;
   // 使用 front matter 中的 typora-root-url
   const typoraRootUrl = frontMatter["typora-root-url"];
@@ -132,7 +137,7 @@ function modifyURL(url, frontMatter) {
   return fullUrl;
 }
 
-export default new MarkdownIt(markdownOptions)
+export const DEFAULT_MARKDOWN = new MarkdownIt(markdownOptions)
   .use(frontMatter, saveFrontMatter)
   .use(mathjax)
   .use(sup)
@@ -148,3 +153,19 @@ export default new MarkdownIt(markdownOptions)
   .use(container, containerOption.errorContainer)
   .use(container, containerOption.detailsContainer)
   .use(container, containerOption.warningContainer);
+
+export async function markdown2Html(key, filePath) {
+  const startTime = Date.now();
+
+  // 读取文件
+  const mdFile = await fs.promises.readFile(filePath, "utf-8");
+
+  // 获取渲染结果
+  const html = DEFAULT_MARKDOWN.render(mdFile);
+
+  console.log(`执行 ${key} 耗时：${Date.now() - startTime}ms`);
+
+  return html;
+}
+
+export default DEFAULT_MARKDOWN;

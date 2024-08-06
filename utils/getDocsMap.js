@@ -101,5 +101,22 @@ function readDir(dirPath) {
 }
 
 export default async function getDocsMap() {
-  return readDir(path.join(process.cwd(), "docs"));
+  const startTime = Date.now();
+
+  const savePath = path.join(process.cwd(), "assets", "docsMap.json");
+
+  // 如果存在 Toc.json 文件，则直接返回
+  if (fs.existsSync(savePath)) {
+    const docsMap = await fs.promises.readFile(savePath, "utf-8");
+    console.log(`执行 getDocsMap 耗时：${Date.now() - startTime}ms`);
+    return JSON.parse(docsMap);
+  }
+
+  const docsMap = readDir(path.join(process.cwd(), "docs"));
+
+  await fs.promises.writeFile(savePath, JSON.stringify(docsMap, null, 2));
+
+  console.log(`执行 getDocsMap 耗时：${Date.now() - startTime}ms`);
+
+  return docsMap;
 }
