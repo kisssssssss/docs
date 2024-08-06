@@ -26,6 +26,9 @@ const projects = [
   },
 ];
 
+const width =
+"sm:max-w-[512px] md:max-w-[614px] lg:max-w-[820px] xl:max-w-[1024px] mx-auto";
+
 const home = memo(({ darkMode, docs }) => {
   useEffect(() => {
     // 初始化
@@ -46,9 +49,6 @@ const home = memo(({ darkMode, docs }) => {
       fullpageInstance.destroy("all");
     };
   }, []);
-
-  const width =
-    "sm:max-w-[512px] md:max-w-[614px] lg:max-w-[820px] xl:max-w-[1024px] mx-auto";
 
   return (
     <main
