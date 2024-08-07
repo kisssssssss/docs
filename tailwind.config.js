@@ -18,6 +18,7 @@ module.exports = {
         DEFAULT:{
           css:{
             '--tw-prose-invert-body': '#999999',
+            '--tw-prose-bullets':"#707070"
           }
         }
       })
